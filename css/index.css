@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@font-face {
+    font-family: mono;
+    src: url(../fonts/JetBrainsMono-Medium.ttf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+.container {
+    background-color: #1e1e22;
+    box-sizing: border-box;
+    height: 500vw;
+    padding: 0 2vw;
+}
+
+.main {
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.header {
+    height: 60px;
+    position: relative;
+}
+
+.nav {
+    height: 60px;
+    display: inline-block;
+}
+
+.nav li {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 20px;
+    font-family: 'Poppins';
+    list-style: none;
+}
+
+.nav li a {
+    border-bottom: 1px solid #009bff;
+    color: #ddd;
+    transition: all 0.5s;
+}
+
+.nav li a:hover {
+    color: #009bff;
+}
+
+.nav li p {
+    color: #009bff;
+}
+
+.btn-login {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 60px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.btn-login .nav-1 {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    line-height: 40px;
+    color: #000;
+    background-color: #009bff;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.btn-login .nav-1:hover {
+    color: #ddd;
+}
+
+.btn-login .nav-1 ion-icon {
+    height: 40px;
+    padding-right: 10px;
+}
+
+.btn-login .nav-2 {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    line-height: 40px;
+    color: #ddd;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.btn-login .nav-2:hover {
+    color: #009bff;
+}
+
+.btn-login .nav-2 ion-icon {
+    height: 40px;
+    padding-right: 10px;
+}
+
+.title-bar {
+    height: 10vw;
+}
+
+.title {
+    border-right: 2px solid #000;
+    margin-top: 4vw;
+    display: inline-block;
+    font-size: 6vw;
+    font-family: 'mono';
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: borders 1s infinite normal,
+        widths 4s steps(16);
+}
+
+@keyframes borders {
+    from {
+        border-right-color: #000;
+    }
+
+    to {
+        border-right-color: #ddd;
+    }
+}
+
+@keyframes widths {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 16ch;
+    }
+}
+
+.about {
+    margin-top: 3vw;
+}
+
+.about p {
+    font-size: 1.5vw;
+    font-family: 'Poppins';
+    color: #fff;
+}
+
+.func-1 {
+    margin-top: 5vw;
+    height: 610px;
+    display: flex;
+    flex-direction: row;
+}
+
+.func-1 .func-1-left {
+    width: 55vw;
+    margin-right: 5vw;
+    border: 1px solid #ddd;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    margin: 2vw 0;
+}
+
+.block p {
+    font-family: "Poppins";
+    font-size: 1.5vw;
+    color: #fff;
+    padding-left: 1vw;
+    border-left: 2px solid #009bff;
+}
+
+.block h1,
+.learning h1 {
+    font-family: 'Poppins';
+    font-size: 3vw;
+    font-weight: 400;
+    color: #fff;
+    transition: all 1s;
+}
+
+.block h1:hover,
+.learning h1:hover {
+    color: #009bff;
+}
+
+.learning {
+    display: grid;
+}

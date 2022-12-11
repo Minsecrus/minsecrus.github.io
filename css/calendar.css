@@ -1,0 +1,288 @@
+:root {
+    --dark-text: #555566;
+    --light-body: #f3f8fe;
+    --light-main: #fdfdfd;
+    --light-second: #c3c2c8;
+    --light-hover: #f0f0f0;
+    --light-text: #151426;
+    --light-btn: rgba(0, 155, 255, 0.87);
+    --lighter-btn: rgba(0, 155, 255, 0.47);
+    --blue: #0000ff;
+    --white: #fff;
+    --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --font-family: 'Poppins';
+}
+
+.calendar {
+    height: 610px;
+    position: relative;
+    width: max-content;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 30px 50px 0 50px;
+    box-shadow: var(--shadow);
+}
+
+.calendar-header {
+    background: var(--light-btn);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: var(--white);
+    padding: 10px;
+}
+
+.calendar-body {
+}
+
+.calendar-week-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: 600;
+    cursor: pointer;
+    color: #686868;
+}
+
+.calendar-week-days div:hover {
+    color: var(--light-btn);
+    transform: scale(1.2);
+    transition: all .2s ease-in-out;
+}
+
+.calendar-week-days div {
+    display: grid;
+    place-items: center;
+    color: var(--light-second);
+    height: 50px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    color: var(--dark-text);
+}
+
+.calendar-days div {
+    width: 30px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    animation: to-top 1s forwards;
+}
+
+.month-picker {
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.month-picker:hover {
+    background-color: var(--light-hover);
+}
+
+.year-picker {
+    display: flex;
+    align-items: center;
+}
+
+.year-change {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.year-change:hover {
+    background-color: var(--light-btn);
+    transition: all 2s ease-in-out;
+    transform: scale(1.12);
+}
+
+.year-change:hover pre {
+    color: var(--light-body);
+}
+
+.calendar-footer {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#year:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.calendar-days div span {
+    position: absolute;
+}
+
+.calendar-days div:hover {
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+    background-color: var(--lighter-btn);
+    border-radius: 20%;
+    color: var(--dark-text);
+}
+
+.month-list {
+    position: relative;
+    left: 0;
+    top: -50px;
+    background-color: #ffffff;
+    color: var(--light-text);
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    border-radius: 20px;
+}
+
+.month-list > div {
+    display: grid;
+    place-content: center;
+    transition: all .2s ease-in-out;
+}
+
+.month-list > div > div {
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', serif;
+}
+
+.month-list > div > div:hover {
+    background-color: var(--lighter-btn);
+}
+
+.month-list .show {
+    visibility: visible;
+    pointer-events: visible;
+    transition: .6s ease-in-out;
+    animation: to-left .71s forwards;
+}
+
+.month-list.hideonce {
+    visibility: hidden;
+}
+
+.month-list.hide {
+    animation: to-right 1s forwards;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.date-time-formate {
+    width: max-content;
+    height: max-content;
+    font-family: 'Jetbrains Mono', serif;
+    position: relative;
+    display: inline;
+    top: 140px;
+    justify-content: center;
+}
+
+.day-text-formate {
+    font-family: 'Poppins', serif;
+    font-size: 1.4rem;
+    padding-right: 5%;
+    border-right: 3px solid var(--light-btn);
+    position: absolute;
+    left: -1rem;
+}
+
+.date-time-value {
+    display: block;
+    height: max-content;
+    width: max-content;
+    position: relative;
+    left: 30%;
+    top: -18px;
+    text-align: center;
+}
+
+.time-formate {
+    font-size: 1.5rem;
+}
+
+.time-formate.hidetime {
+    animation: hidetime 1.5s forwards;
+}
+
+.date-text-formate.hidetime {
+    animation: hidetime 1.5s forwards;
+}
+
+.date-formate.hidetime {
+    animation: hidetime 1.5s forwards;
+}
+
+.time-formate.showtime {
+    animation: showtime 1s forwards;
+}
+
+.date-formate.showtime {
+    animation: showtime 1s forwards;
+}
+
+.date-text-formate.showtime {
+    animation: showtime 1s forwards;
+}
+
+@keyframes to-top {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+}
+
+@keyframes to-left {
+    0% {
+        transform: translateX(230%);
+    }
+
+    100% {
+        transform: translateX(230%);
+        opacity: 1;
+    }
+}
+
+@keyframes to-right {
+    10% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-150%);
+        opacity: 1;
+    }
+}
+
+@keyframes hidetime {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-370%);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 375px) {
+    .month-list > div {
+        margin: -5px 0;
+    }
+}
