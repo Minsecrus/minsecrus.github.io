@@ -36,7 +36,7 @@ jobs:
           cache: 'npm' # Or 'yarn' if you use Yarn
 
       - name: Install dependencies
-        run: npm ci # 'ci' is generally recommended for CI environments, or use 'npm install' or 'yarn install'
+        run: npm install # 'ci' is generally recommended for CI environments, or use 'npm install' or 'yarn install'
 
       - name: Build project
         run: npm run build # IMPORTANT: Change this if your build command is different (e.g., vite build, yarn build)
