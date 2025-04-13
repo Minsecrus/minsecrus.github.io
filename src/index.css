@@ -1,0 +1,63 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --bg-color: #FFFDFB;
+  /* 背景色 - 温柔近白 */
+  --theme-color: #A2D2FF;
+  /* 主题色 - 浅蓝 */
+  --accent-color: #63b7f3;
+  /* 强调/链接色 - 稍深蓝 */
+  --heading-color: #333333;
+  /* 主标题颜色 - 深灰 */
+  --text-color: #555555;
+  /* 副标题/正文颜色 - 中灰 */
+  --light-gray: #AAAAAA;
+  /* 浅灰色，用于辅助文字 */
+  --white-color: #FFFFFF;
+  /* 纯白色 */
+
+  --heading-weight: 700;
+  /* 标题字体粗细 */
+  --subtitle-weight: 600;
+  /* 副标题字体粗细 */
+  --text-weight: 500;
+  /* 正文字体粗细 */
+
+  line-height: 1.5;
+  font-weight: 500;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* 更直观的盒模型 */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* 页面内锚点跳转平滑滚动 */
+}
+
+h1 {
+  font-size: 48px;
+  color: var(--heading-color);
+}
+
+.text {
+  font-family: 'Quicksand', 'HarmonyOS Sans', sans-serif;
+}
+
+.interact {
+  font-family: 'Quicksand', 'Lovely', sans-serif;
+}
