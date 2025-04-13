@@ -59,12 +59,12 @@ export function Toolbox() {
         { name: "Headspace", category: "健康与生活", description: "冥想与放松指导应用" },
         { name: "Sass", category: "前端开发", description: "CSS 预处理器" },
         { name: "GitLab", category: "DevOps 与部署", description: "完整的 DevOps 平台" },
-        { name: "Microsoft Word", category: "写作与编辑", description: "经典的文字处理软件" },
+        { name: "Microsoft Word", category: "写作与编辑", description: "classical 文字处理软件" },
         { name: "SQLite", category: "数据库", description: "轻量级关系型数据库" },
         { name: "Procreate", category: "设计与创意", description: "iPad 绘画应用" },
         { name: "Axios", category: "前端开发", description: "基于 Promise 的 HTTP 客户端" },
         { name: "Terraform", category: "DevOps 与部署", description: "基础设施即代码工具" },
-        { name: "Evernote", category: "生产力与组织", description: "经典的笔记和信息收集应用" },
+        { name: "Evernote", category: "生产力与组织", description: "classical 笔记和信息收集应用" },
         { name: "Netflix", category: "媒体与娱乐", description: "流媒体视频平台" },
         { name: "Flask", category: "后端开发", description: "轻量级 Python Web 框架" },
         { name: "WebStorm", category: "开发环境", description: "专业的 JavaScript IDE" },
@@ -265,19 +265,34 @@ export function Toolbox() {
                         <div className={styles.toolsGrid}>
                             {filteredTools.map((tool, index) => (
                                 <motion.div
-                                    className={styles.toolCard}
+                                    className={`${styles.toolCard} ${tool.link ? 'cursor-pointer' : ''}`}
                                     data-category={tool.category}
                                     data-size={tool.size}
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
-                                    transition={{
-                                        delay: Math.min(index * 0.02, 0.8),
-                                        duration: 0.2
+
+                                    whileHover={{
+                                        scale: 1.02,
+                                        y: -2,
+                                        transition: {
+                                            duration: 0.2,
+                                            ease: "easeOut"
+                                        }
                                     }}
-                                    whileHover={{ scale: 1.02, y: -2 }}
+                                    transition={{
+                                        opacity: {
+                                            delay: Math.min(index * 0.02, 0.8),
+                                            duration: 0.2
+                                        }
+                                    }}
                                     key={tool.name}
                                 >
-                                    <h3 className="interact">{tool.name}</h3>
+                                    <h3 className="interact">
+                                        {tool.link ? (
+                                            <a href={tool.link} target="_blank" rel="noopener noreferrer" className="no-color-link">{tool.name}</a>
+                                        ) : (
+                                            tool.name
+                                        )}</h3>
                                     <p className={`${styles.toolDesc} text`}>{tool.description}</p>
                                 </motion.div>
                             ))}

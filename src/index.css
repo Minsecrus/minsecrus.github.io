@@ -6,6 +6,8 @@
   /* 主题色 - 浅蓝 */
   --accent-color: #63b7f3;
   /* 强调/链接色 - 稍深蓝 */
+  --darker-accent-color: #4a90d2;
+  /* 强调/链接色 - 稍深蓝 */
   --heading-color: #333333;
   /* 主标题颜色 - 深灰 */
   --text-color: #555555;
@@ -52,6 +54,18 @@ a {
 
 a:hover {
   color: var(--theme-color);
+}
+
+a.no-color-link {
+  color: var(--text-color);
+}
+
+a.no-color-link:hover {
+  color: var(--accent-color);
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 html {

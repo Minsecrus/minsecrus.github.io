@@ -26,6 +26,16 @@ export function Library() {
         { name: "HTTP权威指南", category: "网络编程", description: "HTTP协议详解" },
         { name: "图解TCP/IP", category: "网络编程", description: "TCP/IP协议图解" },
         { name: "Unix网络编程", category: "网络编程", description: "网络编程经典著作" },
+
+        // 文档资源（按技术领域分类）
+        { name: "CPP Reference", category: "编程语言", description: "C++ 标准库完整参考", link: "https://zh.cppreference.com" },
+        { name: "MDN Web Docs", category: "前端开发", description: "Web 技术权威文档", link: "https://developer.mozilla.org" },
+        { name: "Rust 程序设计语言", category: "编程语言", description: "Rust 官方中文文档", link: "https://rustwiki.org/zh-CN/book" },
+        { name: "Python 文档", category: "编程语言", description: "Python 官方中文文档", link: "https://docs.python.org/zh-cn" },
+        { name: "Go 语言之旅", category: "编程语言", description: "Go 语言在线教程", link: "https://tour.go-zh.org" },
+        { name: "TypeScript 手册", category: "前端开发", description: "TypeScript 中文文档", link: "https://typescript.bootcss.com" },
+        { name: "React 中文文档", category: "前端开发", description: "React 官方中文文档", link: "https://zh-hans.react.dev" },
+        { name: "Linux 手册页", category: "计算机基础", description: "Linux 命令手册", link: "https://man7.org/linux/man-pages" },
         // ... 更多书籍
     ].map(book => ({
         ...book,
@@ -56,19 +66,35 @@ export function Library() {
                         <div className={styles.booksGrid}>
                             {filteredBooks.map((book, index) => (
                                 <motion.div
-                                    className={styles.bookCard}
+                                    className={`${styles.bookCard} ${book.link ? 'cursor-pointer' : ''}`}
                                     data-category={book.category}
                                     data-size={book.size}
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
-                                    transition={{
-                                        delay: Math.min(index * 0.02, 0.8),
-                                        duration: 0.2
+
+                                    whileHover={{
+                                        scale: 1.02,
+                                        y: -2,
+                                        transition: {
+                                            duration: 0.2,
+                                            ease: "easeOut"
+                                        }
                                     }}
-                                    whileHover={{ scale: 1.02, y: -2 }}
+                                    transition={{
+                                        opacity: {
+                                            delay: Math.min(index * 0.02, 0.8),
+                                            duration: 0.2
+                                        }
+                                    }}
                                     key={book.name}
                                 >
-                                    <h3 className="interact">{book.name}</h3>
+                                    <h3 className="interact">
+                                        {book.link ? (
+                                            <a href={book.link} target="_blank" rel="noopener noreferrer" className="no-color-link">{book.name}</a>
+                                        ) : (
+                                            book.name
+                                        )}
+                                    </h3>
                                     <p className={`${styles.bookDesc} text`}>{book.description}</p>
                                 </motion.div>
                             ))}
