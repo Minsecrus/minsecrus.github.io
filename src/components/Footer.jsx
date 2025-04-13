@@ -3,7 +3,7 @@ import styles from './Footer.module.css'
 
 export function Footer() {
     return (
-        <motion.footer 
+        <motion.footer
             className={styles.footer}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -11,10 +11,10 @@ export function Footer() {
         >
             <div className={styles.footerContent}>
                 <div className={styles.footerLeft}>
-                    <p className="text">© 2024 Minsecrus. All rights reserved.</p>
+                    <p className="text">© 2007 - 2025 Minsecrus. All rights reserved.</p>
                 </div>
                 <div className={styles.footerRight}>
-                    <a href="https://github.com/minsecrus" className={`${styles.footerLink} interact`}>
+                    <a target='_blank' href="https://github.com/minsecrus" className={`${styles.footerLink} interact`}>
                         GitHub
                     </a>
                     <a href="mailto:minsecrusdreamers@gmail.com" className={`${styles.footerLink} interact`}>

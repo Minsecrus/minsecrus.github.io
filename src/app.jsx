@@ -81,20 +81,18 @@ export function App() {
                 <motion.div
                   className="skill-card"
                   initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 }}
-                  whileHover={{ scale: 1.05 }}
+                  whileInView={{ opacity: 1, x: 0, transition: { delay: 0.1 } }}
+                  whileHover={{ scale: 1.05, transition: { delay: 0 } }}
                 >
                   <h3 className="interact">读书，读诗</h3>
-                  <p className="skill-desc text">茅盾，老舍，巴金，钱锺书；Victor Hugo，J.K.Rowling；王勃，白居易，李贺，苏轼，晏殊，贺铸</p>
+                  <p className="skill-desc text">茅盾，老舍，巴金，沈从文；Victor Hugo，Albert Camus，J.K.Rowling；王勃，白居易，李贺，苏轼，晏殊，贺铸</p>
                 </motion.div>
 
                 <motion.div
                   className="skill-card"
                   initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
-                  whileHover={{ scale: 1.05 }}
+                  whileInView={{ opacity: 1, x: 0, transition: { delay: 0.2 } }}
+                  whileHover={{ scale: 1.05, transition: { delay: 0 } }}
                 >
                   <h3 className="interact">沉迷于 Maths 无法自拔</h3>
                   <p className="skill-desc text">微分几何，泛函分析，范畴论</p>
@@ -103,9 +101,8 @@ export function App() {
                 <motion.div
                   className="skill-card"
                   initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3 }}
-                  whileHover={{ scale: 1.05 }}
+                  whileInView={{ opacity: 1, x: 0, transition: { delay: 0.3 } }}
+                  whileHover={{ scale: 1.05, transition: { delay: 0 } }}
                 >
                   <h3 className="interact">计算机科学真奇妙</h3>
                   <p className="skill-desc text">PLT，Web 前后端，Linux，数据结构与算法，计算机网络</p>
@@ -114,9 +111,8 @@ export function App() {
                 <motion.div
                   className="skill-card"
                   initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4 }}
-                  whileHover={{ scale: 1.05 }}
+                  whileInView={{ opacity: 1, x: 0, transition: { delay: 0.4 } }}
+                  whileHover={{ scale: 1.05, transition: { delay: 0 } }}
                 >
                   <h3 className="interact">Games ~</h3>
                   <p className="skill-desc text">原神，Minecraft</p>
@@ -136,12 +132,11 @@ export function App() {
                 <motion.div
                   className="project-card"
                   initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.2 }}
-                  whileHover={{ y: -10 }}
+                  whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.2 } }}
+                  whileHover={{ y: -10, transition: { delay: 0 } }}
                 >
                   <div className="project-content">
-                    <h3 className="interact">Minsecrus</h3>
+                    <h3 className="interact">Minsecrus.github.io</h3>
                     <p className="text">个人主页项目，使用 Preact 和 Motion 构建的现代化网站</p>
                   </div>
                 </motion.div>
@@ -149,12 +144,11 @@ export function App() {
                 <motion.div
                   className="project-card"
                   initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.4 }}
-                  whileHover={{ y: -10 }}
+                  whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.4 } }}
+                  whileHover={{ y: -10, transition: { delay: 0 } }}
                 >
                   <div className="project-content">
-                    <h3 className="interact">C 语言教程</h3>
+                    <h3 className="interact">Mdr-C-Tutorial</h3>
                     <p className="text">完全开源免费的全套 C 语言教程，涉及从基础语法到项目开发的广大领域</p>
                   </div>
                 </motion.div>
@@ -162,9 +156,8 @@ export function App() {
                 <motion.div
                   className="project-card"
                   initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.6 }}
-                  whileHover={{ y: -10 }}
+                  whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.6 } }}
+                  whileHover={{ y: -10, transition: { delay: 0 } }}
                 >
                   <div className="project-content">
                     <h3 className="interact">操作系统 CPOS</h3>

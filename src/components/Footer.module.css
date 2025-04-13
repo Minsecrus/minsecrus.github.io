@@ -31,7 +31,7 @@
     text-decoration: none;
     font-size: 14px;
     opacity: 0.8;
-    transition: opacity 0.2s ease;
+    transition: all 0.3s;
 }
 
 .footerLink:hover {

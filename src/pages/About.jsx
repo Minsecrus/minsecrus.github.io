@@ -25,10 +25,12 @@ export function About() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.5 }}
                 >
-                    <h2 className="subtitle interact">Others</h2>
+                    <h2 className="subtitle interact">Gratitude</h2>
                     <div className={styles.sectionContent}>
-                        <p className="text">献给所有无名的人</p>
+                        <p className="text">献给所有无名的人（喜欢毛不易那首歌）；</p>
+                        <p className="text">感谢陪伴在我身边的朋友们。</p>
                         <p className="text">Specially Dedicated to my beloved. Y. T. L.</p>
+                        <p className="text interact">注定比你少见证 915 次日出日落，可不可以多读 915 本书来弥补呢？</p>
                     </div>
                 </motion.section>
             </main>

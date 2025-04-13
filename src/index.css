@@ -8,13 +8,14 @@
   /* 强调/链接色 - 稍深蓝 */
   --darker-accent-color: #4a90d2;
   /* 强调/链接色 - 稍深蓝 */
-  --heading-color: #333333;
+  --heading-color: #333;
   /* 主标题颜色 - 深灰 */
-  --text-color: #555555;
+  --text-color: #555;
   /* 副标题/正文颜色 - 中灰 */
-  --light-gray: #AAAAAA;
+  --subtext-color: #666;
+  --light-gray: #AAA;
   /* 浅灰色，用于辅助文字 */
-  --white-color: #FFFFFF;
+  --white-color: #FFF;
   /* 纯白色 */
 
   --heading-weight: 700;
@@ -81,6 +82,12 @@ h1 {
 .text {
   font-family: 'Quicksand', 'HarmonyOS Sans', sans-serif;
   color: var(--text-color);
+}
+
+.subtext {
+  font-family: 'Quicksand', 'HarmonyOS Sans', sans-serif;
+  color: var(--subtext-color);
+  font-size: .9em !important;
 }
 
 .interact {

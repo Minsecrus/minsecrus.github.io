@@ -43,6 +43,7 @@
     transition: all 0.2s ease;
     font-size: 14px;
     color: var(--text-color);
+    font-weight: var(--text-weight);
 }
 
 .categoryBtn:hover {
@@ -53,7 +54,8 @@
     background: var(--accent-color);
     color: white;
     border-color: var(--theme-color);
-    box-shadow: 1px 1px 3px var(--accent-color);
+    font-weight: var(--subtitle-weight);
+    box-shadow: 1px 1px 2px var(--accent-color);
 }
 
 .toolsGrid {
