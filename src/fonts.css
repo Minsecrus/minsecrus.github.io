@@ -215,19 +215,23 @@
 
 @font-face {
     font-family: 'HarmonyOS Sans';
-    src: url(/fonts/Harmony/HarmonyOS_SansSC_Regular.ttf);
+    src: url(/fonts/Harmony/HarmonyOS_SansSC_Regular.woff2) format(woff2),
+        url(/fonts/Harmony/HarmonyOS_SansSC_Regular.ttf) format(truetype);
     font-weight: 400;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'HarmonyOS Sans';
-    src: url(/fonts/Harmony/HarmonyOS_SansSC_Medium.ttf);
+    src: url(/fonts/Harmony/HarmonyOS_SansSC_Medium.woff2) format(woff2),
+        url(/fonts/Harmony/HarmonyOS_SansSC_Medium.ttf) format(truetype);
     font-weight: 500;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'HarmonyOS Sans';
-    src: url(/fonts/Harmony/HarmonyOS_SansSC_Bold.ttf);
+    src: url(/fonts/Harmony/HarmonyOS_SansSC_Bold.woff2)format(woff2), url(/fonts/Harmony/HarmonyOS_SansSC_Bold.ttf)format(truetype);
     font-weight: 700;
 }
 
@@ -263,5 +267,5 @@
 
 @font-face {
     font-family: 'Lovely';
-    src: url(/fonts/Lovely.ttf);
+    src: url(/fonts/Lovely.woff2)format(woff2), url(/fonts/Lovely.ttf)format(truetype);
 }

@@ -20,6 +20,13 @@
   transform: translateX(-8px);
 }
 
+@media screen and (max-width: 768px) {
+  .main-title {
+    font-size: 16vw;
+    transform: translateX(-1vw);
+  }
+}
+
 .pretitle,
 .subtitle {
   font-size: 24px;
@@ -33,6 +40,17 @@
 
 .subtitle {
   margin-bottom: 32px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .pretitle {
+    font-size: 5vw;
+  }
+
+  .subtitle {
+    font-size: 4vw;
+  }
 }
 
 .button-bar {
