@@ -125,7 +125,7 @@ export function Toolbox() {
         { name: "Selenium", category: "构建与测试", description: "自动化测试工具" },
         { name: "TickTick", category: "生产力与组织", description: "结合任务、日历、习惯打卡的管理应用" },
         { name: "Ruby on Rails", category: "后端开发", description: "Ruby Web 应用框架" },
-        { name: "Android Studio", category: "开发环境", description: "Android开发IDE" },
+        { name: "Android Studio", category: "开发环境", description: "Android 开发 IDE" },
         { name: "Pocket", category: "学习与知识", description: "稍后阅读服务，保存文章和网页" },
         { name: "Chakra UI", category: "前端开发", description: "简单、模块化的组件库" },
         { name: "OBS Studio", category: "系统与安全", description: "免费开源的视频录制和直播软件" },

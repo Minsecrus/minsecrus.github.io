@@ -44,6 +44,16 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--theme-color);
+}
+
 html {
   scroll-behavior: smooth;
   /* 页面内锚点跳转平滑滚动 */
@@ -56,6 +66,7 @@ h1 {
 
 .text {
   font-family: 'Quicksand', 'HarmonyOS Sans', sans-serif;
+  color: var(--text-color);
 }
 
 .interact {

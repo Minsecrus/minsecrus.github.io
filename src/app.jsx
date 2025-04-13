@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import { Toolbox } from './pages/Toolbox'
 import { Library } from './pages/Library'
 import { Footer } from './components/Footer'
+import { About } from './pages/About'
 
 export function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -21,6 +22,8 @@ export function App() {
       const path = window.location.pathname
       if (path === '/' || path === '') {
         setCurrentPage('home')
+      } else if (path === '/about') {
+        setCurrentPage('about')
       } else if (path === '/toolbox') {
         setCurrentPage('toolbox')
       } else if (path === '/library') {
@@ -35,6 +38,9 @@ export function App() {
   // 根据URL初始化页面
   useEffect(() => {
     const path = window.location.pathname
+    if (path === '/about') {
+      setCurrentPage('about')
+    }
     if (path === '/toolbox') {
       setCurrentPage('toolbox')
     } else if (path === '/library') {
@@ -50,6 +56,8 @@ export function App() {
         return <Toolbox />
       case 'library':
         return <Library />
+      case 'about':
+        return <About />
       default:
         return (
           <main className="main-content">
@@ -199,8 +207,8 @@ export function App() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <span className="interact">GitHub：</span>
-                  <a href="https://github.com" className="interact">github.com/minsecrus</a>
+                  <span className="interact">编程交流群：</span>
+                  <a className="interact">885719573</a>
                 </motion.p>
                 <motion.p
                   className="contact-item"
@@ -208,8 +216,8 @@ export function App() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <span className="interact">Email：</span>
-                  <a href="mailto:minsecrusdreamers@gmail.com" className="interact">minsecrusdreamers@gmail.com</a>
+                  <span className="interact">知识脱贫群：</span>
+                  <a className="interact">1019721429</a>
                 </motion.p>
               </div>
             </motion.section>

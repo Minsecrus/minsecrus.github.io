@@ -21,18 +21,11 @@ export function NavBar({ currentPage, navigateTo }) {
             <span className="text" onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }}>Minsecrus</span>
             <div className={styles.links}>
                 <a
-                    className={`text ${currentPage === 'toolbox' ? styles.active : ''}`}
-                    onClick={() => navigateTo('toolbox')}
+                    className={`interact ${currentPage === 'about' ? styles.active : ''}`}
+                    onClick={() => navigateTo('about')}
                     style={{ cursor: 'pointer' }}
                 >
-                    工具箱
-                </a>
-                <a
-                    className={`text ${currentPage === 'library' ? styles.active : ''}`}
-                    onClick={() => navigateTo('library')}
-                    style={{ cursor: 'pointer' }}
-                >
-                    资料库
+                    关于
                 </a>
             </div>
         </nav>
