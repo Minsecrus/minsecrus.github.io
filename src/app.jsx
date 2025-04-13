@@ -4,6 +4,7 @@ import { animate, motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Toolbox } from './pages/Toolbox'
 import { Library } from './pages/Library'
+import { Footer } from './components/Footer'
 
 export function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -221,6 +222,7 @@ export function App() {
     <>
       <NavBar currentPage={currentPage} navigateTo={navigateTo} />
       {renderPage()}
+      <Footer />
     </>
   )
 }
