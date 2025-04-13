@@ -7,17 +7,12 @@
     <script type="text/javascript">
       // 用于 GitHub Pages 的单页应用路由支持
       (function() {
-        const segment = 1;
         const l = window.location;
-        if (l.search[1] === '/') {
-          const decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
+        
+        if (l.pathname !== '/' && !l.pathname.includes('.')) {
+          window.history.replaceState(null, null, l.pathname);
         }
-      }());
+      })();
     </script>
   </head>
   <body>
