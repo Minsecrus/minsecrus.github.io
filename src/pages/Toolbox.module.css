@@ -1,0 +1,262 @@
+.toolboxContainer {
+    display: flex;
+    gap: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 80px;
+}
+
+.toolboxContent {
+    flex: 1;
+}
+
+.filterSidebar {
+    width: 200px;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+}
+
+.filterContainer {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.categoryButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.categoryBtn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.categoryBtn:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.categoryBtn.active {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--theme-color);
+    box-shadow: 1px 1px 3px var(--accent-color);
+}
+
+.toolsGrid {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.toolCard {
+    grid-column: span 2;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.toolCard h3 {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 8px;
+    color: var(--heading-color);
+}
+
+.toolDesc {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--text-color);
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.toolCard[data-size="wide"] {
+    grid-column: span 3;
+}
+
+.toolCard[data-size="wider"] {
+    grid-column: span 4;
+}
+
+.toolCard[data-size="tall"] {
+    grid-row: span 2;
+}
+
+.toolCard[data-size="large"] {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.toolCard[data-size="large"] .toolDesc {
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+}
+
+.toolsSection {
+    margin-top: 40px;
+}
+
+/* 根据类别设置不同的边框颜色 */
+.toolCard[data-category="生产力"],
+.toolCard[data-category="生产力与组织"] {
+    border-color: #B39DDB;
+}
+
+.toolCard[data-category="通讯协作"],
+.toolCard[data-category="通讯与协作"] {
+    border-color: #80DEEA;
+}
+
+.toolCard[data-category="写作编辑"],
+.toolCard[data-category="写作与编辑"] {
+    border-color: #FFE082;
+}
+
+.toolCard[data-category="财务管理"] {
+    border-color: #A5D6A7;
+}
+
+.toolCard[data-category="健康生活"],
+.toolCard[data-category="健康与生活"] {
+    border-color: #F48FB1;
+}
+
+.toolCard[data-category="学习工具"],
+.toolCard[data-category="学习资源"],
+.toolCard[data-category="学习与知识"] {
+    border-color: #90CAF9;
+}
+
+.toolCard[data-category="媒体娱乐"],
+.toolCard[data-category="媒体与娱乐"] {
+    border-color: #FFB74D;
+}
+
+.toolCard[data-category="创意设计"],
+.toolCard[data-category="设计与创意"] {
+    border-color: #E57373;
+}
+
+.toolCard[data-category="安全工具"],
+.toolCard[data-category="系统与安全"] {
+    border-color: #9FA8DA;
+}
+
+.toolCard[data-category="云存储"] {
+    border-color: #81D4FA;
+}
+
+.toolCard[data-category="网络工具"] {
+    border-color: #B0BEC5;
+}
+
+.toolCard[data-category="系统工具"],
+.toolCard[data-category="开发平台"] {
+    border-color: #BCAAA4;
+}
+
+.toolCard[data-category="自动化"] {
+    border-color: #F06292;
+}
+
+.toolCard[data-category="前端开发"],
+.toolCard[data-category="开发工具"] {
+    border-color: #64B5F6;
+}
+
+.toolCard[data-category="后端开发"] {
+    border-color: #81C784;
+}
+
+.toolCard[data-category="开发环境"] {
+    border-color: #FFB74D;
+}
+
+.toolCard[data-category="数据库"] {
+    border-color: #90A4AE;
+}
+
+.toolCard[data-category="DevOps 与部署"],
+.toolCard[data-category="DevOps"] {
+    border-color: #FF8A65;
+}
+
+.toolCard[data-category="构建与测试"] {
+    border-color: #9CCC65;
+}
+
+.toolCard[data-category="构建工具"] {
+    border-color: #A1887F;
+}
+
+.toolCard[data-category="测试工具"] {
+    border-color: #4DB6AC;
+}
+
+.toolCard[data-category="监控工具"] {
+    border-color: #9575CD;
+}
+
+.toolCard[data-category="搜索引擎"] {
+    border-color: #FFD54F;
+}
+
+.toolCard[data-category="数据分析"] {
+    border-color: #4FC3F7;
+}
+
+.toolCard[data-category="API"] {
+    border-color: #AED581;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .toolboxContainer {
+        flex-direction: column;
+    }
+
+    .filterSidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .categoryButtons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .categoryBtn {
+        flex: 0 0 auto;
+    }
+}
+
+.toolboxMain {
+    text-align: left;
+    max-width: 1180px;
+    margin: 0 auto;
+}
