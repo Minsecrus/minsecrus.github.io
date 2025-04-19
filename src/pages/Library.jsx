@@ -1,6 +1,7 @@
 import { motion } from 'motion/react'
 import { useState } from 'react'
 import styles from './Library.module.css'
+import './list.css'  // 引入通用样式
 
 function getStringLength(str) {
     return Array.from(str).reduce((len, char) => {
@@ -63,10 +64,10 @@ export function Library() {
     const categories = [...new Set(books.map(book => book.category))]
 
     return (
-        <div className={styles.libraryContainer}>
-            <div className={styles.libraryContent}>
-                <main className={styles.libraryMain}>
-                    <h2 className="subtitle interact">我的技术书籍与学习资源 ~</h2>
+        <div className="list-container">
+            <div className="list-content">
+                <main className="list-main">
+                    <h2 className="subtitle interact">我的资料库 ~</h2>
 
                     <motion.section
                         className={styles.booksSection}
@@ -74,15 +75,14 @@ export function Library() {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <div className={styles.booksGrid}>
+                        <div className="items-grid">
                             {filteredBooks.map((book, index) => (
                                 <motion.div
-                                    className={`${styles.bookCard} ${book.link ? 'cursor-pointer' : ''}`}
+                                    className={`item-card ${book.link ? 'cursor-pointer' : ''}`}
                                     data-category={book.category}
-                                    data-size={book.size}
+                                    data-size={calculateCardSize(book)}
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
-
                                     whileHover={{
                                         scale: 1.02,
                                         y: -2,
@@ -104,9 +104,8 @@ export function Library() {
                                             <a href={book.link} target="_blank" rel="noopener noreferrer" className="no-color-link">{book.name}</a>
                                         ) : (
                                             book.name
-                                        )}
-                                    </h3>
-                                    <p className={`${styles.bookDesc} text`}>{book.description}</p>
+                                        )}</h3>
+                                    <p className="item-desc text">{book.description}</p>
                                 </motion.div>
                             ))}
                         </div>
@@ -114,19 +113,27 @@ export function Library() {
                 </main>
             </div>
 
-            <div className={styles.filterSidebar}>
-                <div className={styles.filterContainer}>
-                    <div className={styles.categoryFilters}>
-                        <div className={styles.categoryButtons}>
+            <div className="filter-sidebar">
+                <div className="filter-container">
+                    {/* 添加搜索框 */}
+                    <input
+                        type="text"
+                        placeholder="搜索..."
+                        className="search-input"
+                        value={filter}
+                        onChange={(e) => setFilter(e.target.value)}
+                    />
+                    <div className="category-filters">
+                        <div className="category-buttons">
                             <button
-                                className={`${styles.categoryBtn} ${filter === '' ? styles.active : ''}`}
+                                className={`category-btn ${filter === '' ? 'active' : ''}`}
                                 onClick={() => setFilter('')}
                             >
                                 全部
                             </button>
                             {categories.map(category => (
                                 <button
-                                    className={`${styles.categoryBtn} ${filter === category ? styles.active : ''}`}
+                                    className={`category-btn ${filter === category ? 'active' : ''}`}
                                     onClick={() => setFilter(category)}
                                     key={category}
                                 >

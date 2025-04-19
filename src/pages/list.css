@@ -1,0 +1,208 @@
+.list-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 80px;
+}
+
+.list-content {
+    flex: 1;
+}
+
+.list-main {
+    text-align: left;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.filter-sidebar {
+    width: 200px;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+}
+
+.filter-container {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.category-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.category-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: var(--text-weight);
+}
+
+.category-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.category-btn.active {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--theme-color);
+    font-weight: var(--subtitle-weight);
+    box-shadow: 1px 1px 2px var(--theme-color);
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.item-card {
+    grid-column: span 2;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 16px;
+    padding-top: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.item-card[data-category="计算机基础"] {
+    border-color: #64B5F6;
+}
+
+.item-card[data-category="算法与数据结构"] {
+    border-color: #81C784;
+}
+
+.item-card[data-category="软件设计"] {
+    border-color: #FFB74D;
+}
+
+.item-card[data-category="前端开发"] {
+    border-color: #F48FB1;
+}
+
+.item-card[data-category="后端开发"] {
+    border-color: #9575CD;
+}
+
+.item-card[data-category="编程语言"] {
+    border-color: #4DB6AC;
+}
+
+.item-card[data-category="数据库"] {
+    border-color: #90A4AE;
+}
+
+.item-card[data-category="DevOps"] {
+    border-color: #FF8A65;
+}
+
+.item-card[data-category="网络编程"] {
+    border-color: #7986CB;
+}
+
+.item-card h3 {
+    font-size: 16px;
+    margin: 0;
+    color: var(--heading-color);
+}
+
+.item-desc {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--text-color);
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.item-card[data-size="wide"] {
+    grid-column: span 3;
+}
+
+.item-card[data-size="wider"] {
+    grid-column: span 4;
+}
+
+@media (max-width: 768px) {
+    .list-container {
+        flex-direction: column;
+    }
+
+    .filter-sidebar {
+        width: 100%;
+        position: static;
+        order: -1;
+        margin-bottom: 30px;
+    }
+
+    .list-content {
+        order: 0;
+    }
+
+    .category-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .category-btn {
+        flex: 0 0 auto;
+        text-align: center;
+    }
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    color: var(--text-color);
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    line-height: normal;
+    font-family: 'HarmonyOS Sans';
+}
+
+.search-input::placeholder {
+    color: var(--text-color-secondary);
+    opacity: 0.8;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.category-filters {
+    width: 100%;
+}
