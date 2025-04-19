@@ -18,7 +18,7 @@ permissions:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false # Changed to false for production deploys
 
 jobs:
@@ -33,13 +33,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20 # Or your project's required Node.js version (e.g., 18, 20)
-          cache: 'npm' # Or 'yarn' if you use Yarn
+          cache: yarn # Or 'yarn' if you use Yarn
 
       - name: Install dependencies
-        run: npm install # 'ci' is generally recommended for CI environments, or use 'npm install' or 'yarn install'
+        run: yarn install # 'ci' is generally recommended for CI environments, or use 'npm install' or 'yarn install'
 
       - name: Build project
-        run: npm run build # IMPORTANT: Change this if your build command is different (e.g., vite build, yarn build)
+        run: yarn run build # IMPORTANT: Change this if your build command is different (e.g., vite build, yarn build)
         # If your build command needs environment variables (like PUBLIC_URL or BASE_PATH), set them here:
         # env:
         #   VITE_BASE_PATH: ${{ github.event.repository.name }} # Example for Vite if deploying to a subpath
