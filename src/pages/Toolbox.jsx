@@ -2,7 +2,7 @@ import { motion } from 'motion/react'
 import { useState } from 'react'
 import './list.css'  // 引入通用样式
 import { calculateCardSize } from '../utils/cardUtils'
-import { link } from 'motion/react-client'
+import { li, link } from 'motion/react-client'
 
 export function Toolbox() {
     const [filter, setFilter] = useState('')
@@ -17,6 +17,7 @@ export function Toolbox() {
         { name: "Python", category: "编程语言", description: "通用高级编程语言", link: "https://www.python.org/" }, // Assuming Python is implicitly popular via Django/Flask etc.
         { name: "Google Search", category: "资源库", description: "全球最流行的网络搜索引擎", link: "https://www.google.com/" },
         { name: "TypeScript", category: "编程语言", description: "JavaScript 的超集，添加了类型系统", link: "https://www.typescriptlang.org/" },
+        { name: "BiliBili", category: "内容平台", description: "弹幕视频平台", link: "https://www.bilibili.com/" },
         { name: "PostgreSQL", category: "数据库", description: "强大的开源关系型数据库", link: "https://www.postgresql.org/" },
         { name: "MySQL", category: "数据库", description: "最流行的开源关系型数据库", link: "https://www.mysql.com/" },
         { name: "Vue", category: "前端开发", description: "广泛使用的渐进式 JavaScript 框架", link: "https://vuejs.org/" },
@@ -38,6 +39,7 @@ export function Toolbox() {
         { name: "Jest", category: "DevOps", description: "JavaScript 测试框架", link: "https://jestjs.io/" },
         { name: "MongoDB", category: "数据库", description: "流行的 NoSQL 数据库系统", link: "https://www.mongodb.com/" },
         { name: "Express", category: "后端开发", description: "Node.js Web 应用框架", link: "https://expressjs.com/" },
+        { name: "知乎", category: "内容平台", description: "全球最大的中文互联网问答社区", link: "https://zhihu.com/" },
         { name: "Astro", category: "全栈开发", description: "内容驱动的 Web 框架", link: "https://astro.build/" },
         { name: "GraphQL", category: "后端开发", description: "API 查询语言和运行时", link: "https://graphql.org/" },
         { name: "Flutter", category: "跨平台开发", description: "Google 的 UI 工具包，用于从单个代码库构建多平台应用", link: "https://flutter.dev/" },
@@ -283,7 +285,7 @@ export function Toolbox() {
         { name: "Feedly", category: "学习与知识", description: "RSS 新闻聚合阅读器", link: "https://feedly.com/" },
         { name: "Calibre", category: "学习与知识", description: "电子书管理软件", link: "https://calibre-ebook.com/" },
         { name: "Spotify", category: "娱乐工具", description: "流媒体音乐服务", link: "https://www.spotify.com/" },
-        { name: "Netflix", category: "娱乐工具", description: "流媒体视频平台", link: "https://www.netflix.com/" },
+        { name: "Netflix", category: "内容平台", description: "流媒体视频平台", link: "https://www.netflix.com/" },
         { name: "Audible", category: "娱乐工具", description: "有声书平台", link: "https://www.audible.com/" },
         { name: "VLC Media Player", category: "娱乐工具", description: "强大的跨平台多媒体播放器", link: "https://www.videolan.org/vlc/" },
         { name: "Kindle", category: "娱乐工具", description: "电子书阅读器或应用", link: "https://www.amazon.com/kindle-dbs/storefront" },
