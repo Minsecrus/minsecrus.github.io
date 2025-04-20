@@ -2,11 +2,11 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   --bg-color: #FFFDFB;
   /* 背景色 - 温柔近白 */
-  --theme-color: #FFD1DC; /* 修改为浅粉色 */
+  --theme-color: #ffc0cf;
   /* 主题色 - 浅粉 */
-  --accent-color: #F78FB3; /* 修改为中粉色 */
+  --accent-color: #f687ae;
   /* 强调/链接色 - 粉色 */
-  --darker-accent-color: #E75480; /* 修改为稍深粉色 */
+  --darker-accent-color: #E75480;
   /* 强调/链接色 - 稍深粉 */
   --heading-color: #333;
   /* 主标题颜色 - 深灰 */
@@ -49,12 +49,14 @@
 
 a {
   text-decoration: none;
-  color: var(--accent-color); /* 链接颜色将自动更新为粉色 */
+  color: var(--accent-color);
+  /* 链接颜色将自动更新为粉色 */
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--theme-color); /* 悬停颜色将自动更新为浅粉色 */
+  color: var(--theme-color);
+  /* 悬停颜色将自动更新为浅粉色 */
 }
 
 a.no-color-link {
@@ -63,10 +65,6 @@ a.no-color-link {
 
 a.no-color-link:hover {
   color: var(--accent-color);
-}
-
-.cursor-pointer {
-  cursor: pointer;
 }
 
 html {

@@ -48,7 +48,7 @@
 
 .active {
     color: var(--accent-color) !important;
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 .navbar>span {

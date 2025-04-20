@@ -3,7 +3,7 @@
     gap: 40px;
     max-width: 1280px;
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .list-content {
@@ -127,6 +127,10 @@
 
 .item-card[data-category="后端开发"] {
     border-color: #9575CD;
+}
+
+.item-card[data-category="全栈开发"] {
+    border-color: #ff7dd8;
 }
 
 .item-card[data-category="编程语言"] {
