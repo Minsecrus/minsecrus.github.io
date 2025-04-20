@@ -4,12 +4,6 @@
   padding: 2rem;
 }
 
-@media screen and (max-width: 500px) {
-  #app {
-    padding: .5rem;
-  }
-}
-
 .main-content {
   padding-top: 120px;
   text-align: left;
@@ -38,6 +32,7 @@
   font-size: 24px;
   color: var(--text-color);
   font-weight: var(--subtitle-weight);
+  white-space: nowrap;
 }
 
 .pretitle {
@@ -48,14 +43,11 @@
   margin-bottom: 32px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
 
-  .pretitle {
-    font-size: 5vw;
-  }
-
+  .pretitle,
   .subtitle {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 }
 
@@ -63,6 +55,12 @@
   display: flex;
   gap: 16px;
   margin-top: 32px;
+}
+
+@media screen and (max-width: 400px) {
+  .button-bar {
+    flex-direction: column;
+  }
 }
 
 .primary-btn,
