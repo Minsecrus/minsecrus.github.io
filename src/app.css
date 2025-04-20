@@ -121,7 +121,12 @@
 .project-card h3 {
   font-size: 24px;
   color: var(--heading-color);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  transition: color 0.2s ease;
+}
+
+.project-card:hover h3 {
+  color: var(--accent-color);
 }
 
 .project-card p {
@@ -143,9 +148,14 @@
 }
 
 .skill-card h3 {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   color: var(--heading-color);
   font-size: 24px;
+  transition: color 0.2s ease;
+}
+
+.skill-card:hover h3 {
+  color: var(--accent-color);
 }
 
 .skill-desc {

@@ -129,11 +129,13 @@ export function App() {
             >
               <h2 className="section-title interact">我的 Github</h2>
               <div className="project-grid">
+                {/* 项目 1: Minsecrus.github.io */}
                 <motion.div
                   className="project-card"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.2 } }}
                   whileHover={{ y: -10, transition: { delay: 0 } }}
+                  onClick={() => window.open('https://github.com/Minsecrus/Minsecrus.github.io', '_blank', 'noopener,noreferrer')}
                 >
                   <div className="project-content">
                     <h3 className="interact">Minsecrus.github.io</h3>
@@ -141,11 +143,13 @@ export function App() {
                   </div>
                 </motion.div>
 
+                {/* 项目 2: Mdr-C-Tutorial */}
                 <motion.div
                   className="project-card"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.4 } }}
                   whileHover={{ y: -10, transition: { delay: 0 } }}
+                  onClick={() => window.open('https://github.com/Mdr-C-Tutorial/C', '_blank', 'noopener,noreferrer')}
                 >
                   <div className="project-content">
                     <h3 className="interact">Mdr-C-Tutorial</h3>
@@ -153,11 +157,13 @@ export function App() {
                   </div>
                 </motion.div>
 
+                {/* 项目 3: 操作系统 CPOS */}
                 <motion.div
                   className="project-card"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.6 } }}
                   whileHover={{ y: -10, transition: { delay: 0 } }}
+                  onClick={() => window.open('https://github.com/PLOS-clan/CoolPotOS', '_blank', 'noopener,noreferrer')} /* 替换为实际链接 */
                 >
                   <div className="project-content">
                     <h3 className="interact">操作系统 CPOS</h3>

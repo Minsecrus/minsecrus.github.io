@@ -36,6 +36,7 @@
 
 .footerLink:hover {
     opacity: 1;
+    color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
