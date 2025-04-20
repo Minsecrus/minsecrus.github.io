@@ -20,8 +20,13 @@
 .filter-sidebar {
     width: 200px;
     position: sticky;
-    top: 20px;
+    top: 100px;
+    /* 从 20px 增加到 100px */
     align-self: flex-start;
+    max-height: 70vh;
+    /* 添加最大高度限制 */
+    overflow: hidden;
+    /* 确保内容不会溢出 */
 }
 
 .filter-container {
@@ -39,6 +44,23 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-top: 16px;
+    overflow-y: auto;
+    /* 允许垂直滚动 */
+    max-height: calc(70vh - 100px);
+    /* 为搜索框留出空间 */
+    scrollbar-width: none;
+    /* Firefox 隐藏滚动条 */
+    -ms-overflow-style: none;
+    /* IE/Edge 隐藏滚动条 */
+}
+
+/* Webkit 浏览器隐藏滚动条 */
+.category-buttons::-webkit-scrollbar {
+    display: none;
+}
+
+.category-buttons {
     width: 100%;
 }
 
@@ -122,6 +144,170 @@
 
 .item-card[data-category="网络编程"] {
     border-color: #7986CB;
+}
+
+.item-card[data-category="生产力"],
+.item-card[data-category="生产力与组织"] {
+    border-color: #B39DDB;
+}
+
+.item-card[data-category="通讯协作"],
+.item-card[data-category="通讯与协作"] {
+    border-color: #80DEEA;
+}
+
+.item-card[data-category="写作编辑"],
+.item-card[data-category="写作与编辑"] {
+    border-color: #FFE082;
+}
+
+.item-card[data-category="财务管理"] {
+    border-color: #A5D6A7;
+}
+
+.item-card[data-category="健康生活"],
+.item-card[data-category="健康与生活"] {
+    border-color: #F48FB1;
+}
+
+.item-card[data-category="学习工具"],
+.item-card[data-category="学习资源"],
+.item-card[data-category="学习与知识"] {
+    border-color: #90CAF9;
+}
+
+.item-card[data-category="媒体娱乐"],
+.item-card[data-category="媒体与娱乐"] {
+    border-color: #FFB74D;
+}
+
+.item-card[data-category="创意设计"],
+.item-card[data-category="设计与创意"] {
+    border-color: #E57373;
+}
+
+.item-card[data-category="安全工具"],
+.item-card[data-category="系统与安全"] {
+    border-color: #9FA8DA;
+}
+
+.item-card[data-category="云存储"] {
+    border-color: #81D4FA;
+}
+
+.item-card[data-category="网络工具"] {
+    border-color: #B0BEC5;
+}
+
+.item-card[data-category="系统工具"],
+.item-card[data-category="开发平台"] {
+    border-color: #BCAAA4;
+}
+
+.item-card[data-category="自动化"] {
+    border-color: #F06292;
+}
+
+.item-card[data-category="前端开发"],
+.item-card[data-category="开发工具"] {
+    border-color: #64B5F6;
+}
+
+.item-card[data-category="后端开发"] {
+    border-color: #81C784;
+}
+
+.item-card[data-category="开发环境"] {
+    border-color: #FFB74D;
+}
+
+.item-card[data-category="数据库"] {
+    border-color: #90A4AE;
+}
+
+.item-card[data-category="DevOps 与部署"],
+.item-card[data-category="DevOps"] {
+    border-color: #FF8A65;
+}
+
+.item-card[data-category="构建与测试"] {
+    border-color: #9CCC65;
+}
+
+.item-card[data-category="构建工具"] {
+    border-color: #A1887F;
+}
+
+.item-card[data-category="测试工具"] {
+    border-color: #4DB6AC;
+}
+
+.item-card[data-category="监控工具"] {
+    border-color: #9575CD;
+}
+
+.item-card[data-category="搜索引擎"] {
+    border-color: #FFD54F;
+}
+
+.item-card[data-category="数据分析"] {
+    border-color: #4FC3F7;
+}
+
+.item-card[data-category="API"] {
+    border-color: #AED581;
+}
+
+.item-card[data-category="设计与制作"] {
+    border-color: #FF7043;
+}
+
+.item-card[data-category="资源库"] {
+    border-color: #7E57C2;
+}
+
+.item-card[data-category="编程语言"] {
+    border-color: #26A69A;
+}
+
+.item-card[data-category="机器学习"] {
+    border-color: #5C6BC0;
+}
+
+.item-card[data-category="跨平台开发"] {
+    border-color: #EC407A;
+}
+
+.item-card[data-category="编辑工具"] {
+    border-color: #66BB6A;
+}
+
+.item-card[data-category="AI 助手"] {
+    border-color: #29B6F6;
+}
+
+.item-card[data-category="数学"] {
+    border-color: #FFA726;
+}
+
+.item-card[data-category="数据处理"] {
+    border-color: #78909C;
+}
+
+.item-card[data-category="游戏开发"] {
+    border-color: #EF5350;
+}
+
+.item-card[data-category="嵌入式开发"] {
+    border-color: #9CCC65;
+}
+
+.item-card[data-category="特定平台开发"] {
+    border-color: #8D6E63;
+}
+
+.item-card[data-category="娱乐工具"] {
+    border-color: #AB47BC;
 }
 
 .item-card h3 {

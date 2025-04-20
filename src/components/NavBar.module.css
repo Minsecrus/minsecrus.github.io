@@ -55,4 +55,5 @@
     color: var(--heading-color);
     font-size: 20px;
     font-weight: var(--subtitle-weight);
+    transform: translateY(-1px);
 }

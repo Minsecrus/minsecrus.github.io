@@ -13,17 +13,28 @@ export function About() {
                 >
                     <h2 className="subtitle interact">Origin</h2>
                     <div className={styles.sectionContent}>
-                        <p className="text">整理和分享我在学习过程中收集的各种工具与资源。</p>
-                        <p className="text">希望能帮助到大家。</p>
-                        <p className="text"><a href="https://space.bilibili.com/27619688">左岚</a>不做官网，我做（乐）</p>
+                        <p className="text">整理和分享我在学习过程中收集的各种工具与资源，希望能帮助到大家；</p>
+                        <p className="text">也为想用框架和 GitHub Pages 建设网站的小伙伴们提供一定参考。</p>
                     </div>
                 </motion.section>
-
                 <motion.section
-                    className={styles.dedicationSection}
+                    className={styles.purposeSection}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.5 }}
+                >
+                    <h2 className="subtitle interact">Reference</h2>
+                    <div className={styles.sectionContent}>
+                        <p className="text">本站制作过程中使用了新兴的前端框架 Preact 和常见动画库 Motion，使用 Vite 进行构建；此外未使用任何库和框架。</p>
+                        <p className="text">本站使用 Quicksand 和 HarmonyOS Sans 字体。字体通过 FontSpider 在线工具进行压缩，包含约 4500 个常用汉字。</p>
+                        <p className="text interact">如果发现某字的字体无法显示或某个链接没有指向正确的网址，麻烦告诉我一下 ~</p>
+                    </div>
+                </motion.section>
+                <motion.section
+                    className={styles.dedicationSection}
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6, duration: 0.5 }}
                 >
                     <h2 className="subtitle interact">Gratitude</h2>
                     <div className={styles.sectionContent}>

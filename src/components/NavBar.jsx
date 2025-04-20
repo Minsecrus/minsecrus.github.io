@@ -25,7 +25,7 @@ export function NavBar({ currentPage, navigateTo }) {
                     onClick={() => navigateTo('about')}
                     style={{ cursor: 'pointer' }}
                 >
-                    关于
+                    About
                 </a>
             </div>
         </nav>

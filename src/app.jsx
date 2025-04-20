@@ -85,7 +85,7 @@ export function App() {
                   whileHover={{ scale: 1.05, transition: { delay: 0 } }}
                 >
                   <h3 className="interact">读书，读诗</h3>
-                  <p className="skill-desc text">茅盾，老舍，巴金，沈从文；Victor Hugo，Albert Camus，J.K.Rowling；王勃，白居易，李贺，苏轼，晏殊，贺铸</p>
+                  <p className="skill-desc text">茅盾，老舍，巴金，沈从文；Victor Hugo，Albert Camus，J.K.Rowling；王勃，白居易，李贺，柳永，贺铸</p>
                 </motion.div>
 
                 <motion.div

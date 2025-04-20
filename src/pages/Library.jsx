@@ -1,23 +1,7 @@
 import { motion } from 'motion/react'
 import { useState } from 'react'
-import styles from './Library.module.css'
 import './list.css'  // 引入通用样式
-
-function getStringLength(str) {
-    return Array.from(str).reduce((len, char) => {
-        return len + (/[\u4e00-\u9fa5]/.test(char) ? 1.5 : 1);
-    }, 0);
-}
-
-function calculateCardSize(book) {
-    const nameLength = getStringLength(book.name);
-    const descLength = getStringLength(book.description);
-
-    if (nameLength > 16) return 'wider';
-    if (nameLength > 8.5) return 'wide';
-    if (descLength > 30) return 'wide';
-    return 'normal';
-}
+import { calculateCardSize } from '../utils/cardUtils'
 
 export function Library() {
     const [filter, setFilter] = useState('')
@@ -49,10 +33,11 @@ export function Library() {
         { name: "编程珠玑", category: "算法与数据结构", description: "程序设计经典案例赏析" },
         { name: "HTTP 权威指南", category: "网络编程", description: "HTTP 协议详解" },
         { name: "图解 TCP/IP", category: "网络编程", description: "TCP/IP 协议图解" },
-        { name: "Unix网络编程", category: "网络编程", description: "网络编程经典著作" },
+        { name: "Unix 网络编程", category: "网络编程", description: "网络编程经典著作" },
     ].map(book => ({
         ...book,
-        size: calculateCardSize(book)
+        name: book.link ? book.name : `《${book.name}》`,
+        size: calculateCardSize(book, book.link ? true : false),
     }))
 
     const filteredBooks = books.filter(book =>
@@ -70,7 +55,6 @@ export function Library() {
                     <h2 className="subtitle interact">我的资料库 ~</h2>
 
                     <motion.section
-                        className={styles.booksSection}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5 }}
@@ -78,9 +62,9 @@ export function Library() {
                         <div className="items-grid">
                             {filteredBooks.map((book, index) => (
                                 <motion.div
-                                    className={`item-card ${book.link ? 'cursor-pointer' : ''}`}
+                                    className={`item-card`}
                                     data-category={book.category}
-                                    data-size={calculateCardSize(book)}
+                                    data-size={book.size}
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     whileHover={{
