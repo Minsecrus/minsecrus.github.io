@@ -2,7 +2,6 @@ import { motion } from 'motion/react'
 import { useState } from 'react'
 import './list.css'  // 引入通用样式
 import { calculateCardSize } from '../utils/cardUtils'
-import { link } from 'motion/react-client'
 
 export function Toolbox() {
     const [filter, setFilter] = useState('')
@@ -43,6 +42,17 @@ export function Toolbox() {
         { name: "Next.js", category: "全栈开发", description: "React 服务端渲染框架", link: "https://nextjs.org/" },
         { name: "Swift", category: "编程语言", description: "Apple 开发的现代编程语言", link: "https://developer.apple.com/swift/" },
         { name: "MongoDB", category: "数据库", description: "流行的 NoSQL 数据库系统", link: "https://www.mongodb.com/" },
+        { name: "语雀", category: "生产力与组织", description: "阿里巴巴出品的知识创作与分享工具，团队文档协作平台", link: "https://www.yuque.com/" },
+        { name: "Nix", category: "DevOps", description: "强大的声明式包管理器和 Linux 发行版 (NixOS)", link: "https://nixos.org/" },
+        { name: "Flatpak", category: "系统工具", description: "Linux 应用程序沙箱化和分发框架", link: "https://flatpak.org/" },
+        { name: "Reqable", category: "开发工具", description: "跨平台 API 开发与调试工具", link: "https://reqable.com/" },
+        { name: "Termux", category: "开发工具", description: "Android 上的终端模拟器和 Linux 环境", link: "https://termux.dev/en/" },
+        { name: "kovi", category: "特定平台开发", description: "Rust 机器人框架", link: "https://docs.rs/kovi/latest/kovi/" },
+        { name: "Tokio", category: "后端开发", description: "Rust 语言的事件驱动、非阻塞 I/O 平台 (异步运行时)", link: "https://tokio.rs/" },
+        { name: "Salvo", category: "后端开发", description: "功能强大且极其简单的 Rust Web 框架", link: "https://salvo.rs/" },
+        { name: "ArkTS", category: "编程语言", description: "华为 HarmonyOS 应用开发语言，基于 TypeScript", link: "https://developer.huawei.com/consumer/cn/arkts/" },
+        { name: "TapTap", category: "内容平台", description: "手机游戏分享社区与游戏分发平台", link: "https://www.taptap.cn/" },
+        { name: "MT管理器", category: "系统工具", description: "Android 平台强大的文件管理与 APK 编辑工具", link: "https://bbs.binmt.vip/" },
         { name: "Angular", category: "前端开发", description: "Google 的 Web 应用框架", link: "https://angular.io/" },
         { name: "Kotlin", category: "编程语言", description: "JetBrains 开发的静态类型编程语言", link: "https://kotlinlang.org/" },
         { name: "Spring Boot", category: "后端开发", description: "简化 Spring 应用开发的框架", link: "https://spring.io/projects/spring-boot" },
@@ -65,6 +75,7 @@ export function Toolbox() {
         { name: "Vim", category: "编辑工具", description: "文本编辑器", link: "https://www.vim.org/" },
         { name: "Zoom", category: "通讯与协作", description: "视频会议和在线会议解决方案", link: "https://zoom.us/" },
         { name: "Jenkins", category: "DevOps", description: "开源的持续集成工具", link: "https://www.jenkins.io/" },
+        { name: "PDF Gear", category: "编辑工具", description: "完全免费的 PDF 软件", link: "https://www.pdfgear.com/zh/" },
         { name: "Sublime Text", category: "编辑工具", description: "快速的文本编辑器", link: "https://www.sublimetext.com/" },
         { name: "Cypress", category: "DevOps", description: "现代化的端到端测试框架", link: "https://www.cypress.io/" },
         { name: "OBS Studio", category: "设计与制作", description: "免费开源的视频录制和直播软件", link: "https://obsproject.com/" },
@@ -91,6 +102,7 @@ export function Toolbox() {
         { name: "Blender", category: "设计与制作", description: "3D 创作套件", link: "https://www.blender.org/" },
         { name: "React Router", category: "前端开发", description: "React 路由库", link: "https://reactrouter.com/" },
         { name: "GitLab", category: "DevOps", description: "完整的 DevOps 平台", link: "https://about.gitlab.com/" },
+        { name: "UPDF", category: "编辑工具", description: "国产 PDF 编辑器（免费版功能非常有限）", link: "https://www.updf.cn/" },
         { name: "D3.js", category: "前端开发", description: "数据可视化库", link: "https://d3js.org/" },
         { name: "Three.js", category: "前端开发", description: "3D 图形库", link: "https://threejs.org/" },
         { name: "Prettier", category: "DevOps", description: "代码格式化工具", link: "https://prettier.io/" },
@@ -384,9 +396,9 @@ export function Toolbox() {
         }))
 
     const filteredTools = tools.filter(tool =>
-        tool.name.toLowerCase().includes(filter.toLowerCase()) ||
-        tool.category.toLowerCase().includes(filter.toLowerCase()) ||
-        tool.description.toLowerCase().includes(filter.toLowerCase())
+        tool.name.toLowerCase().replace(/\s/g, "").includes(filter.toLowerCase().replace(/\s/g, "")) ||
+        tool.category.toLowerCase().replace(/\s/g, "").includes(filter.toLowerCase().replace(/\s/g, "")) ||
+        tool.description.toLowerCase().replace(/\s/g, "").includes(filter.toLowerCase().replace(/\s/g, ""))
     )
 
     const categories = [...new Set(tools.map(tool => tool.category))]

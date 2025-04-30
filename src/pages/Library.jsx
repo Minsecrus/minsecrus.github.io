@@ -29,9 +29,9 @@ export function Library() {
     }))
 
     const filteredBooks = books.filter(book =>
-        book.name.toLowerCase().includes(filter.toLowerCase()) ||
-        book.category.toLowerCase().includes(filter.toLowerCase()) ||
-        book.description.toLowerCase().includes(filter.toLowerCase())
+        book.name.toLowerCase().replace(/\s/g, "").includes(filter.toLowerCase().replace(/\s/g, "")) ||
+        book.category.toLowerCase().replace(/\s/g, "").includes(filter.toLowerCase().replace(/\s/g, "")) ||
+        book.description.toLowerCase().replace(/\s/g, "").includes(filter.toLowerCase().replace(/\s/g, ""))
     )
 
     const categories = [...new Set(books.map(book => book.category))]
