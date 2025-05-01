@@ -1,13 +1,24 @@
 #app {
   max-width: 1280px;
+  padding: 4rem;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  #app {
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 542px) {
+  #app {
+    padding: 2rem;
+  }
 }
 
 .main-content {
-  padding-top: 120px;
+  padding-top: 80px;
   text-align: left;
-  max-width: 1180px;
   margin: 0 auto;
 }
 
@@ -43,11 +54,11 @@
   margin-bottom: 32px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 542px) {
 
   .pretitle,
   .subtitle {
-    font-size: 5vw;
+    font-size: 4.5vw;
   }
 }
 
@@ -96,12 +107,17 @@
 
 
 .section-title {
-  font-size: 48px;
+  font-size: 44px;
   color: var(--heading-color);
   margin: 120px 0 40px;
 }
 
-/* 项目展示区样式 */
+@media screen and (max-width: 542px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

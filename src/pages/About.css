@@ -1,0 +1,30 @@
+.about-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.about-main {
+    margin: 0 auto;
+}
+
+.about-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: var(--subtitle-weight);
+    white-space: nowrap;
+}
+
+.about-section {
+    margin-bottom: 60px;
+}
+
+.section-content {
+    margin-top: 20px;
+}
+
+.section-content p {
+    margin: 12px 0;
+    font-size: 17px;
+    line-height: 1.6;
+}

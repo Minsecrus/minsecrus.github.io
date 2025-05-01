@@ -2,6 +2,7 @@ import { motion } from 'motion/react'
 import { useState } from 'react'
 import './list.css'  // 引入通用样式
 import { calculateCardSize } from '../utils/cardUtils'
+import { filterItems } from '../utils/filterUtils'
 
 export function Toolbox() {
     const [filter, setFilter] = useState('')
@@ -42,6 +43,7 @@ export function Toolbox() {
         { name: "Next.js", category: "全栈开发", description: "React 服务端渲染框架", link: "https://nextjs.org/" },
         { name: "Swift", category: "编程语言", description: "Apple 开发的现代编程语言", link: "https://developer.apple.com/swift/" },
         { name: "MongoDB", category: "数据库", description: "流行的 NoSQL 数据库系统", link: "https://www.mongodb.com/" },
+        { name: "PCL", category: "娱乐工具", description: "流行的 Minecraft 启动器", link: "https://afdian.com/a/LTCat" },
         { name: "语雀", category: "生产力与组织", description: "阿里巴巴出品的知识创作与分享工具，团队文档协作平台", link: "https://www.yuque.com/" },
         { name: "Nix", category: "DevOps", description: "强大的声明式包管理器和 Linux 发行版 (NixOS)", link: "https://nixos.org/" },
         { name: "Flatpak", category: "系统工具", description: "Linux 应用程序沙箱化和分发框架", link: "https://flatpak.org/" },
@@ -62,6 +64,7 @@ export function Toolbox() {
         { name: "PHP", category: "编程语言", description: "广泛使用的服务器端脚本语言", link: "https://www.php.net/" },
         { name: "LeetCode", category: "资源库", description: "编程题库和学习平台", link: "https://leetcode.com/" },
         { name: "Jest", category: "DevOps", description: "JavaScript 测试框架", link: "https://jestjs.io/" },
+        { name: "HMCL", category: "娱乐工具", description: "开源免费的 Minecraft 启动器", link: "https://hmcl.huangyuhui.net/" },
         { name: "PyCharm", category: "开发工具", description: "JetBrains 出品的 Python IDE", link: "https://www.jetbrains.com/pycharm/" },
         { name: "WebStorm", category: "开发工具", description: "JetBrains 出品的专业 JavaScript IDE", link: "https://www.jetbrains.com/webstorm/" },
         { name: "Wikipedia", category: "资源库", description: "自由、开放内容的多语言网络百科全书", link: "https://www.wikipedia.org/" },
@@ -395,11 +398,7 @@ export function Toolbox() {
             size: calculateCardSize(tool)
         }))
 
-    const filteredTools = tools.filter(tool =>
-        tool.name.toLowerCase().replace(/\s/g, "").includes(filter.toLowerCase().replace(/\s/g, "")) ||
-        tool.category.toLowerCase().replace(/\s/g, "").includes(filter.toLowerCase().replace(/\s/g, "")) ||
-        tool.description.toLowerCase().replace(/\s/g, "").includes(filter.toLowerCase().replace(/\s/g, ""))
-    )
+    const filteredTools = filterItems(tools, filter)
 
     const categories = [...new Set(tools.map(tool => tool.category))]
 
@@ -454,7 +453,6 @@ export function Toolbox() {
 
             <div className="filter-sidebar">
                 <div className="filter-container">
-                    {/* 添加搜索框 */}
                     <input
                         type="text"
                         placeholder="搜索..."

@@ -2,6 +2,7 @@ import { motion } from 'motion/react'
 import { useState } from 'react'
 import './list.css'  // 引入通用样式
 import { calculateCardSize } from '../utils/cardUtils'
+import { filterItems } from '../utils/filterUtils'
 
 export function Library() {
     const [filter, setFilter] = useState('')
@@ -28,11 +29,7 @@ export function Library() {
         size: calculateCardSize(book, book.link ? true : false),
     }))
 
-    const filteredBooks = books.filter(book =>
-        book.name.toLowerCase().replace(/\s/g, "").includes(filter.toLowerCase().replace(/\s/g, "")) ||
-        book.category.toLowerCase().replace(/\s/g, "").includes(filter.toLowerCase().replace(/\s/g, "")) ||
-        book.description.toLowerCase().replace(/\s/g, "").includes(filter.toLowerCase().replace(/\s/g, ""))
-    )
+    const filteredBooks = filterItems(books, filter)
 
     const categories = [...new Set(books.map(book => book.category))]
 
@@ -87,7 +84,6 @@ export function Library() {
 
             <div className="filter-sidebar">
                 <div className="filter-container">
-                    {/* 添加搜索框 */}
                     <input
                         type="text"
                         placeholder="搜索..."

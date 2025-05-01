@@ -4,7 +4,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 40px);
-    max-width: 1240px;
+    max-width: 1340px;
     height: 60px;
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);

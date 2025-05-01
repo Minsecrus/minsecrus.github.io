@@ -1,6 +1,6 @@
 import './app.css'
 import { NavBar } from './components/NavBar'
-import { animate, motion } from 'motion/react'
+import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { Toolbox } from './pages/Toolbox'
 import { Library } from './pages/Library'
@@ -10,13 +10,11 @@ import { About } from './pages/About'
 export function App() {
   const [currentPage, setCurrentPage] = useState('home')
 
-  // 处理导航
   const navigateTo = (page) => {
     setCurrentPage(page)
     window.history.pushState(null, '', page === 'home' ? '/' : `/${page}`)
   }
 
-  // 处理浏览器前进后退
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname
@@ -35,7 +33,6 @@ export function App() {
     return () => window.removeEventListener('popstate', handlePopState)
   }, [])
 
-  // 根据URL初始化页面
   useEffect(() => {
     const path = window.location.pathname
     if (path === '/about') {
@@ -48,7 +45,6 @@ export function App() {
   }, [])
 
 
-  // 渲染当前页面
   const renderPage = () => {
     switch (currentPage) {
       case 'toolbox':
@@ -96,7 +92,7 @@ export function App() {
                   whileHover={{ scale: 1.05, transition: { delay: 0 } }}
                 >
                   <h3 className="interact">读书，读诗</h3>
-                  <p className="skill-desc text">茅盾，老舍，巴金，沈从文；Victor Hugo，Albert Camus，J.K.Rowling；王勃，白居易，李贺，柳永，贺铸</p>
+                  <p className="skill-desc text">莫言，老舍，巴金，沈从文，李娟；Frank Herbert，Victor Hugo，Albert Camus，J.K.Rowling；王勃，白居易，李贺，柳永，贺铸</p>
                 </motion.div>
 
                 <motion.div
@@ -115,7 +111,7 @@ export function App() {
                   whileInView={{ opacity: 1, x: 0, transition: { delay: 0.3 } }}
                   whileHover={{ scale: 1.05, transition: { delay: 0 } }}
                 >
-                  <h3 className="interact">计算机科学真奇妙</h3>
+                  <h3 className="interact">计算机真奇妙</h3>
                   <p className="skill-desc text">PLT，Web 前后端，Linux，数据结构与算法，计算机网络</p>
                 </motion.div>
 
@@ -131,7 +127,6 @@ export function App() {
               </div>
             </motion.section>
 
-            {/* 项目展示区 */}
             <motion.section
               className="projects-section"
               initial={{ opacity: 0, y: 50 }}
@@ -140,7 +135,6 @@ export function App() {
             >
               <h2 className="section-title interact">我的 Github</h2>
               <div className="project-grid">
-                {/* 项目 1: Minsecrus.github.io */}
                 <motion.div
                   className="project-card"
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -154,7 +148,6 @@ export function App() {
                   </div>
                 </motion.div>
 
-                {/* 项目 2: Mdr-C-Tutorial */}
                 <motion.div
                   className="project-card"
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -168,7 +161,6 @@ export function App() {
                   </div>
                 </motion.div>
 
-                {/* 项目 3: 操作系统 CPOS */}
                 <motion.div
                   className="project-card"
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -184,7 +176,6 @@ export function App() {
               </div>
             </motion.section>
 
-            {/* 联系方式区域 */}
             <motion.section
               className="contact-section"
               initial={{ opacity: 0, y: 50 }}

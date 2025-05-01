@@ -111,7 +111,6 @@
 
 .item-card[data-category="计算机基础"] {
     border-color: #64B5F6;
-    /* 保持不变 */
 }
 
 .item-card[data-category="计算机科学"] {
@@ -120,232 +119,154 @@
 
 .item-card[data-category="算法与数据结构"] {
     border-color: #81C784;
-    /* 保持不变 */
 }
 
 .item-card[data-category="软件设计"] {
     border-color: #FFB74D;
-    /* 保持不变 */
 }
 
-.item-card[data-category="前端开发"],
+.item-card[data-category="前端开发"] {
+    border-color: #59D0A9;
+}
+
 .item-card[data-category="开发工具"] {
-    /* 组合别名 */
     border-color: #F06292;
-    /* 新颜色 - 粉红 */
 }
 
-.item-card[data-category="后端开发"],
+.item-card[data-category="后端开发"] {
+    border-color: #4DD0E1;
+}
+
 .item-card[data-category="监控工具"] {
-    /* 组合别名 */
     border-color: #7986CB;
-    /* 新颜色 - 靛蓝 */
 }
 
 .item-card[data-category="全栈开发"] {
     border-color: #ff7dd8;
-    /* 保持不变 */
 }
 
-.item-card[data-category="编程语言"],
-.item-card[data-category="测试工具"] {
-    /* 组合别名 */
+.item-card[data-category="编程语言"] {
     border-color: #4DB6AC;
-    /* 保持不变 */
 }
 
 .item-card[data-category="数据库"] {
     border-color: #90A4AE;
-    /* 保持不变 */
 }
 
-.item-card[data-category="DevOps"],
-.item-card[data-category="DevOps 与部署"] {
-    /* 组合别名 */
+.item-card[data-category="DevOps"] {
     border-color: #FF8A65;
-    /* 保持不变 */
 }
 
 .item-card[data-category="网络编程"] {
     border-color: #5C6BC0;
-    /* 新颜色 - 靛蓝/蓝 */
 }
 
-.item-card[data-category="生产力"],
 .item-card[data-category="生产力与组织"] {
     border-color: #B39DDB;
-    /* 保持不变 */
 }
 
-.item-card[data-category="通讯协作"],
 .item-card[data-category="通讯与协作"] {
     border-color: #80DEEA;
-    /* 保持不变 */
-}
-
-.item-card[data-category="写作编辑"],
-.item-card[data-category="写作与编辑"] {
-    border-color: #FFE082;
-    /* 保持不变 */
 }
 
 .item-card[data-category="财务管理"] {
     border-color: #A5D6A7;
-    /* 保持不变 */
 }
 
-.item-card[data-category="健康生活"],
 .item-card[data-category="健康与生活"] {
     border-color: #E57373;
-    /* 新颜色 - 红 */
 }
 
-.item-card[data-category="学习工具"],
-.item-card[data-category="学习资源"],
 .item-card[data-category="学习与知识"] {
     border-color: #90CAF9;
-    /* 保持不变 */
 }
 
-.item-card[data-category="媒体娱乐"],
-.item-card[data-category="媒体与娱乐"],
-.item-card[data-category="开发环境"] {
-    /* 组合别名 */
-    border-color: #BA68C8;
-    /* 新颜色 - 紫 */
-}
-
-.item-card[data-category="创意设计"],
-.item-card[data-category="设计与创意"] {
-    border-color: #F48FB1;
-    /* 新颜色 - 粉 */
-}
-
-.item-card[data-category="安全工具"],
 .item-card[data-category="系统与安全"] {
     border-color: #9FA8DA;
-    /* 保持不变 */
 }
 
 .item-card[data-category="云存储"] {
     border-color: #81D4FA;
-    /* 保持不变 */
 }
 
 .item-card[data-category="网络工具"] {
     border-color: #B0BEC5;
-    /* 保持不变 */
 }
 
-.item-card[data-category="系统工具"],
-.item-card[data-category="开发平台"] {
+.item-card[data-category="系统工具"] {
     border-color: #BCAAA4;
-    /* 保持不变 */
 }
 
 .item-card[data-category="自动化"] {
-    border-color: #C5E1A5;
-    /* 新颜色 - 浅绿 */
+    border-color: #cbe1a5;
 }
 
-/* 注意：前端开发/开发工具 已在上面定义 */
-/* 注意：后端开发 已在上面定义 */
-/* 注意：开发环境 已在上面定义 */
-/* 注意：数据库 已在上面定义 */
-/* 注意：DevOps 已在上面定义 */
-
-.item-card[data-category="构建与测试"],
 .item-card[data-category="嵌入式开发"] {
-    /* 组合别名 */
-    border-color: #9CCC65;
-    /* 保持不变 */
+    border-color: #666666;
 }
 
 .item-card[data-category="构建工具"] {
     border-color: #A1887F;
-    /* 保持不变 */
 }
 
-/* 注意：测试工具 已在上面定义 */
-/* 注意：监控工具 已在上面定义 */
-
 .item-card[data-category="搜索引擎"] {
-    border-color: #8fe969;
-    /* 保持不变 */
+    border-color: #8aee5f;
 }
 
 .item-card[data-category="数据分析"] {
     border-color: #4FC3F7;
-    /* 保持不变 */
 }
 
 .item-card[data-category="API"] {
-    border-color: #AED581;
-    /* 保持不变 */
+    border-color: #a9c68f;
 }
 
 .item-card[data-category="设计与制作"] {
     border-color: #FF7043;
-    /* 保持不变 */
 }
 
 .item-card[data-category="资源库"] {
     border-color: #7E57C2;
-    /* 保持不变 */
 }
-
-/* 注意：编程语言 已在上面定义 */
 
 .item-card[data-category="机器学习"] {
     border-color: #26A69A;
-    /* 新颜色 - 青 */
 }
 
 .item-card[data-category="跨平台开发"] {
     border-color: #EC407A;
-    /* 保持不变 */
 }
 
 .item-card[data-category="编辑工具"] {
     border-color: #66BB6A;
-    /* 保持不变 */
 }
 
 .item-card[data-category="AI 助手"] {
     border-color: #29B6F6;
-    /* 保持不变 */
 }
 
 .item-card[data-category="数学"] {
     border-color: #FFA726;
-    /* 保持不变 */
 }
 
 .item-card[data-category="数据处理"] {
     border-color: #78909C;
-    /* 保持不变 */
 }
 
 .item-card[data-category="游戏开发"] {
     border-color: #EF5350;
-    /* 保持不变 */
 }
-
-/* 注意：嵌入式开发 已在上面定义 */
 
 .item-card[data-category="特定平台开发"] {
     border-color: #8D6E63;
-    /* 保持不变 */
 }
 
 .item-card[data-category="娱乐工具"] {
     border-color: #AB47BC;
-    /* 保持不变 */
 }
 
 .item-card[data-category="内容平台"] {
     border-color: #c1c165;
-    /* 保持不变 */
 }
 
 .item-card h3 {
