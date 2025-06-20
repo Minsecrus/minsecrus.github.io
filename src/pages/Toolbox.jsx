@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
-import { useState } from 'react'
-import './list.css'  // 引入通用样式
+import { useState, useMemo } from 'react'
+import './list.css'
 import { calculateCardSize } from '../utils/cardUtils'
 import { filterItems } from '../utils/filterUtils'
 import { data } from '../data/tools'
