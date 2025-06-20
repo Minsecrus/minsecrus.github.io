@@ -16,56 +16,45 @@ export function App() {
   }
 
   useEffect(() => {
-    const handlePopState = () => {
-      const path = window.location.pathname
-      if (path === '/' || path === '') {
-        setCurrentPage('home')
-      } else if (path === '/about') {
-        setCurrentPage('about')
-      } else if (path === '/toolbox') {
-        setCurrentPage('toolbox')
-      } else if (path === '/library') {
-        setCurrentPage('library')
-      }
-    }
+    const handlePathChange = () => {
+        const path = window.location.pathname;
+        if (path === '/about') setCurrentPage('about');
+        else if (path === '/toolbox') setCurrentPage('toolbox');
+        else if (path === '/library') setCurrentPage('library');
+        else setCurrentPage('home');
+    };
 
-    window.addEventListener('popstate', handlePopState)
-    return () => window.removeEventListener('popstate', handlePopState)
-  }, [])
+    handlePathChange();
+    window.addEventListener('popstate', handlePathChange);
+    return () => window.removeEventListener('popstate', handlePathChange);
+}, []);
 
   useEffect(() => {
-    const path = window.location.pathname
-    if (path === '/about') {
-      setCurrentPage('about')
-    } else if (path === '/toolbox') {
-      setCurrentPage('toolbox')
-    } else if (path === '/library') {
-      setCurrentPage('library')
+    switch (currentPage) {
+      case 'toolbox':
+        document.title = 'Minsecrus - 工具箱';
+        break;
+      case 'library':
+        document.title = 'Minsecrus - 资料库';
+        break;
+      case 'about':
+        document.title = 'Minsecrus - 关于本网站';
+        break;
+      default: // home page
+        document.title = 'Minsecrus - 遇见更好的自己';
     }
-  }, [])
+  }, [currentPage]);
 
 
   const renderPage = () => {
     switch (currentPage) {
       case 'toolbox':
-        useEffect(() => {
-          document.title = 'Minsecrus - 工具箱';
-        })
-        return <Toolbox />
+        return <Toolbox />;
       case 'library':
-        useEffect(() => {
-          document.title = 'Minsecrus - 资料库';
-        })
-        return <Library />
+        return <Library />;
       case 'about':
-        useEffect(() => {
-          document.title = 'Minsecrus - 关于本网站';
-        })
-        return <About />
+        return <About />;
       default:
-        useEffect(() => {
-          document.title = 'Minsecrus - 遇见更好的自己';
-        })
         return (
           <main className="main-content">
             <h2 className="pretitle text">Hi, I'm</h2>
