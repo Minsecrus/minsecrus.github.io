@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './list.css'  // 引入通用样式
 import { calculateCardSize } from '../utils/cardUtils'
 import { filterItems } from '../utils/filterUtils'
-import { tools as _tools } from './tools'
+import { tools as _tools } from '../data/tools'
 
 export function Toolbox() {
     const [filter, setFilter] = useState('')
