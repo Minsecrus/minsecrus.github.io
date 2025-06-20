@@ -11,7 +11,7 @@ export function Footer() {
         >
             <div className={styles.footerContent}>
                 <div className={styles.footerLeft}>
-                    <p className="text">© 2007 - 2025 Minsecrus. All rights reserved.</p>
+                    <p className="text"> <span id="copyleft">©</span> 2007 - 2025 Minsecrus. All rights reserved.</p>
                 </div>
                 <div className={styles.footerRight}>
                     <a target='_blank' href="https://github.com/minsecrus" className={`${styles.footerLink} interact`}>
