@@ -91,3 +91,8 @@ h1 {
 .interact {
   font-family: 'Quicksand', 'Lovely', sans-serif;
 }
+
+#copyleft {
+  display: inline-block;
+  transform: scaleX(-1);
+}

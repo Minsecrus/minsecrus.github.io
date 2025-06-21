@@ -44,8 +44,3 @@
         text-align: center;
     }
 }
-
-#copyleft {
-    display: inline-block;
-    transform: scaleX(-1);
-}
