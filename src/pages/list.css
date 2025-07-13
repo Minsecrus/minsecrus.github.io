@@ -34,13 +34,13 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 
 .category-buttons {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-top: 16px;
     overflow-y: auto;
     max-height: calc(70vh - 100px);
     scrollbar-width: none;
@@ -311,6 +311,10 @@
     .category-btn {
         flex: 0 0 auto;
         text-align: center;
+    }
+
+    .filter-container {
+        flex-direction: column-reverse;
     }
 }
 
