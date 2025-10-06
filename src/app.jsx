@@ -17,17 +17,22 @@ export function App() {
 
   useEffect(() => {
     const handlePathChange = () => {
-        const path = window.location.pathname;
-        if (path === '/about') setCurrentPage('about');
-        else if (path === '/toolbox') setCurrentPage('toolbox');
-        else if (path === '/library') setCurrentPage('library');
-        else setCurrentPage('home');
+      const path = window.location.pathname;
+      if (path === '/about') setCurrentPage('about');
+      else if (path === '/toolbox') setCurrentPage('toolbox');
+      else if (path === '/library') setCurrentPage('library');
+      else setCurrentPage('home');
     };
 
     handlePathChange();
     window.addEventListener('popstate', handlePathChange);
     return () => window.removeEventListener('popstate', handlePathChange);
-}, []);
+  }, []);
+
+  const copyToClipboard = async (text, label) => {
+    await navigator.clipboard.writeText(text)
+    alert(`已复制 ${label}：${text}`)
+  }
 
   useEffect(() => {
     switch (currentPage) {
@@ -173,6 +178,7 @@ export function App() {
             >
               <h2 className="section-title interact">加个联系方式吧</h2>
               <div className="contact-list">
+
                 <motion.p
                   className="contact-item"
                   initial={{ opacity: 0, x: -20 }}
@@ -180,8 +186,11 @@ export function App() {
                   transition={{ delay: 0.2 }}
                 >
                   <span className="interact">微信：</span>
-                  <a className="interact">Minsecrus_dreamers</a>
+                  <a className="interact"
+                    onClick={() => copyToClipboard('Minsecrus_dreamers', '微信')}
+                  >Minsecrus_dreamers</a>
                 </motion.p>
+
                 <motion.p
                   className="contact-item"
                   initial={{ opacity: 0, x: -20 }}
@@ -189,8 +198,11 @@ export function App() {
                   transition={{ delay: 0.3 }}
                 >
                   <span className="interact">QQ：</span>
-                  <a className="interact">2972853299</a>
+                  <a className="interact"
+                    onClick={() => copyToClipboard('2972853299', 'QQ')}
+                  >2972853299</a>
                 </motion.p>
+
                 <motion.p
                   className="contact-item"
                   initial={{ opacity: 0, x: -20 }}
@@ -198,8 +210,11 @@ export function App() {
                   transition={{ delay: 0.4 }}
                 >
                   <span className="interact">编程交流群：</span>
-                  <a className="interact">885719573</a>
+                  <a className="interact"
+                    onClick={() => copyToClipboard('885719573', '编程交流群')}
+                  >885719573</a>
                 </motion.p>
+
                 <motion.p
                   className="contact-item"
                   initial={{ opacity: 0, x: -20 }}
@@ -207,8 +222,11 @@ export function App() {
                   transition={{ delay: 0.5 }}
                 >
                   <span className="interact">知识脱贫群：</span>
-                  <a className="interact">1019721429</a>
+                  <a className="interact"
+                    onClick={() => copyToClipboard('1019721429', '知识脱贫群')}
+                  >1019721429</a>
                 </motion.p>
+
               </div>
             </motion.section>
           </main>

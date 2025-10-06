@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'Jetbrains Mono';
-    src: url(fonts/JetBrains/JetBrainsMono-ExtraLight.ttf);
+    src: url(/fonts/JetBrains/JetBrainsMono-ExtraLight.ttf);
     font-weight: 200;
 }
 

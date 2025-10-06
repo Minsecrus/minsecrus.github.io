@@ -1,20 +1,21 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import styles from './NavBar.module.css'
 
 export function NavBar({ currentPage, navigateTo }) {
     const [visible, setVisible] = useState(true)
-    const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY)
+
+
+    const prevScrollPos = useRef(window.scrollY)
 
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.scrollY
-            setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10)
-            setPrevScrollPos(currentScrollPos)
+            setVisible(prevScrollPos.current > currentScrollPos || currentScrollPos < 10)
+            prevScrollPos.current = currentScrollPos
         }
-
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
-    }, [prevScrollPos])
+    }, [])
 
     return (
         <nav className={`${styles.navbar} ${visible ? styles.visible : styles.hidden}`}>
