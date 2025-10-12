@@ -44,6 +44,19 @@ export function About() {
                         <p className="text interact">注定比你少见证 915 次日出日落，可不可以多读 915 本书来弥补呢？</p>
                     </div>
                 </motion.section>
+                <motion.section
+                    className="about-section"
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.9, duration: 0.5 }}
+                >
+                    <h2 className="about-subtitle interact">友链</h2>
+                    <div className="section-content">
+                        <div id="links">
+                            <a href="https://github.com/zuoliangyu" className="interact">左岚</a>
+                        </div>
+                    </div>
+                </motion.section>
             </main>
         </div>
     )

@@ -28,7 +28,8 @@ export function Home() {
                         whileHover={{ scale: 1.05, transition: { delay: 0 } }}
                     >
                         <h3 className="interact">读书，读诗</h3>
-                        <p className="skill-desc text">莫言，老舍，巴金，沈从文，李娟；Frank Herbert，Victor Hugo，Albert Camus，J.K.Rowling；王勃，白居易，李贺，柳永，贺铸</p>
+                        <p className="skill-desc text">莫言，老舍，巴金，沈从文；Victor Hugo，Albert Camus，Fyodor Dostoyevsky；王勃，白居易，李贺，柳永，秦观，贺铸，纳兰性德，仓央嘉措；</p>
+                        <p className="skill-desc text">《诗经》《楚辞》；《追忆似水年华》《源氏物语》《飘》《沙丘》</p>
                     </motion.div>
 
                     <motion.div
@@ -37,8 +38,8 @@ export function Home() {
                         whileInView={{ opacity: 1, x: 0, transition: { delay: 0.2 } }}
                         whileHover={{ scale: 1.05, transition: { delay: 0 } }}
                     >
-                        <h3 className="interact">沉迷于 Maths 无法自拔</h3>
-                        <p className="skill-desc text">微分几何，泛函分析，范畴论</p>
+                        <h3 className="interact">沉迷于 Maths & Physics 无法自拔</h3>
+                        <p className="skill-desc text">微分几何，泛函分析，范畴论；分析力学</p>
                     </motion.div>
 
                     <motion.div
@@ -48,7 +49,8 @@ export function Home() {
                         whileHover={{ scale: 1.05, transition: { delay: 0 } }}
                     >
                         <h3 className="interact">计算机真奇妙</h3>
-                        <p className="skill-desc text">PLT，Web 前后端，Linux，数据结构与算法，计算机网络</p>
+                        <p className="skill-desc text">计算理论，PLT，Web 前后端，Linux，数据结构与算法，计算机网络；</p>
+                        <p className="skill-desc text">UI/UX 设计，API Design，Technical Writing</p>
                     </motion.div>
 
                     <motion.div

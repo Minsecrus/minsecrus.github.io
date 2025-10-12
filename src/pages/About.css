@@ -28,3 +28,10 @@
     font-size: 17px;
     line-height: 1.6;
 }
+
+#links {
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    gap: 1rem;
+}
