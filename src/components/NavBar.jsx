@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import styles from './NavBar.module.css'
+import './NavBar.css'
 
 export function NavBar({ currentPage, navigateTo }) {
     const [visible, setVisible] = useState(true)
@@ -18,11 +18,11 @@ export function NavBar({ currentPage, navigateTo }) {
     }, [])
 
     return (
-        <nav className={`${styles.navbar} ${visible ? styles.visible : styles.hidden}`}>
+        <nav className={`navbar ${visible ? 'visible' : 'hidden'}`}>
             <span className="text" onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }}>Minsecrus</span>
-            <div className={styles.links}>
+            <div className="links">
                 <a
-                    className={`interact ${currentPage === 'about' ? styles.active : ''}`}
+                    className={`interact ${currentPage === 'about' ? 'active' : ''}`}
                     onClick={() => navigateTo('about')}
                     style={{ cursor: 'pointer' }}
                 >
