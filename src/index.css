@@ -2,12 +2,10 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   --bg-color: #FFFDFB;
   /* 背景色 - 温柔近白 */
-  --theme-color: #ffc0cf;
+  --theme-color: #ff8ba6;
   /* 主题色 - 浅粉 */
-  --accent-color: #f687ae;
+  --accent-color: #f16596;
   /* 强调/链接色 - 粉色 */
-  --darker-accent-color: #E75480;
-  /* 强调/链接色 - 稍深粉 */
   --heading-color: #333;
   /* 主标题颜色 - 深灰 */
   --text-color: #555;

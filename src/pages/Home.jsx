@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import '../app.css'
 
-export function Home() {
+export function Home({ navigateTo }) {
     return (
         <main className="main-content">
             <h2 className="pretitle text">Hi, I'm</h2>

@@ -6,6 +6,7 @@ import { Library } from './pages/Library'
 import { Footer } from './components/Footer'
 import { About } from './pages/About'
 import { Home } from './pages/Home'
+import { Abbr } from './pages/Abbr'
 
 export function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -19,6 +20,7 @@ export function App() {
     const handlePathChange = () => {
       const path = window.location.pathname;
       if (path === '/about') setCurrentPage('about');
+      else if (path === '/abbr') setCurrentPage('abbr');
       else if (path === '/toolbox') setCurrentPage('toolbox');
       else if (path === '/library') setCurrentPage('library');
       else setCurrentPage('home');
@@ -45,6 +47,9 @@ export function App() {
       case 'about':
         document.title = 'Minsecrus - 关于本网站';
         break;
+      case 'abbr':
+        document.title = 'Minsecrus - 缩略词列表';
+        break;
       default: // home page
         document.title = 'Minsecrus - 遇见更好的自己';
     }
@@ -57,10 +62,12 @@ export function App() {
         return <Toolbox />;
       case 'library':
         return <Library />;
+      case 'abbr':
+        return <Abbr />;
       case 'about':
         return <About />;
       default:
-        return <Home />
+        return <Home navigateTo={navigateTo} />;
     }
   }
 

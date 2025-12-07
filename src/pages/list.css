@@ -74,7 +74,7 @@
 
 .category-btn.active {
     background: var(--accent-color);
-    color: white;
+    color: white !important;
     border-color: var(--theme-color);
     font-weight: var(--subtitle-weight);
     box-shadow: 1px 1px 2px var(--theme-color);

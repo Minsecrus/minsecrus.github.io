@@ -54,6 +54,7 @@ export function About() {
                     <div className="section-content">
                         <div id="links">
                             <a href="https://github.com/zuoliangyu" className="interact">左岚</a>
+                            <a href="https://github.com/MalloyManga" className="interact">Malloy</a>
                         </div>
                     </div>
                 </motion.section>

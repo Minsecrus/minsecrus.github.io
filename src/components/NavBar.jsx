@@ -22,6 +22,13 @@ export function NavBar({ currentPage, navigateTo }) {
             <span className="text" onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }}>Minsecrus</span>
             <div className="links">
                 <a
+                    className={`interact ${currentPage === 'abbr' ? 'active' : ''}`}
+                    onClick={() => navigateTo('abbr')}
+                    style={{ cursor: 'pointer' }}
+                >
+                    Abbr
+                </a>
+                <a
                     className={`interact ${currentPage === 'about' ? 'active' : ''}`}
                     onClick={() => navigateTo('about')}
                     style={{ cursor: 'pointer' }}
