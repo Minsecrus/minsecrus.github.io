@@ -121,6 +121,7 @@ export const unsortedAbbrGroups = [
         letter: "K",
         items: [
             { id: "kb", short: "KB", description: "Kilobyte / 千字节" },
+            { id: "km", short: "km", description: "Kilometer / 千米" },
             { id: "kpi", short: "KPI", description: "Key Performance Indicator / 关键绩效指标" },
             { id: "kvm", short: "KVM", description: "Kernel-based Virtual Machine / 基于内核的虚拟机" }
         ]
@@ -206,6 +207,7 @@ export const unsortedAbbrGroups = [
         letter: "R",
         items: [
             { id: "ram", short: "RAM", description: "Random Access Memory / 随机存取存储器" },
+            { id: "rn", short: "RN", description: "React Native：跨平台移动应用开发框架" },
             { id: "rest", short: "REST", description: "Representational State Transfer / 表述性状态转移" },
             { id: "roi", short: "ROI", description: "Return on Investment / 投资回报率" },
             { id: "rom", short: "ROM", description: "Read-Only Memory / 只读存储器" },

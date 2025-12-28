@@ -261,6 +261,31 @@
     border-color: #c1c165;
 }
 
+.item-card[data-category="Web3"] {
+    border-color: #47748a;
+}
+
+.item-card[data-category="Web API"] {
+    border-color: #9e42bf;
+}
+
+.item-card[data-category="运行环境"] {
+    border-color: #4cccbf;
+}
+
+.item-card[data-category="Web 标准"] {
+    border-color: #4777f1;
+}
+
+.item-card[data-category="无障碍"] {
+    border-color: black;
+}
+
+
+.item-card[data-category="数据可视化"] {
+    border-color: rgb(0, 173, 6);
+}
+
 .item-card h3 {
     font-size: 16px;
     margin: 0;
