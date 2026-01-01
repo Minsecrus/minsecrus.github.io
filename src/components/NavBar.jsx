@@ -21,7 +21,7 @@ export function NavBar({ currentPage, navigateTo }) {
         <nav className={`navbar ${visible ? 'visible' : 'hidden'}`}>
             <span className="text" onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }}>Minsecrus</span>
             <div className="links">
-                <a onClick={() => window.open('https://minsecrus.github.io/ZenResume-Generator/', '_blank')} className="interact"
+                <a href="https://minsecrus.github.io/ZenResume-Generator/" target="_blank" className="interact"
                 >
                     ZenResume
                 </a>
