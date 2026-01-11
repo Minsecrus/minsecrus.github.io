@@ -35,7 +35,8 @@
     gap: 2rem;
 }
 
-.links a {
+.links a,
+.mobile-links a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
@@ -56,4 +57,114 @@
     font-size: 20px;
     font-weight: var(--subtitle-weight);
     transform: translateY(-1px);
+}
+
+/* 响应式菜单 */
+.menu-container {
+    position: relative;
+    display: none;
+}
+
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.menu-button:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.menu-button .dot {
+    width: 4px;
+    height: 4px;
+    background: #333;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+.menu-button:hover .dot {
+    background: #000;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    min-width: 150px;
+    padding: 8px 0;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dropdown-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #000;
+}
+
+.dropdown-item.active {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* 桌面端和移动端显示控制 */
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* 窄屏响应式 */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 1.5rem;
+    }
+
+    .links .desktop-only {
+        display: none;
+    }
+
+    .menu-container {
+        display: block;
+    }
+
+    .mobile-only {
+        display: flex;
+    }
 }

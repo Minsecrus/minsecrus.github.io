@@ -2,6 +2,8 @@ import { motion } from 'motion/react'
 import './Footer.css'
 
 export function Footer() {
+    const currentYear = new Date().getFullYear()
+
     return (
         <motion.footer
             className="footer"
@@ -9,15 +11,15 @@ export function Footer() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
         >
-            <div className="footerContent">
-                <div className="footerLeft">
-                    <p className="text"> <span id="copyleft">©</span> 2007 - 2025 Minsecrus. All rights reserved.</p>
+            <div className="footer-content">
+                <div className="footer-left">
+                    <p className="text"> <span id="copyleft">©</span> 2007 - {currentYear} Minsecrus. All rights reserved.</p>
                 </div>
-                <div className="footerRight">
-                    <a target='_blank' href="https://github.com/minsecrus" className="footerLink interact">
+                <div className="footer-right">
+                    <a target='_blank' href="https://github.com/minsecrus" className="footer-link interact">
                         GitHub
                     </a>
-                    <a href="mailto:minsecrusdreamers@gmail.com" className="footerLink interact">
+                    <a href="mailto:minsecrusdreamers@gmail.com" className="footer-link interact">
                         Email
                     </a>
                 </div>

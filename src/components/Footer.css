@@ -6,25 +6,25 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footerContent {
+.footer-content {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.footerLeft p {
+.footer-left p {
     margin: 0;
     font-size: 14px;
     opacity: 0.8;
 }
 
-.footerRight {
+.footer-right {
     display: flex;
     gap: 20px;
 }
 
-.footerLink {
+.footer-link {
     color: var(--text-color);
     text-decoration: none;
     font-size: 14px;
@@ -32,13 +32,13 @@
     transition: all 0.3s;
 }
 
-.footerLink:hover {
+.footer-link:hover {
     opacity: 1;
     color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
-    .footerContent {
+    .footer-content {
         flex-direction: column;
         gap: 10px;
         text-align: center;

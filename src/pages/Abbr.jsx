@@ -42,25 +42,20 @@ export function Abbr() {
     const [abbrIndexChain, setAbbrIndexChain] = useState(() => ['', '', ''])
 
     const handleLetterClick = (letter, columnIndex) => {
-        console.log('handleLetterClick', letter, columnIndex)
         const nextChain = [...abbrIndexChain]
         nextChain[columnIndex] = letter
         nextChain.fill('', columnIndex + 1)
-        console.log('nextChain', nextChain)
         setActiveLetters(nextChain)
         setAbbrIndexChain(nextChain)
 
         if (columnIndex + 2 > visibleColumns && columnIndex + 2 < 4) {
-            console.log('setVisibleColumns', columnIndex + 2)
             setVisibleColumns(columnIndex + 2)
         }
 
         const prefix = nextChain.join('').toLowerCase()
         if (prefix.length > 0) {
-            console.log('Searching for prefix', prefix)
             const bestId = findBestIdByPrefix(prefix)
             if (bestId) {
-                console.log('prefix', prefix, 'bestId', bestId)
                 const anchor = document.getElementById(bestId)
                 if (anchor) {
                     anchor.scrollIntoView({ behavior: 'smooth', block: 'start' })

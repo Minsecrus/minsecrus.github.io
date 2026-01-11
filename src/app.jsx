@@ -1,15 +1,26 @@
 import './app.css'
 import { NavBar } from './components/NavBar'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Toolbox } from './pages/Toolbox'
 import { Library } from './pages/Library'
 import { Footer } from './components/Footer'
 import { About } from './pages/About'
 import { Home } from './pages/Home'
 import { Abbr } from './pages/Abbr'
+import { ToastContainer } from './components/Toast'
 
 export function App() {
   const [currentPage, setCurrentPage] = useState('home')
+  const [toasts, setToasts] = useState([])
+
+  const addToast = useCallback((message, type = 'success', duration = 3000) => {
+    const id = Date.now()
+    setToasts(prev => [...prev, { id, message, type, duration }])
+  }, [])
+
+  const removeToast = useCallback((id) => {
+    setToasts(prev => prev.filter(toast => toast.id !== id))
+  }, [])
 
   const navigateTo = (page) => {
     setCurrentPage(page)
@@ -32,8 +43,12 @@ export function App() {
   }, []);
 
   const copyToClipboard = async (text, label) => {
-    await navigator.clipboard.writeText(text)
-    alert(`已复制 ${label}：${text}`)
+    try {
+      await navigator.clipboard.writeText(text)
+      addToast(`已复制 ${label}`, 'success')
+    } catch (err) {
+      addToast('复制失败，请重试', 'error')
+    }
   }
 
   useEffect(() => {
@@ -67,7 +82,7 @@ export function App() {
       case 'about':
         return <About />;
       default:
-        return <Home navigateTo={navigateTo} />;
+        return <Home navigateTo={navigateTo} copyToClipboard={copyToClipboard} />;
     }
   }
 
@@ -76,6 +91,7 @@ export function App() {
       <NavBar currentPage={currentPage} navigateTo={navigateTo} />
       {renderPage()}
       <Footer />
+      <ToastContainer toasts={toasts} removeToast={removeToast} />
     </>
   )
 }
