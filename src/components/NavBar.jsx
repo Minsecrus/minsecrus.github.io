@@ -44,6 +44,10 @@ export function NavBar({ currentPage, navigateTo }) {
         <nav className={`navbar ${visible ? 'visible' : 'hidden'}`}>
             <span className="text" onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }}>Minsecrus</span>
             <div className="links">
+                <a href="https://minsecrus.github.io/CssTellation/" target="_blank" className="interact desktop-only"
+                >
+                    CssTellation
+                </a>
                 <a href="https://minsecrus.github.io/ZenResume-Generator/" target="_blank" className="interact desktop-only"
                 >
                     ZenResume
