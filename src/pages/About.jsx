@@ -55,6 +55,7 @@ export function About() {
                         <div id="links">
                             <a href="https://github.com/zuoliangyu" className="interact">左岚</a>
                             <a href="https://github.com/MalloyManga" className="interact">Malloy</a>
+                            <a href="https://github.com/AzidoPP" className="interact">懒羊羊 Tetrazole</a>
                         </div>
                     </div>
                 </motion.section>
