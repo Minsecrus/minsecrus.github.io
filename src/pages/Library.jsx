@@ -11,6 +11,7 @@ export function Library() {
         { name: "深入理解计算机系统", category: "计算机基础", description: "计算机系统底层原理详解" },
         { name: "计算机程序设计艺术", category: "计算机科学", description: "计算科学的经典之作" },
         { name: "算法导论", category: "算法与数据结构", description: "经典算法教材" },
+        { name: "Vibe Vibe", category: "人工智能", description: "全民 AI 学习第一课，首个系统化 Vibe Coding 开源教程", link: "https://vibevibe.cn/" },
         { name: "JavaScript 高级程序设计", category: "前端开发", description: "JavaScript 圣经" },
         { name: "你不知道的 JavaScript", category: "前端开发", description: "深入 JavaScript 语言核心机制" },
         { name: "深入理解 Java 虚拟机", category: "后端开发", description: "JVM 原理与调优指南" },
