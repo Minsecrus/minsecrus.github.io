@@ -56,6 +56,7 @@ export function About() {
                             <a href="https://github.com/zuoliangyu" className="interact">左岚</a>
                             <a href="https://github.com/MalloyManga" className="interact">Malloy</a>
                             <a href="https://github.com/AzidoPP" className="interact">懒羊羊 Tetrazole</a>
+                            <a href="https://chenglan29.github.io" className="interact">橙蓝</a>
                         </div>
                     </div>
                 </motion.section>
