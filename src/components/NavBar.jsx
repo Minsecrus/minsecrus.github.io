@@ -44,6 +44,10 @@ export function NavBar({ currentPage, navigateTo }) {
         <nav className={`navbar ${visible ? 'visible' : 'hidden'}`}>
             <span className="text" onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }}>Minsecrus</span>
             <div className="links">
+                <a href="https://minsecrus.github.io/Frontend-Guide/" target="_blank" className="interact desktop-only"
+                >
+                    Frontend Guide
+                </a>
                 <a href="https://minsecrus.github.io/CssTellation/" target="_blank" className="interact desktop-only"
                 >
                     CssTellation
@@ -75,6 +79,15 @@ export function NavBar({ currentPage, navigateTo }) {
                 </button>
                 {menuOpen && (
                     <div className="dropdown-menu mobile-links">
+
+                        <a href="https://minsecrus.github.io/Frontend-Guide/" target="_blank" className="dropdown-item interact"
+                        >
+                            Frontend Guide
+                        </a>
+                        <a href="https://minsecrus.github.io/CssTellation/" target="_blank" className="dropdown-item interact"
+                        >
+                            CssTellation
+                        </a>
                         <a href="https://minsecrus.github.io/ZenResume-Generator/" target="_blank" className="dropdown-item interact">
                             ZenResume
                         </a>
