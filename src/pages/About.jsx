@@ -58,6 +58,7 @@ export function About() {
                             <a href="https://github.com/AzidoPP" className="interact">懒羊羊 Tetrazole</a>
                             <a href="https://chenglan29.github.io" className="interact">橙蓝</a>
                             <a href="https://tpppp.wiki" className="interact">TPPPP</a>
+                            <a href="https://www.sormaze.top/" className="interact">索瑞迷宫主</a>
                         </div>
                     </div>
                 </motion.section>
