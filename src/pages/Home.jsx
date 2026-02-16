@@ -130,9 +130,13 @@ export function Home({ navigateTo, copyToClipboard }) {
                         transition={{ delay: 0.2 }}
                     >
                         <span className="interact">微信：</span>
-                        <a className="interact"
+                        <button
+                            type="button"
+                            className="contact-copy-btn interact"
                             onClick={() => copyToClipboard('Minsecrus_dreamers', '微信')}
-                        >Minsecrus_dreamers</a>
+                        >
+                            Minsecrus_dreamers
+                        </button>
                     </motion.p>
 
                     <motion.p
@@ -142,9 +146,13 @@ export function Home({ navigateTo, copyToClipboard }) {
                         transition={{ delay: 0.3 }}
                     >
                         <span className="interact">QQ：</span>
-                        <a className="interact"
+                        <button
+                            type="button"
+                            className="contact-copy-btn interact"
                             onClick={() => copyToClipboard('2972853299', 'QQ')}
-                        >2972853299</a>
+                        >
+                            2972853299
+                        </button>
                     </motion.p>
 
                     <motion.p
@@ -154,9 +162,13 @@ export function Home({ navigateTo, copyToClipboard }) {
                         transition={{ delay: 0.4 }}
                     >
                         <span className="interact">编程交流群：</span>
-                        <a className="interact"
+                        <button
+                            type="button"
+                            className="contact-copy-btn interact"
                             onClick={() => copyToClipboard('885719573', '编程交流群')}
-                        >885719573</a>
+                        >
+                            885719573
+                        </button>
                     </motion.p>
 
                     <motion.p
@@ -166,9 +178,13 @@ export function Home({ navigateTo, copyToClipboard }) {
                         transition={{ delay: 0.5 }}
                     >
                         <span className="interact">知识脱贫群：</span>
-                        <a className="interact"
+                        <button
+                            type="button"
+                            className="contact-copy-btn interact"
                             onClick={() => copyToClipboard('1019721429', '知识脱贫群')}
-                        >1019721429</a>
+                        >
+                            1019721429
+                        </button>
                     </motion.p>
 
                 </div>

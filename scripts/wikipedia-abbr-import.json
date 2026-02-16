@@ -1,0 +1,41 @@
+{
+  "seed": "https://en.wikipedia.org/wiki/Lists_of_acronyms",
+  "lang": "en",
+  "crawl": true,
+  "pagesProcessed": 6,
+  "pages": [
+    {
+      "title": "Lists of acronyms",
+      "url": "https://en.wikipedia.org/wiki/Lists_of_acronyms",
+      "importedCount": 1
+    },
+    {
+      "title": "Acronym",
+      "url": "https://en.wikipedia.org/wiki/Acronym",
+      "importedCount": 52
+    },
+    {
+      "title": "Acronyms and abbreviations in avionics",
+      "url": "https://en.wikipedia.org/wiki/Acronyms_and_abbreviations_in_avionics",
+      "importedCount": 1
+    },
+    {
+      "title": "List of Aramaic acronyms",
+      "url": "https://en.wikipedia.org/wiki/List_of_Aramaic_acronyms",
+      "importedCount": 34
+    },
+    {
+      "title": "List of astronomy acronyms",
+      "url": "https://en.wikipedia.org/wiki/List_of_astronomy_acronyms",
+      "importedCount": 1054
+    },
+    {
+      "title": "Climate change acronyms",
+      "url": "https://en.wikipedia.org/wiki/Climate_change_acronyms",
+      "importedCount": 1
+    }
+  ],
+  "importedCount": 1140,
+  "added": 1122,
+  "skipped": 18
+}

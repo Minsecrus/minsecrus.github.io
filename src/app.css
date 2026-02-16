@@ -199,13 +199,19 @@
   font-weight: var(--subtitle-weight);
 }
 
-.contact-item a {
+.contact-copy-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
   color: var(--accent-color);
   font-weight: var(--heading-weight);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.contact-item a:hover {
+.contact-copy-btn:hover {
   color: var(--theme-color);
 }

@@ -1,0 +1,106 @@
+{
+  "seed": "https://en.wikipedia.org/wiki/Lists_of_acronyms",
+  "lang": "en",
+  "crawl": true,
+  "pagesProcessed": 19,
+  "pages": [
+    {
+      "title": "Lists of acronyms",
+      "url": "https://en.wikipedia.org/wiki/Lists_of_acronyms",
+      "importedCount": 1
+    },
+    {
+      "title": "Acronym",
+      "url": "https://en.wikipedia.org/wiki/Acronym",
+      "importedCount": 52
+    },
+    {
+      "title": "Acronyms and abbreviations in avionics",
+      "url": "https://en.wikipedia.org/wiki/Acronyms_and_abbreviations_in_avionics",
+      "importedCount": 1
+    },
+    {
+      "title": "List of Aramaic acronyms",
+      "url": "https://en.wikipedia.org/wiki/List_of_Aramaic_acronyms",
+      "importedCount": 34
+    },
+    {
+      "title": "List of astronomy acronyms",
+      "url": "https://en.wikipedia.org/wiki/List_of_astronomy_acronyms",
+      "importedCount": 1054
+    },
+    {
+      "title": "Climate change acronyms",
+      "url": "https://en.wikipedia.org/wiki/Climate_change_acronyms",
+      "importedCount": 1
+    },
+    {
+      "title": "List of computer science conference acronyms",
+      "url": "https://en.wikipedia.org/wiki/List_of_computer_science_conference_acronyms",
+      "importedCount": 168
+    },
+    {
+      "title": "List of acronyms associated with the eurozone crisis",
+      "url": "https://en.wikipedia.org/wiki/List_of_acronyms_associated_with_the_eurozone_crisis",
+      "importedCount": 105
+    },
+    {
+      "title": "List of government and military acronyms",
+      "url": "https://en.wikipedia.org/wiki/List_of_government_and_military_acronyms",
+      "importedCount": 0
+    },
+    {
+      "title": "Acronyms in healthcare",
+      "url": "https://en.wikipedia.org/wiki/Acronyms_in_healthcare",
+      "importedCount": 1
+    },
+    {
+      "title": "List of information technology initialisms",
+      "url": "https://en.wikipedia.org/wiki/List_of_information_technology_initialisms",
+      "importedCount": 160
+    },
+    {
+      "title": "Laser acronyms",
+      "url": "https://en.wikipedia.org/wiki/Laser_acronyms",
+      "importedCount": 79
+    },
+    {
+      "title": "List of abbreviations in oil and gas exploration and production",
+      "url": "https://en.wikipedia.org/wiki/List_of_abbreviations_in_oil_and_gas_exploration_and_production",
+      "importedCount": 2034
+    },
+    {
+      "title": "List of geographic acronyms and initialisms",
+      "url": "https://en.wikipedia.org/wiki/List_of_geographic_acronyms_and_initialisms",
+      "importedCount": 118
+    },
+    {
+      "title": "List of LGBT-related acronyms",
+      "url": "https://en.wikipedia.org/wiki/List_of_LGBT-related_acronyms",
+      "importedCount": 0
+    },
+    {
+      "title": "List of rabbis known by acronyms",
+      "url": "https://en.wikipedia.org/wiki/List_of_rabbis_known_by_acronyms",
+      "importedCount": 50
+    },
+    {
+      "title": "List of U.S. government and military acronyms",
+      "url": "https://en.wikipedia.org/wiki/List_of_U.S._government_and_military_acronyms",
+      "importedCount": 718
+    },
+    {
+      "title": "List of waste management acronyms",
+      "url": "https://en.wikipedia.org/wiki/List_of_waste_management_acronyms",
+      "importedCount": 7
+    },
+    {
+      "title": "Lists of abbreviations",
+      "url": "https://en.wikipedia.org/wiki/Lists_of_abbreviations",
+      "importedCount": 0
+    }
+  ],
+  "importedCount": 4244,
+  "added": 4166,
+  "skipped": 78
+}

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "abbr:import:wiki": "node scripts/import-wikipedia-abbr.mjs",
+    "abbr:backfill:zh": "node scripts/backfill-abbr-zh.mjs"
   },
   "dependencies": {
     "motion": "^12.6.5",

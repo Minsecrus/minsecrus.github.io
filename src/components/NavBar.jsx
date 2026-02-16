@@ -44,32 +44,32 @@ export function NavBar({ currentPage, navigateTo }) {
         <nav className={`navbar ${visible ? 'visible' : 'hidden'}`}>
             <span className="text" onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }}>Minsecrus</span>
             <div className="links">
-                <a href="https://minsecrus.github.io/Frontend-Guide/" target="_blank" className="interact desktop-only"
+                <a href="https://minsecrus.github.io/Frontend-Guide/" target="_blank" rel="noopener noreferrer" className="interact desktop-only"
                 >
                     Frontend Guide
                 </a>
-                <a href="https://minsecrus.github.io/CssTellation/" target="_blank" className="interact desktop-only"
+                <a href="https://minsecrus.github.io/CssTellation/" target="_blank" rel="noopener noreferrer" className="interact desktop-only"
                 >
                     CssTellation
                 </a>
-                <a href="https://minsecrus.github.io/ZenResume-Generator/" target="_blank" className="interact desktop-only"
+                <a href="https://minsecrus.github.io/ZenResume-Generator/" target="_blank" rel="noopener noreferrer" className="interact desktop-only"
                 >
                     ZenResume
                 </a>
-                <a
-                    className={`interact desktop-only ${currentPage === 'abbr' ? 'active' : ''}`}
+                <button
+                    type="button"
+                    className={`nav-link-btn interact desktop-only ${currentPage === 'abbr' ? 'active' : ''}`}
                     onClick={() => navigateTo('abbr')}
-                    style={{ cursor: 'pointer' }}
                 >
                     Abbr
-                </a>
-                <a
-                    className={`interact desktop-only ${currentPage === 'about' ? 'active' : ''}`}
+                </button>
+                <button
+                    type="button"
+                    className={`nav-link-btn interact desktop-only ${currentPage === 'about' ? 'active' : ''}`}
                     onClick={() => navigateTo('about')}
-                    style={{ cursor: 'pointer' }}
                 >
                     About
-                </a>
+                </button>
             </div>
             <div className="menu-container" ref={menuRef}>
                 <button className="menu-button mobile-only" onClick={handleMenuClick}>
@@ -80,29 +80,31 @@ export function NavBar({ currentPage, navigateTo }) {
                 {menuOpen && (
                     <div className="dropdown-menu mobile-links">
 
-                        <a href="https://minsecrus.github.io/Frontend-Guide/" target="_blank" className="dropdown-item interact"
+                        <a href="https://minsecrus.github.io/Frontend-Guide/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
                         >
                             Frontend Guide
                         </a>
-                        <a href="https://minsecrus.github.io/CssTellation/" target="_blank" className="dropdown-item interact"
+                        <a href="https://minsecrus.github.io/CssTellation/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
                         >
                             CssTellation
                         </a>
-                        <a href="https://minsecrus.github.io/ZenResume-Generator/" target="_blank" className="dropdown-item interact">
+                        <a href="https://minsecrus.github.io/ZenResume-Generator/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact">
                             ZenResume
                         </a>
-                        <a
-                            className={`dropdown-item interact ${currentPage === 'abbr' ? 'active' : ''}`}
+                        <button
+                            type="button"
+                            className={`dropdown-item dropdown-item-btn interact ${currentPage === 'abbr' ? 'active' : ''}`}
                             onClick={() => handleLinkClick('abbr')}
                         >
                             Abbr
-                        </a>
-                        <a
-                            className={`dropdown-item interact ${currentPage === 'about' ? 'active' : ''}`}
+                        </button>
+                        <button
+                            type="button"
+                            className={`dropdown-item dropdown-item-btn interact ${currentPage === 'about' ? 'active' : ''}`}
                             onClick={() => handleLinkClick('about')}
                         >
                             About
-                        </a>
+                        </button>
                     </div>
                 )}
             </div>

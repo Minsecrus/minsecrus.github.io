@@ -16,7 +16,12 @@ export function Footer() {
                     <p className="text"> <span id="copyleft">©</span> 2007 - {currentYear} Minsecrus. All rights reserved.</p>
                 </div>
                 <div className="footer-right">
-                    <a target='_blank' href="https://github.com/minsecrus" className="footer-link interact">
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/minsecrus"
+                        className="footer-link interact"
+                    >
                         GitHub
                     </a>
                     <a href="mailto:minsecrusdreamers@gmail.com" className="footer-link interact">

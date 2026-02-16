@@ -1,0 +1,284 @@
+{
+  "totalWithoutChinese": 4166,
+  "translated": 4097,
+  "fromCache": 28,
+  "failed": 69,
+  "failures": [
+    {
+      "id": "air",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "amxg",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "cic",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "ddnl",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dea",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "decc",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dect",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "del",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "denis",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "denisp",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "deros",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dfg",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dfi",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dfph",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dgds",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dgp",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dhpg",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dhptt",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dia",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dial",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "diegr",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "difm",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dilb",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dill",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dills",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dilsl",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dim",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dint",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dip",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dipbh",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dipft",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "diplp",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "diprm",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dipsa",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dipsk",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dirs",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dirsu",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dis",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "disa",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "disc",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "diso",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dla",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dlist",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dll",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dlt",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dm",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dmea",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dmrp",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dmt",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dnho",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dnv",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "do",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dodaac",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dodaf",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "doehrs",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "doggr",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "doph",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dos",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dpl",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dposs",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dr",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dsct",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dsi",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dsl",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "dss",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "eggr",
+      "error": "HTTP 400"
+    },
+    {
+      "id": "fysa",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "tmd",
+      "error": "HTTP 500"
+    },
+    {
+      "id": "vltcs",
+      "error": "HTTP 500"
+    }
+  ]
+}

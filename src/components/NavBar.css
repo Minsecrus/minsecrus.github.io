@@ -36,11 +36,20 @@
 }
 
 .links a,
-.mobile-links a {
+.mobile-links a,
+.nav-link-btn {
     text-decoration: none;
     color: #333;
     font-weight: 500;
     transition: color 0.2s ease;
+}
+
+.nav-link-btn {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    font-size: inherit;
 }
 
 .links a:hover {
@@ -129,6 +138,13 @@
     transition: background 0.2s ease, color 0.2s ease;
     cursor: pointer;
     white-space: nowrap;
+}
+
+.dropdown-item-btn {
+    width: 100%;
+    border: 0;
+    text-align: left;
+    background: transparent;
 }
 
 .dropdown-item:hover {
