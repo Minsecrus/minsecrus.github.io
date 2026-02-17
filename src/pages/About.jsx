@@ -59,6 +59,7 @@ export function About() {
                             <a href="https://chenglan29.github.io" className="interact">橙蓝</a>
                             <a href="https://tpppp.wiki" className="interact">TPPPP</a>
                             <a href="https://www.sormaze.top/" className="interact">索瑞迷宫主</a>
+                            <a href="https://www.skyhat.top/" className="interact">帽子</a>
                         </div>
                     </div>
                 </motion.section>
