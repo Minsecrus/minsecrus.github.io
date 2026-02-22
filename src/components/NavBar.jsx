@@ -56,6 +56,10 @@ export function NavBar({ currentPage, navigateTo }) {
                 >
                     ZenResume
                 </a>
+                <a href="https://minsecrus.github.io/mini-vue/" target="_blank" rel="noopener noreferrer" className="interact desktop-only"
+                >
+                    Mini Vue
+                </a>
                 <button
                     type="button"
                     className={`nav-link-btn interact desktop-only ${currentPage === 'abbr' ? 'active' : ''}`}
@@ -90,6 +94,9 @@ export function NavBar({ currentPage, navigateTo }) {
                         </a>
                         <a href="https://minsecrus.github.io/ZenResume-Generator/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact">
                             ZenResume
+                        </a>
+                        <a href="https://minsecrus.github.io/mini-vue/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact">
+                            Mini Vue
                         </a>
                         <button
                             type="button"
