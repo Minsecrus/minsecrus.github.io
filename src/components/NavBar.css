@@ -134,6 +134,7 @@
     padding: 10px 20px;
     text-decoration: none;
     color: #333;
+    font-size: 0.875rem;
     font-weight: 500;
     transition: background 0.2s ease, color 0.2s ease;
     cursor: pointer;
@@ -167,7 +168,7 @@
 }
 
 /* 窄屏响应式 */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .navbar {
         padding: 0 1.5rem;
     }
