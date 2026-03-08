@@ -44,6 +44,10 @@ export function NavBar({ currentPage, navigateTo }) {
         <nav className={`navbar ${visible ? 'visible' : 'hidden'}`}>
             <span className="text" onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }}>Minsecrus</span>
             <div className="links">
+                <a href="https://minsecrus.github.io/NameKura/" target="_blank" rel="noopener noreferrer" className="interact desktop-only"
+                >
+                    NameKura
+                </a>
                 <a href="https://minsecrus.github.io/Frontend-Guide/" target="_blank" rel="noopener noreferrer" className="interact desktop-only"
                 >
                     Frontend Guide
@@ -84,6 +88,10 @@ export function NavBar({ currentPage, navigateTo }) {
                 {menuOpen && (
                     <div className="dropdown-menu mobile-links">
 
+                        <a href="https://minsecrus.github.io/NameKura/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
+                        >
+                            NameKura
+                        </a>
                         <a href="https://minsecrus.github.io/Frontend-Guide/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
                         >
                             Frontend Guide
