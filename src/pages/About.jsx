@@ -53,13 +53,14 @@ export function About() {
                     <h2 className="about-subtitle interact">友链</h2>
                     <div className="section-content">
                         <div id="links">
-                            <a href="https://github.com/zuoliangyu" className="interact">左岚</a>
-                            <a href="https://github.com/MalloyManga" className="interact">Malloy</a>
-                            <a href="https://github.com/AzidoPP" className="interact">懒羊羊 Tetrazole</a>
-                            <a href="https://chenglan29.github.io" className="interact">橙蓝</a>
-                            <a href="https://tpppp.wiki" className="interact">TPPPP</a>
+                            <a href="https://github.com/zuoliangyu/" className="interact">左岚</a>
+                            <a href="https://github.com/MalloyManga/" className="interact">Malloy</a>
+                            <a href="https://github.com/AzidoPP/" className="interact">懒羊羊 Tetrazole</a>
+                            <a href="https://chenglan29.github.io/" className="interact">橙蓝</a>
+                            <a href="https://tpppp.wiki/" className="interact">TPPPP</a>
                             <a href="https://www.sormaze.top/" className="interact">索瑞迷宫主</a>
                             <a href="https://www.skyhat.top/" className="interact">帽子</a>
+                            <a href="https://lvyovo-wiki.tech/" className="interact">Lvy Neko</a>
                         </div>
                     </div>
                 </motion.section>
