@@ -44,6 +44,14 @@ export function NavBar({ currentPage, navigateTo }) {
         <nav className={`navbar ${visible ? 'visible' : 'hidden'}`}>
             <span className="text" onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }}>Minsecrus</span>
             <div className="links">
+                <a href="https://minsecrus.github.io/ProConSheet/" target="_blank" rel="noopener noreferrer" className="interact desktop-only"
+                >
+                    ProConSheet
+                </a>
+                <a href="https://minsecrus.github.io/Calligrid/" target="_blank" rel="noopener noreferrer" className="interact desktop-only"
+                >
+                    CalliGrid
+                </a>
                 <a href="https://minsecrus.github.io/NameKura/" target="_blank" rel="noopener noreferrer" className="interact desktop-only"
                 >
                     NameKura
