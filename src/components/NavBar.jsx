@@ -48,7 +48,7 @@ export function NavBar({ currentPage, navigateTo }) {
                 >
                     ProConSheet
                 </a>
-                <a href="https://minsecrus.github.io/Calligrid/" target="_blank" rel="noopener noreferrer" className="interact desktop-only"
+                <a href="https://minsecrus.github.io/CalliGrid/" target="_blank" rel="noopener noreferrer" className="interact desktop-only"
                 >
                     CalliGrid
                 </a>
@@ -95,7 +95,14 @@ export function NavBar({ currentPage, navigateTo }) {
                 </button>
                 {menuOpen && (
                     <div className="dropdown-menu mobile-links">
-
+                        <a href="https://minsecrus.github.io/ProConSheet/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
+                        >
+                            ProConSheet
+                        </a>
+                        <a href="https://minsecrus.github.io/CalliGrid/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
+                        >
+                            CalliGrid
+                        </a>
                         <a href="https://minsecrus.github.io/NameKura/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
                         >
                             NameKura
