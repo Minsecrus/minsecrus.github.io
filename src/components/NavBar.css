@@ -35,6 +35,13 @@
     gap: 2rem;
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: auto;
+}
+
 .links a,
 .mobile-links a,
 .nav-link-btn {
@@ -71,7 +78,7 @@
 /* 响应式菜单 */
 .menu-container {
     position: relative;
-    display: none;
+    display: block;
 }
 
 .menu-button {
@@ -159,11 +166,11 @@
 }
 
 /* 桌面端和移动端显示控制 */
-.desktop-only {
+.desktop-primary {
     display: block;
 }
 
-.mobile-only {
+.mobile-menu-item {
     display: none;
 }
 
@@ -173,15 +180,15 @@
         padding: 0 1.5rem;
     }
 
-    .links .desktop-only {
+    .nav-actions {
+        gap: 0;
+    }
+
+    .links {
         display: none;
     }
-
-    .menu-container {
+    
+    .mobile-menu-item {
         display: block;
-    }
-
-    .mobile-only {
-        display: flex;
     }
 }
