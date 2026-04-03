@@ -68,6 +68,10 @@ export function NavBar({ currentPage, navigateTo }) {
                     </button>
                     {menuOpen && (
                         <div className="dropdown-menu mobile-links">
+                            <a href="https://minsecrus.github.io/HistoryAxis/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
+                            >
+                                HistoryAxis
+                            </a>
                             <a href="https://minsecrus.github.io/GeneGraph/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
                             >
                                 GeneGraph
