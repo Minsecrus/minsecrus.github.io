@@ -28,7 +28,7 @@ export function Home({ navigateTo, copyToClipboard }) {
                         whileHover={{ scale: 1.05, transition: { delay: 0 } }}
                     >
                         <h3 className="interact">读书，读诗</h3>
-                        <p className="skill-desc text">莫言，老舍，巴金，沈从文；Victor Hugo，Albert Camus，Fyodor Dostoyevsky，Arthur Charles Clarke；王勃，白居易，李贺，柳永，秦观，贺铸，纳兰性德，仓央嘉措；</p>
+                        <p className="skill-desc text">莫言，老舍，巴金，沈从文，史铁生；Victor Hugo，Albert Camus，Fyodor Dostoyevsky，Arthur Charles Clarke；李白，杜甫，韩愈，王勃，白居易，李贺，柳永，秦观，贺铸，纳兰性德，仓央嘉措；</p>
                         <p className="skill-desc text">《诗经》《楚辞》；《追忆似水年华》《源氏物语》《飘》《沙丘》</p>
                     </motion.div>
 
@@ -122,6 +122,19 @@ export function Home({ navigateTo, copyToClipboard }) {
                         <div className="project-content">
                             <h3 className="interact">Mdr-Front-Engine</h3>
                             <p className="text">开源可视化前端开发平台 —— 从设计到部署的全流程解决方案</p>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        className="project-card"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1, transition: { delay: 1.0 } }}
+                        whileHover={{ y: -10, transition: { delay: 0 } }}
+                        onClick={() => window.open('https://github.com/Mdr-Tutorials/FrontFrontier', '_blank', 'noopener,noreferrer')}
+                    >
+                        <div className="project-content">
+                            <h3 className="interact">Front Frontier</h3>
+                            <p className="text">前端亦可前沿 —— 前端知识分享站</p>
                         </div>
                     </motion.div>
                 </div>
