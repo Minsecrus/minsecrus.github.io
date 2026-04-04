@@ -88,10 +88,6 @@ export function NavBar({ currentPage, navigateTo }) {
                             >
                                 NameKura
                             </a>
-                            <a href="https://minsecrus.github.io/Frontend-Guide/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
-                            >
-                                Frontend Guide
-                            </a>
                             <a href="https://minsecrus.github.io/CssTellation/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
                             >
                                 CssTellation
@@ -99,8 +95,8 @@ export function NavBar({ currentPage, navigateTo }) {
                             <a href="https://minsecrus.github.io/ZenResume-Generator/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact">
                                 ZenResume
                             </a>
-                            <a href="https://minsecrus.github.io/mini-vue/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact">
-                                Mini Vue
+                            <a href="https://minsecrus.github.io/FrontFrontier/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact">
+                                FrontFrontier
                             </a>
                             <button
                                 type="button"
