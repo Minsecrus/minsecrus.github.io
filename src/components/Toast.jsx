@@ -11,9 +11,13 @@ export function Toast({ message, type = 'success', duration = 3000, onClose }) {
     }, [duration, onClose])
 
     return (
-        <div className={`toast toast-${type}`}>
+        <div
+            className={`toast toast-${type}`}
+            role={type === 'error' ? 'alert' : 'status'}
+            aria-live={type === 'error' ? 'assertive' : 'polite'}
+        >
             <span className="toast-message interact">{message}</span>
-            <button className="toast-close" onClick={onClose} aria-label="关闭提示">
+            <button type="button" className="toast-close" onClick={onClose} aria-label="关闭提示">
                 ×
             </button>
         </div>

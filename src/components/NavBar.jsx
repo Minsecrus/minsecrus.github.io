@@ -56,30 +56,40 @@ export function NavBar({ currentPage, navigateTo }) {
         setMenuOpen(!menuOpen)
     }
 
-    const handleLinkClick = (page) => {
+    const handleNavClick = (event, page) => {
+        event.preventDefault()
         navigateTo(page)
         setMenuOpen(false)
     }
 
     return (
         <nav className={`navbar ${visible ? 'visible' : 'hidden'}`}>
-            <span className="text" onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }}>Minsecrus</span>
+            <a
+                href="/"
+                className="brand-link text"
+                onClick={(event) => handleNavClick(event, 'home')}
+                aria-current={currentPage === 'home' ? 'page' : undefined}
+            >
+                Minsecrus
+            </a>
             <div className="nav-actions">
                 <div className="links">
-                    <button
-                        type="button"
+                    <a
+                        href="/abbr"
                         className={`nav-link-btn interact desktop-primary ${currentPage === 'abbr' ? 'active' : ''}`}
-                        onClick={() => navigateTo('abbr')}
+                        onClick={(event) => handleNavClick(event, 'abbr')}
+                        aria-current={currentPage === 'abbr' ? 'page' : undefined}
                     >
                         Abbr
-                    </button>
-                    <button
-                        type="button"
+                    </a>
+                    <a
+                        href="/about"
                         className={`nav-link-btn interact desktop-primary ${currentPage === 'about' ? 'active' : ''}`}
-                        onClick={() => navigateTo('about')}
+                        onClick={(event) => handleNavClick(event, 'about')}
+                        aria-current={currentPage === 'about' ? 'page' : undefined}
                     >
                         About
-                    </button>
+                    </a>
                 </div>
                 <div className="menu-container" ref={menuRef}>
                     <button
@@ -88,13 +98,14 @@ export function NavBar({ currentPage, navigateTo }) {
                         onClick={handleMenuClick}
                         aria-label="打开导航菜单"
                         aria-expanded={menuOpen}
+                        aria-controls="site-navigation-menu"
                     >
                         <span className="dot"></span>
                         <span className="dot"></span>
                         <span className="dot"></span>
                     </button>
                     {menuOpen && (
-                        <div className="dropdown-menu mobile-links">
+                        <div className="dropdown-menu mobile-links" id="site-navigation-menu">
                             {projectGroups.map((group) => (
                                 <section
                                     className={`dropdown-group ${group.items.length === 1 ? 'is-single' : ''}`}
@@ -119,20 +130,22 @@ export function NavBar({ currentPage, navigateTo }) {
                             <div className="dropdown-group mobile-page-group">
                                 <p className="dropdown-group-title">本站页面</p>
                                 <div className="dropdown-group-items">
-                                    <button
-                                        type="button"
+                                    <a
+                                        href="/abbr"
                                         className={`dropdown-item dropdown-item-btn interact mobile-menu-item ${currentPage === 'abbr' ? 'active' : ''}`}
-                                        onClick={() => handleLinkClick('abbr')}
+                                        onClick={(event) => handleNavClick(event, 'abbr')}
+                                        aria-current={currentPage === 'abbr' ? 'page' : undefined}
                                     >
                                         Abbr
-                                    </button>
-                                    <button
-                                        type="button"
+                                    </a>
+                                    <a
+                                        href="/about"
                                         className={`dropdown-item dropdown-item-btn interact mobile-menu-item ${currentPage === 'about' ? 'active' : ''}`}
-                                        onClick={() => handleLinkClick('about')}
+                                        onClick={(event) => handleNavClick(event, 'about')}
+                                        aria-current={currentPage === 'about' ? 'page' : undefined}
                                     >
                                         About
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

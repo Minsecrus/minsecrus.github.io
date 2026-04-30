@@ -42,6 +42,7 @@
     margin-left: auto;
 }
 
+.brand-link,
 .links a,
 .mobile-links a,
 .nav-link-btn {
@@ -68,7 +69,7 @@
     font-weight: 600 !important;
 }
 
-.navbar>span {
+.brand-link {
     color: var(--heading-color);
     font-size: 20px;
     font-weight: var(--subtitle-weight);

@@ -78,6 +78,7 @@ export function Toolbox() {
                 <div className="filter-container">
                     <input
                         type="text"
+                        aria-label="搜索工具"
                         placeholder="搜索..."
                         className="search-input"
                         value={filter}
@@ -86,15 +87,19 @@ export function Toolbox() {
                     <div className="category-filters">
                         <div className="category-buttons">
                             <button
+                                type="button"
                                 className={`category-btn ${filter === '' ? 'active' : ''}`}
                                 onClick={() => setFilter('')}
+                                aria-pressed={filter === ''}
                             >
                                 全部
                             </button>
                             {categories.map(category => (
                                 <button
+                                    type="button"
                                     className={`category-btn ${filter === category ? 'active' : ''}`}
                                     onClick={() => setFilter(category)}
+                                    aria-pressed={filter === category}
                                     key={category}
                                 >
                                     {category}

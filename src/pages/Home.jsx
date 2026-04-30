@@ -73,70 +73,80 @@ export function Home({ navigateTo, copyToClipboard }) {
             >
                 <h2 className="section-title interact">我的 Github</h2>
                 <div className="project-grid">
-                    <motion.div
+                    <motion.a
+                        href="https://github.com/Minsecrus/Minsecrus.github.io"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="project-card"
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.2 } }}
                         whileHover={{ y: -10, transition: { delay: 0 } }}
-                        onClick={() => window.open('https://github.com/Minsecrus/Minsecrus.github.io', '_blank', 'noopener,noreferrer')}
                     >
                         <div className="project-content">
                             <h3 className="interact">Minsecrus.github.io</h3>
                             <p className="text">个人主页项目，使用 Preact 和 Motion 构建的现代化网站</p>
                         </div>
-                    </motion.div>
+                    </motion.a>
 
-                    <motion.div
+                    <motion.a
+                        href="https://github.com/Mdr-C-Tutorial/C"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="project-card"
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.4 } }}
                         whileHover={{ y: -10, transition: { delay: 0 } }}
-                        onClick={() => window.open('https://github.com/Mdr-C-Tutorial/C', '_blank', 'noopener,noreferrer')}
                     >
                         <div className="project-content">
                             <h3 className="interact">Mdr-C-Tutorial</h3>
                             <p className="text">完全开源免费的全套 C 语言教程，涉及从基础语法到项目开发的广大领域</p>
                         </div>
-                    </motion.div>
+                    </motion.a>
 
-                    <motion.div
+                    <motion.a
+                        href="https://github.com/PLOS-clan/CoolPotOS"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="project-card"
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.6 } }}
                         whileHover={{ y: -10, transition: { delay: 0 } }}
-                        onClick={() => window.open('https://github.com/PLOS-clan/CoolPotOS', '_blank', 'noopener,noreferrer')} /* 替换为实际链接 */
                     >
                         <div className="project-content">
                             <h3 className="interact">操作系统 CPOS</h3>
                             <p className="text">自制操作系统内核，在 Bilibili 有几十万播放量</p>
                         </div>
-                    </motion.div>
+                    </motion.a>
 
-                    <motion.div
+                    <motion.a
+                        href="https://github.com/Mdr-Tutorials/Mdr-Front-Engine"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="project-card"
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.8 } }}
                         whileHover={{ y: -10, transition: { delay: 0 } }}
-                        onClick={() => window.open('https://github.com/Mdr-Tutorials/Mdr-Front-Engine', '_blank', 'noopener,noreferrer')}
                     >
                         <div className="project-content">
                             <h3 className="interact">Mdr-Front-Engine</h3>
                             <p className="text">开源可视化前端开发平台 —— 从设计到部署的全流程解决方案</p>
                         </div>
-                    </motion.div>
+                    </motion.a>
 
-                    <motion.div
+                    <motion.a
+                        href="https://github.com/Mdr-Tutorials/FrontFrontier"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="project-card"
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1, transition: { delay: 1.0 } }}
                         whileHover={{ y: -10, transition: { delay: 0 } }}
-                        onClick={() => window.open('https://github.com/Mdr-Tutorials/FrontFrontier', '_blank', 'noopener,noreferrer')}
                     >
                         <div className="project-content">
                             <h3 className="interact">Front Frontier</h3>
                             <p className="text">前端亦可前沿 —— 前端知识分享站</p>
                         </div>
-                    </motion.div>
+                    </motion.a>
                 </div>
             </motion.section>
 
