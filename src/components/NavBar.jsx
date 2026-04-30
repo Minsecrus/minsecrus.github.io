@@ -1,6 +1,27 @@
 import { useState, useEffect, useRef } from 'react'
 import './NavBar.css'
 
+const projectGroups = [
+    {
+        title: '教程和分享',
+        items: [
+            { name: 'FrontFrontier', href: 'https://minsecrus.github.io/FrontFrontier/' },
+        ],
+    },
+    {
+        title: '微项目',
+        items: [
+            { name: 'HistoryAxis', href: 'https://minsecrus.github.io/HistoryAxis/' },
+            { name: 'GeneGraph', href: 'https://minsecrus.github.io/GeneGraph/' },
+            { name: 'ProConSheet', href: 'https://minsecrus.github.io/ProConSheet/' },
+            { name: 'CalliGrid', href: 'https://minsecrus.github.io/CalliGrid/' },
+            { name: 'NameKura', href: 'https://minsecrus.github.io/NameKura/' },
+            { name: 'CssTellation', href: 'https://minsecrus.github.io/CssTellation/' },
+            { name: 'ZenResume', href: 'https://minsecrus.github.io/ZenResume-Generator/' },
+        ],
+    },
+]
+
 export function NavBar({ currentPage, navigateTo }) {
     const [visible, setVisible] = useState(true)
     const [menuOpen, setMenuOpen] = useState(false)
@@ -61,57 +82,59 @@ export function NavBar({ currentPage, navigateTo }) {
                     </button>
                 </div>
                 <div className="menu-container" ref={menuRef}>
-                    <button type="button" className="menu-button" onClick={handleMenuClick}>
+                    <button
+                        type="button"
+                        className="menu-button"
+                        onClick={handleMenuClick}
+                        aria-label="打开导航菜单"
+                        aria-expanded={menuOpen}
+                    >
                         <span className="dot"></span>
                         <span className="dot"></span>
                         <span className="dot"></span>
                     </button>
                     {menuOpen && (
                         <div className="dropdown-menu mobile-links">
-                            <a href="https://minsecrus.github.io/HistoryAxis/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
-                            >
-                                HistoryAxis
-                            </a>
-                            <a href="https://minsecrus.github.io/GeneGraph/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
-                            >
-                                GeneGraph
-                            </a>
-                            <a href="https://minsecrus.github.io/ProConSheet/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
-                            >
-                                ProConSheet
-                            </a>
-                            <a href="https://minsecrus.github.io/CalliGrid/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
-                            >
-                                CalliGrid
-                            </a>
-                            <a href="https://minsecrus.github.io/NameKura/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
-                            >
-                                NameKura
-                            </a>
-                            <a href="https://minsecrus.github.io/CssTellation/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact"
-                            >
-                                CssTellation
-                            </a>
-                            <a href="https://minsecrus.github.io/ZenResume-Generator/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact">
-                                ZenResume
-                            </a>
-                            <a href="https://minsecrus.github.io/FrontFrontier/" target="_blank" rel="noopener noreferrer" className="dropdown-item interact">
-                                FrontFrontier
-                            </a>
-                            <button
-                                type="button"
-                                className={`dropdown-item dropdown-item-btn interact mobile-menu-item ${currentPage === 'abbr' ? 'active' : ''}`}
-                                onClick={() => handleLinkClick('abbr')}
-                            >
-                                Abbr
-                            </button>
-                            <button
-                                type="button"
-                                className={`dropdown-item dropdown-item-btn interact mobile-menu-item ${currentPage === 'about' ? 'active' : ''}`}
-                                onClick={() => handleLinkClick('about')}
-                            >
-                                About
-                            </button>
+                            {projectGroups.map((group) => (
+                                <section
+                                    className={`dropdown-group ${group.items.length === 1 ? 'is-single' : ''}`}
+                                    key={group.title}
+                                >
+                                    <p className="dropdown-group-title">{group.title}</p>
+                                    <div className="dropdown-group-items">
+                                        {group.items.map((item) => (
+                                            <a
+                                                key={item.name}
+                                                href={item.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="dropdown-item interact"
+                                            >
+                                                {item.name}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </section>
+                            ))}
+                            <div className="dropdown-group mobile-page-group">
+                                <p className="dropdown-group-title">本站页面</p>
+                                <div className="dropdown-group-items">
+                                    <button
+                                        type="button"
+                                        className={`dropdown-item dropdown-item-btn interact mobile-menu-item ${currentPage === 'abbr' ? 'active' : ''}`}
+                                        onClick={() => handleLinkClick('abbr')}
+                                    >
+                                        Abbr
+                                    </button>
+                                    <button
+                                        type="button"
+                                        className={`dropdown-item dropdown-item-btn interact mobile-menu-item ${currentPage === 'about' ? 'active' : ''}`}
+                                        onClick={() => handleLinkClick('about')}
+                                    >
+                                        About
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     )}
                 </div>
