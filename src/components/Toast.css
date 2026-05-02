@@ -29,6 +29,15 @@
     color: var(--text-color);
 }
 
+.toast-anchored {
+    position: fixed;
+    z-index: 10000;
+    min-width: max-content;
+    max-width: calc(100vw - 32px);
+    transform: translate(-50%, var(--toast-offset-y, 0));
+    animation: anchoredToastIn 0.2s ease, fadeOut 0.3s ease 2.7s forwards;
+}
+
 @keyframes slideIn {
     from {
         transform: translateX(100%);
@@ -37,6 +46,18 @@
 
     to {
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes anchoredToastIn {
+    from {
+        transform: translate(-50%, calc(var(--toast-offset-y, 0) + 6px));
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, var(--toast-offset-y, 0));
         opacity: 1;
     }
 }
@@ -98,15 +119,19 @@
     .toast-container {
         top: auto;
         bottom: 20px;
-        right: 50%;
-        transform: translateX(50%);
         left: 20px;
+        right: 20px;
     }
 
     .toast {
         min-width: auto;
         width: 100%;
         max-width: none;
+    }
+
+    .toast-anchored {
+        width: max-content;
+        max-width: calc(100vw - 32px);
     }
 
     @keyframes slideIn {

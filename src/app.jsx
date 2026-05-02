@@ -13,9 +13,9 @@ export function App() {
   const [currentPage, setCurrentPage] = useState('home')
   const [toasts, setToasts] = useState([])
 
-  const addToast = useCallback((message, type = 'success', duration = 3000) => {
-    const id = Date.now()
-    setToasts(prev => [...prev, { id, message, type, duration }])
+  const addToast = useCallback((message, type = 'success', duration = 3000, anchor = null) => {
+    const id = crypto.randomUUID?.() ?? `${Date.now()}-${Math.random()}`
+    setToasts(prev => [...prev, { id, message, type, duration, anchor }])
   }, [])
 
   const removeToast = useCallback((id) => {
@@ -42,12 +42,25 @@ export function App() {
     return () => window.removeEventListener('popstate', handlePathChange);
   }, []);
 
-  const copyToClipboard = async (text, label) => {
+  const getToastAnchor = (target) => {
+    if (!target?.getBoundingClientRect) return null
+
+    const rect = target.getBoundingClientRect()
+    return {
+      x: rect.left + rect.width / 2,
+      y: rect.top,
+      bottom: rect.bottom,
+    }
+  }
+
+  const copyToClipboard = async (text, label, event) => {
+    const anchor = getToastAnchor(event?.currentTarget)
+
     try {
       await navigator.clipboard.writeText(text)
-      addToast(`已复制 ${label}`, 'success')
+      addToast(`已复制 ${label}`, 'success', 3000, anchor)
     } catch (err) {
-      addToast('复制失败，请重试', 'error')
+      addToast('复制失败，请重试', 'error', 3000, anchor)
     }
   }
 

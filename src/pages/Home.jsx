@@ -169,7 +169,7 @@ export function Home({ navigateTo, copyToClipboard }) {
                         <button
                             type="button"
                             className="contact-copy-btn interact"
-                            onClick={() => copyToClipboard('Minsecrus_dreamers', '微信')}
+                            onClick={(event) => copyToClipboard('Minsecrus_dreamers', '微信', event)}
                         >
                             Minsecrus_dreamers
                         </button>
@@ -185,7 +185,7 @@ export function Home({ navigateTo, copyToClipboard }) {
                         <button
                             type="button"
                             className="contact-copy-btn interact"
-                            onClick={() => copyToClipboard('2972853299', 'QQ')}
+                            onClick={(event) => copyToClipboard('2972853299', 'QQ', event)}
                         >
                             2972853299
                         </button>
@@ -201,7 +201,7 @@ export function Home({ navigateTo, copyToClipboard }) {
                         <button
                             type="button"
                             className="contact-copy-btn interact"
-                            onClick={() => copyToClipboard('885719573', '编程交流群')}
+                            onClick={(event) => copyToClipboard('885719573', '编程交流群', event)}
                         >
                             885719573
                         </button>
@@ -217,7 +217,7 @@ export function Home({ navigateTo, copyToClipboard }) {
                         <button
                             type="button"
                             className="contact-copy-btn interact"
-                            onClick={() => copyToClipboard('1019721429', '知识脱贫群')}
+                            onClick={(event) => copyToClipboard('1019721429', '知识脱贫群', event)}
                         >
                             1019721429
                         </button>
