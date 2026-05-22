@@ -9,7 +9,7 @@ const projectGroups = [
         ],
     },
     {
-        title: '微项目',
+        title: '前端随笔',
         items: [
             { name: 'HistoryAxis', href: 'https://minsecrus.github.io/HistoryAxis/' },
             { name: 'GeneGraph', href: 'https://minsecrus.github.io/GeneGraph/' },
@@ -18,6 +18,7 @@ const projectGroups = [
             { name: 'NameKura', href: 'https://minsecrus.github.io/NameKura/' },
             { name: 'CssTellation', href: 'https://minsecrus.github.io/CssTellation/' },
             { name: 'ZenResume', href: 'https://minsecrus.github.io/ZenResume-Generator/' },
+            { name: 'CharacterPercents', href: 'https://minsecrus.github.io/CharacterPercents/' },
         ],
     },
 ]
