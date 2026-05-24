@@ -6,6 +6,8 @@ const projectGroups = [
         title: '教程和分享',
         items: [
             { name: 'FrontFrontier', href: 'https://minsecrus.github.io/FrontFrontier/' },
+            { name: 'Learning Notes', href: 'https://minsecrus.github.io/learning-notes/' },
+            { name: 'EasyMaths', href: 'https://minsecrus.github.io/EasyMaths/' },
         ],
     },
     {
@@ -19,6 +21,7 @@ const projectGroups = [
             { name: 'CssTellation', href: 'https://minsecrus.github.io/CssTellation/' },
             { name: 'ZenResume', href: 'https://minsecrus.github.io/ZenResume-Generator/' },
             { name: 'CharacterPercents', href: 'https://minsecrus.github.io/CharacterPercents/' },
+            { name: 'QuiXam', href: 'https://minsecrus.github.io/QuiXam/' },
         ],
     },
 ]
