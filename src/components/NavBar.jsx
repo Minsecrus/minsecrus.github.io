@@ -8,6 +8,7 @@ const projectGroups = [
             { name: 'FrontFrontier', href: 'https://minsecrus.github.io/FrontFrontier/' },
             { name: 'Learning Notes', href: 'https://minsecrus.github.io/learning-notes/' },
             { name: 'EasyMaths', href: 'https://minsecrus.github.io/EasyMaths/' },
+            { name: 'DrifterPoetry', href: 'https://minsecrus.github.io/DrifterPoetry/' },
         ],
     },
     {
