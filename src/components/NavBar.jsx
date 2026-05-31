@@ -23,6 +23,7 @@ const projectGroups = [
             { name: 'ZenResume', href: 'https://minsecrus.github.io/ZenResume-Generator/' },
             { name: 'CharacterPercents', href: 'https://minsecrus.github.io/CharacterPercents/' },
             { name: 'QuiXam', href: 'https://minsecrus.github.io/QuiXam/' },
+            { name: 'GridLogo', href: 'https://minsecrus.github.io/GridLogo/' },
         ],
     },
 ]
