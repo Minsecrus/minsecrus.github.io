@@ -119,7 +119,7 @@ export function Home({ navigateTo, copyToClipboard }) {
                     </motion.a>
 
                     <motion.a
-                        href="https://github.com/Mdr-Tutorials/Mdr-Front-Engine"
+                        href="https://github.com/Mdr-Tutorials/prodivix"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="project-card"
@@ -128,13 +128,13 @@ export function Home({ navigateTo, copyToClipboard }) {
                         whileHover={{ y: -10, transition: { delay: 0 } }}
                     >
                         <div className="project-content">
-                            <h3 className="interact">Mdr-Front-Engine</h3>
+                            <h3 className="interact">Prodivix</h3>
                             <p className="text">开源可视化前端开发平台 —— 从设计到部署的全流程解决方案</p>
                         </div>
                     </motion.a>
 
                     <motion.a
-                        href="https://github.com/Mdr-Tutorials/FrontFrontier"
+                        href="https://github.com/Minsecrus/FrontFrontier"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="project-card"
