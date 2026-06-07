@@ -122,8 +122,13 @@
     border: 1px solid rgba(0, 0, 0, 0.05);
     width: 320px;
     max-width: calc(100vw - 40px);
+    max-height: calc(100dvh - 92px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
     padding: 12px;
     animation: fadeIn 0.2s ease;
+    scrollbar-gutter: stable;
+    -webkit-overflow-scrolling: touch;
 }
 
 @keyframes fadeIn {

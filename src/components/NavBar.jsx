@@ -24,6 +24,7 @@ const projectGroups = [
             { name: 'CharacterPercents', href: 'https://minsecrus.github.io/CharacterPercents/' },
             { name: 'QuiXam', href: 'https://minsecrus.github.io/QuiXam/' },
             { name: 'GridLogo', href: 'https://minsecrus.github.io/GridLogo/' },
+            { name: 'SugarScout', href: 'https://minsecrus.github.io/SugarScout/' },
         ],
     },
 ]
