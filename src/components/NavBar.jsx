@@ -25,6 +25,7 @@ const projectGroups = [
             { name: 'QuiXam', href: 'https://minsecrus.github.io/QuiXam/' },
             { name: 'GridLogo', href: 'https://minsecrus.github.io/GridLogo/' },
             { name: 'SugarScout', href: 'https://minsecrus.github.io/SugarScout/' },
+            { name: 'Refactoring Demo', href: 'https://minsecrus.github.io/refactoring-ui-example/' },
         ],
     },
 ]
