@@ -27,6 +27,7 @@ const projectGroups = [
             { name: 'SugarScout', href: 'https://minsecrus.github.io/SugarScout/' },
             { name: 'Refactoring Demo', href: 'https://minsecrus.github.io/refactoring-ui-example/' },
             { name: 'ForkMind', href: 'https://minsecrus.github.io/ForkMind/' },
+            { name: 'Agent3D', href: 'https://minsecrus.github.io/Agent3D/' },
         ],
     },
 ]
