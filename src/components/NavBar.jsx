@@ -28,6 +28,8 @@ const projectGroups = [
             { name: 'Refactoring Demo', href: 'https://minsecrus.github.io/refactoring-ui-example/' },
             { name: 'ForkMind', href: 'https://minsecrus.github.io/ForkMind/' },
             { name: 'Agent3D', href: 'https://minsecrus.github.io/Agent3D/' },
+            { name: 'NeonFlow', href: 'https://minsecrus.github.io/NeonFlow-Rhythm/' },
+            { name: 'CormorantCycling', href: 'https://minsecrus.github.io/Cormorants-riding-bicycles/' },
         ],
     },
 ]
