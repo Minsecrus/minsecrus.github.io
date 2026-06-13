@@ -34,6 +34,13 @@ const projectGroups = [
     },
 ]
 
+const sitePages = [
+    { name: '我的工具箱', page: 'toolbox', href: '/toolbox' },
+    { name: '我的资料库', page: 'library', href: '/library' },
+    { name: 'Abbr', page: 'abbr', href: '/abbr' },
+    { name: 'About', page: 'about', href: '/about' },
+]
+
 export function NavBar({ currentPage, navigateTo }) {
     const [visible, setVisible] = useState(true)
     const [menuOpen, setMenuOpen] = useState(false)
@@ -137,27 +144,22 @@ export function NavBar({ currentPage, navigateTo }) {
                                             </a>
                                         ))}
                                     </div>
-                                </section>
-                            ))}
+                            </section>
+                        ))}
                             <div className="dropdown-group mobile-page-group">
                                 <p className="dropdown-group-title">本站页面</p>
                                 <div className="dropdown-group-items">
-                                    <a
-                                        href="/abbr"
-                                        className={`dropdown-item dropdown-item-btn interact mobile-menu-item ${currentPage === 'abbr' ? 'active' : ''}`}
-                                        onClick={(event) => handleNavClick(event, 'abbr')}
-                                        aria-current={currentPage === 'abbr' ? 'page' : undefined}
-                                    >
-                                        Abbr
-                                    </a>
-                                    <a
-                                        href="/about"
-                                        className={`dropdown-item dropdown-item-btn interact mobile-menu-item ${currentPage === 'about' ? 'active' : ''}`}
-                                        onClick={(event) => handleNavClick(event, 'about')}
-                                        aria-current={currentPage === 'about' ? 'page' : undefined}
-                                    >
-                                        About
-                                    </a>
+                                    {sitePages.map((item) => (
+                                        <a
+                                            key={item.page}
+                                            href={item.href}
+                                            className={`dropdown-item dropdown-item-btn interact mobile-menu-item ${currentPage === item.page ? 'active' : ''}`}
+                                            onClick={(event) => handleNavClick(event, item.page)}
+                                            aria-current={currentPage === item.page ? 'page' : undefined}
+                                        >
+                                            {item.name}
+                                        </a>
+                                    ))}
                                 </div>
                             </div>
                         </div>
