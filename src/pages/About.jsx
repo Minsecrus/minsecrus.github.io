@@ -53,9 +53,9 @@ export function About() {
                     <h2 className="about-subtitle interact">友链</h2>
                     <div className="section-content">
                         <div id="links">
-                            <a target='_blank' href="https://github.com/zuoliangyu/" className="interact">左岚</a>
-                            <a target='_blank' href="https://github.com/MalloyManga/" className="interact">Malloy</a>
-                            <a target='_blank' href="https://github.com/AzidoPP/" className="interact">懒羊羊 Tetrazole</a>
+                            <a target='_blank' href="https://space.bilibili.com/27619688" className="interact">左岚</a>
+                            <a target='_blank' href="https://malloymanga.github.io/" className="interact">Malloy</a>
+                            <a target='_blank' href="https://space.bilibili.com/1084866085" className="interact">懒羊羊 Tetrazole</a>
                             <a target='_blank' href="https://chenglan29.github.io/" className="interact">橙蓝</a>
                             <a target='_blank' href="https://tpppp.wiki/" className="interact">TPPPP</a>
                             <a target='_blank' href="https://www.sormaze.top/" className="interact">索瑞迷宫主</a>
