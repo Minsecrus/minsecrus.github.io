@@ -147,6 +147,21 @@ export function Home({ navigateTo, copyToClipboard }) {
                             <p className="text">前端亦可前沿 —— 前端知识分享站</p>
                         </div>
                     </motion.a>
+
+                    <motion.a
+                        href="https://github.com/Minsecrus/BudgetBridge"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-card"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1, transition: { delay: 1.2 } }}
+                        whileHover={{ y: -10, transition: { delay: 0 } }}
+                    >
+                        <div className="project-content">
+                            <h3 className="interact">BudgetBridge</h3>
+                            <p className="text">Go/TypeScript API 代理，聚合多账户为单一高可用服务，支持 OpenAI 和 Anthropic 格式</p>
+                        </div>
+                    </motion.a>
                 </div>
             </motion.section>
 
