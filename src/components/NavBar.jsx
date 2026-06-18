@@ -1,42 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
+import { githubPageProjectGroups } from '../data/githubProjects'
 import './NavBar.css'
 
-const projectGroups = [
-    {
-        title: '教程和分享',
-        items: [
-            { name: 'FrontFrontier', href: 'https://minsecrus.github.io/FrontFrontier/' },
-            { name: 'Learning Notes', href: 'https://minsecrus.github.io/learning-notes/' },
-            { name: 'EasyMaths', href: 'https://minsecrus.github.io/EasyMaths/' },
-            { name: 'DrifterPoetry', href: 'https://minsecrus.github.io/DrifterPoetry/' },
-        ],
-    },
-    {
-        title: '前端随笔',
-        items: [
-            { name: 'HistoryAxis', href: 'https://minsecrus.github.io/HistoryAxis/' },
-            { name: 'GeneGraph', href: 'https://minsecrus.github.io/GeneGraph/' },
-            { name: 'ProConSheet', href: 'https://minsecrus.github.io/ProConSheet/' },
-            { name: 'CalliGrid', href: 'https://minsecrus.github.io/CalliGrid/' },
-            { name: 'NameKura', href: 'https://minsecrus.github.io/NameKura/' },
-            { name: 'CssTellation', href: 'https://minsecrus.github.io/CssTellation/' },
-            { name: 'ZenResume', href: 'https://minsecrus.github.io/ZenResume-Generator/' },
-            { name: 'CharacterPercents', href: 'https://minsecrus.github.io/CharacterPercents/' },
-            { name: 'QuiXam', href: 'https://minsecrus.github.io/QuiXam/' },
-            { name: 'GridLogo', href: 'https://minsecrus.github.io/GridLogo/' },
-            { name: 'SugarScout', href: 'https://minsecrus.github.io/SugarScout/' },
-            { name: 'Refactoring Demo', href: 'https://minsecrus.github.io/refactoring-ui-example/' },
-            { name: 'ForkMind', href: 'https://minsecrus.github.io/ForkMind/' },
-            { name: 'Agent3D', href: 'https://minsecrus.github.io/Agent3D/' },
-            { name: 'NeonFlow', href: 'https://minsecrus.github.io/NeonFlow-Rhythm/' },
-            { name: 'CormorantCycling', href: 'https://minsecrus.github.io/Cormorants-riding-bicycles/' },
-        ],
-    },
-]
-
 const sitePages = [
-    { name: '我的工具箱', page: 'toolbox', href: '/toolbox' },
-    { name: '我的资料库', page: 'library', href: '/library' },
+    { name: '工具箱', page: 'toolbox', href: '/toolbox' },
+    { name: '资料库', page: 'library', href: '/library' },
     { name: 'Abbr', page: 'abbr', href: '/abbr' },
     { name: 'About', page: 'about', href: '/about' },
 ]
@@ -125,7 +93,7 @@ export function NavBar({ currentPage, navigateTo }) {
                     </button>
                     {menuOpen && (
                         <div className="dropdown-menu mobile-links" id="site-navigation-menu">
-                            {projectGroups.map((group) => (
+                            {githubPageProjectGroups.map((group) => (
                                 <section
                                     className={`dropdown-group ${group.items.length === 1 ? 'is-single' : ''}`}
                                     key={group.title}
@@ -134,7 +102,7 @@ export function NavBar({ currentPage, navigateTo }) {
                                     <div className="dropdown-group-items">
                                         {group.items.map((item) => (
                                             <a
-                                                key={item.name}
+                                                key={item.id}
                                                 href={item.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
@@ -144,8 +112,8 @@ export function NavBar({ currentPage, navigateTo }) {
                                             </a>
                                         ))}
                                     </div>
-                            </section>
-                        ))}
+                                </section>
+                            ))}
                             <div className="dropdown-group mobile-page-group">
                                 <p className="dropdown-group-title">本站页面</p>
                                 <div className="dropdown-group-items">
