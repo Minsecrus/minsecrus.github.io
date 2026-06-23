@@ -158,6 +158,12 @@ export const allGithubProjects = [
         pagesHref: 'https://minsecrus.github.io/Cormorants-riding-bicycles/',
         group: '前端随笔',
     },
+    {
+        id: 'qr-studio',
+        name: 'QR Studio',
+        pagesHref: 'https://minsecrus.github.io/qr-studio/',
+        group: '前端随笔',
+    },
 ]
 
 export const featuredGithubProjects = allGithubProjects
