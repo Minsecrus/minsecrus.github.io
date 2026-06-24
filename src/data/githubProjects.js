@@ -164,6 +164,12 @@ export const allGithubProjects = [
         pagesHref: 'https://minsecrus.github.io/qr-studio/',
         group: '前端随笔',
     },
+    {
+        id: 'BusyBeaver',
+        name: 'Busy Beaver',
+        pagesHref: 'https://github.com/Minsecrus/BusyBeaver',
+        group: '前端随笔',
+    },
 ]
 
 export const featuredGithubProjects = allGithubProjects
