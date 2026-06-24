@@ -17,7 +17,10 @@ const interests = [
     },
     {
         title: '沉迷于 Maths & Physics 无法自拔',
-        descriptions: ['微分几何，泛函分析，范畴论；分析力学'],
+        descriptions: [
+            '微分几何，泛函分析，凸分析，范畴论；分析力学',
+            '学物理就是学美！'
+        ],
     },
     {
         title: '计算机真奇妙',
