@@ -167,7 +167,7 @@ export const allGithubProjects = [
     {
         id: 'BusyBeaver',
         name: 'Busy Beaver',
-        pagesHref: 'https://github.com/Minsecrus/BusyBeaver',
+        pagesHref: 'https://minsecrus.github.io/BusyBeaver/',
         group: '前端随笔',
     },
 ]
