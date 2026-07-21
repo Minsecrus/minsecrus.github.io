@@ -62,6 +62,7 @@ export function About() {
                             <a target='_blank' href="https://www.skyhat.top/" className="interact">帽子</a>
                             <a target='_blank' href="https://lvyovo-wiki.tech/" className="interact">Lvy Neko</a>
                             <a target='_blank' href="https://www.coderains.cn/" className="interact">晓雨</a>
+                            <a target='_blank' href="https://blog.zgm2003.cn/" className="interact">左光明</a>
                         </div>
                     </div>
                 </motion.section>

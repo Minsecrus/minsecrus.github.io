@@ -37,7 +37,7 @@ export const allGithubProjects = [
     {
         id: 'mainly-c',
         name: 'Mainly.C',
-        description: '面向 C 初学者的轻量级浏览器编辑器，使用 Clang 22 在本地编译并运行 C 代码',
+        description: '面向 C/C++ 初学者的轻量级浏览器编辑器，使用 Clang 22 在本地编译并运行 C/C++ 代码',
         repoHref: 'https://github.com/Minsecrus/Mainly.C',
         featured: true,
     },
