@@ -2,10 +2,13 @@ import { useState, useEffect, useRef } from 'react'
 import { githubPageProjectGroups } from '../data/githubProjects'
 import './NavBar.css'
 
+const blogHref = 'https://minsecrus.github.io/minsecrus-blog/'
+
 const sitePages = [
     { name: '工具箱', page: 'toolbox', href: '/toolbox' },
     { name: '资料库', page: 'library', href: '/library' },
     { name: 'Abbr', page: 'abbr', href: '/abbr' },
+    { name: 'Blog', href: blogHref },
     { name: 'About', page: 'about', href: '/about' },
 ]
 
@@ -70,6 +73,12 @@ export function NavBar({ currentPage, navigateTo }) {
                         Abbr
                     </a>
                     <a
+                        href={blogHref}
+                        className="nav-link-btn interact desktop-primary"
+                    >
+                        Blog
+                    </a>
+                    <a
                         href="/about"
                         className={`nav-link-btn interact desktop-primary ${currentPage === 'about' ? 'active' : ''}`}
                         onClick={(event) => handleNavClick(event, 'about')}
@@ -119,11 +128,11 @@ export function NavBar({ currentPage, navigateTo }) {
                                 <div className="dropdown-group-items">
                                     {sitePages.map((item) => (
                                         <a
-                                            key={item.page}
+                                            key={item.page ?? item.href}
                                             href={item.href}
-                                            className={`dropdown-item dropdown-item-btn interact mobile-menu-item ${currentPage === item.page ? 'active' : ''}`}
-                                            onClick={(event) => handleNavClick(event, item.page)}
-                                            aria-current={currentPage === item.page ? 'page' : undefined}
+                                            className={`dropdown-item dropdown-item-btn interact mobile-menu-item ${item.page && currentPage === item.page ? 'active' : ''}`}
+                                            onClick={item.page ? (event) => handleNavClick(event, item.page) : undefined}
+                                            aria-current={item.page && currentPage === item.page ? 'page' : undefined}
                                         >
                                             {item.name}
                                         </a>
