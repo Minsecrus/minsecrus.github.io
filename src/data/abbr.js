@@ -2897,6 +2897,7 @@ export const unsortedAbbrGroups = [
             { id: "nosql", short: "NoSQL", description: "Not Only SQL / 不仅仅是 SQL" },
             { id: "not", short: "NOT", description: "NOrdic Telescope / 北欧望远镜" },
             { id: "np", short: "NP", description: "non-producing well / 非生产井" },
+            { id: "npc", short: "NPC", description: "Non-Player Character / 非玩家角色" },
             { id: "npd", short: "NPD", description: "Norwegian Petroleum Directorate / 挪威石油管理局" },
             { id: "npdes", short: "NPDES", description: "National Pollutant Discharge Elimination System / 国家污染物排放消除系统" },
             { id: "npm", short: "NPM", description: "Node Package Manager / Node 包管理器" },
