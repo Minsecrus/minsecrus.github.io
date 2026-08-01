@@ -72,6 +72,12 @@ export const allGithubProjects = [
         group: '教程和分享',
     },
     {
+        id: 'tolstoy',
+        name: '书库',
+        pagesHref: 'https://minsecrus.github.io/tolstoy/',
+        group: '教程和分享',
+    },
+    {
         id: 'easy-maths',
         name: 'EasyMaths',
         pagesHref: 'https://minsecrus.github.io/EasyMaths/',
