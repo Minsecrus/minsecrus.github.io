@@ -56,7 +56,7 @@ export function About() {
                             <a target='_blank' href="https://space.bilibili.com/27619688" className="interact">左岚</a>
                             <a target='_blank' href="https://malloymanga.github.io/" className="interact">Malloy</a>
                             <a target='_blank' href="https://space.bilibili.com/1084866085" className="interact">懒羊羊 Tetrazole</a>
-                            <a target='_blank' href="https://chenglan29.github.io/" className="interact">橙蓝</a>
+                            <a target='_blank' href="https://chenglan41.github.io/" className="interact">橙蓝</a>
                             <a target='_blank' href="https://tpppp.wiki/" className="interact">TPPPP</a>
                             <a target='_blank' href="https://www.sormaze.top/" className="interact">索瑞迷宫主</a>
                             <a target='_blank' href="https://www.skyhat.top/" className="interact">帽子</a>
