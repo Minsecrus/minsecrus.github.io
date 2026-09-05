@@ -66,6 +66,20 @@ export const allGithubProjects = [
         featured: true,
     },
     {
+        id: 'need-i-learn',
+        name: 'Need I Learn?',
+        description: '极性对照实验探测大模型的「要学吗」决策边界，自动检测和稀泥套话',
+        repoHref: 'https://github.com/Minsecrus/need-i-learn',
+        featured: true,
+    },
+    {
+        id: 'krcige',
+        name: 'KRCIGE',
+        description: '从认识、资源、控制有限性等基本要素推导软件工程经验原则',
+        repoHref: 'https://github.com/Minsecrus/KRCIGE',
+        featured: true,
+    },
+    {
         id: 'learning-notes',
         name: 'Learning Notes',
         pagesHref: 'https://minsecrus.github.io/learning-notes/',
