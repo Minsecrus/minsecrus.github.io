@@ -77,6 +77,8 @@ export const allGithubProjects = [
         name: 'KRCIGE',
         description: '从认识、资源、控制有限性等基本要素推导软件工程经验原则',
         repoHref: 'https://github.com/Minsecrus/KRCIGE',
+        pagesHref: 'https://minsecrus.github.io/KRCIGE/',
+        group: '教程和分享',
         featured: true,
     },
     {
@@ -113,6 +115,12 @@ export const allGithubProjects = [
         id: 'gene-graph',
         name: 'GeneGraph',
         pagesHref: 'https://minsecrus.github.io/GeneGraph/',
+        group: '前端随笔',
+    },
+    {
+        id: 'poincare-siege',
+        name: 'PoincareSiege',
+        pagesHref: 'https://minsecrus.github.io/PoincareSiege/',
         group: '前端随笔',
     },
     {
