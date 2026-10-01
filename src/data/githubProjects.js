@@ -219,6 +219,18 @@ export const allGithubProjects = [
         pagesHref: 'https://minsecrus.github.io/BusyBeaver/',
         group: '前端随笔',
     },
+    {
+        id: 'mayor-flow',
+        name: 'MayorFlow',
+        pagesHref: 'https://minsecrus.github.io/MayorFlow/',
+        group: '前端随笔',
+    },
+    {
+        id: 'printf',
+        name: 'printf',
+        pagesHref: 'https://minsecrus.github.io/printf/',
+        group: '前端随笔',
+    },
 ]
 
 export const featuredGithubProjects = allGithubProjects
