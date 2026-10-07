@@ -36,7 +36,7 @@ const interests = [
 ]
 
 const contacts = [
-    { label: '微信', value: 'Minsecrus_dreamers' },
+    { label: '微信', value: 'Minsecrus' },
     { label: 'QQ', value: '2972853299' },
     { label: '编程交流群', value: '885719573' },
     { label: '知识脱贫群', value: '1019721429' },
