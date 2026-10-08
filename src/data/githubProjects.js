@@ -231,6 +231,18 @@ export const allGithubProjects = [
         pagesHref: 'https://minsecrus.github.io/printf/',
         group: '前端随笔',
     },
+    {
+        id: 'hemi-sweep',
+        name: 'HemiSweep',
+        pagesHref: 'https://minsecrus.github.io/HemiSweep/',
+        group: '前端随笔',
+    },
+    {
+        id: 'gomoku',
+        name: 'Gomoku',
+        pagesHref: 'https://gentorial.github.io/Gomoku/',
+        group: '前端随笔',
+    },
 ]
 
 export const featuredGithubProjects = allGithubProjects
