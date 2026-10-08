@@ -214,6 +214,16 @@
     display: none;
 }
 
+@media (width > 960px) {
+    .dropdown-menu {
+        width: 500px;
+    }
+
+    .dropdown-group-items {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
 /* 窄屏响应式 */
 @media (max-width: 1024px) {
     .navbar {
