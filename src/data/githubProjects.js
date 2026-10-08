@@ -106,6 +106,12 @@ export const allGithubProjects = [
         group: '教程和分享',
     },
     {
+        id: 'horizon-graph',
+        name: 'HorizonGraph',
+        pagesHref: 'https://mdr-tutorials.github.io/HorizonGraph/',
+        group: '教程和分享',
+    },
+    {
         id: 'history-axis',
         name: 'HistoryAxis',
         pagesHref: 'https://minsecrus.github.io/HistoryAxis/',
