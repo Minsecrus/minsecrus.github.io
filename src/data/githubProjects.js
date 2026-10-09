@@ -2,7 +2,7 @@ export const allGithubProjects = [
     {
         id: 'minsecrus-github-io',
         name: 'Minsecrus.github.io',
-        description: '个人主页项目，使用 Preact 和 Motion 构建的现代化网站',
+        description: '个人主页，使用 Preact 和 Motion 构建',
         repoHref: 'https://github.com/Minsecrus/Minsecrus.github.io',
         featured: true,
     },
@@ -23,14 +23,14 @@ export const allGithubProjects = [
     {
         id: 'prodivix',
         name: 'Prodivix',
-        description: '开源可视化前端开发平台 —— 从设计到部署的全流程解决方案',
+        description: '开源可视化前端开发平台，结合蓝图、节点图和代码，从设计做到部署',
         repoHref: 'https://github.com/prodivix/prodivix',
         featured: true,
     },
     {
         id: 'gentorial',
         name: 'Gentorial',
-        description: '作者定义、学习者塑形的 VitePress 教程框架，为不同学习者生成个性化讲解',
+        description: '基于 VitePress 的教程框架，正文由作者撰写，AI 按读者偏好生成补充讲解',
         repoHref: 'https://github.com/gentorial/gentorial',
         featured: true,
     },
@@ -44,7 +44,7 @@ export const allGithubProjects = [
     {
         id: 'github-developer-assessor',
         name: 'GitHub Developer Assessor',
-        description: '证据优先的 GitHub 开发者评估 Agent Skill，分析工程能力、维护责任、生态影响与成长轨迹',
+        description: '根据公开仓库和贡献记录评估 GitHub 开发者的 Agent Skill',
         repoHref: 'https://github.com/Minsecrus/github-developer-assessor',
         featured: true,
     },
@@ -61,14 +61,14 @@ export const allGithubProjects = [
     {
         id: 'budgetbridge',
         name: 'BudgetBridge',
-        description: 'Go/TypeScript API 代理，聚合多账户为单一高可用服务，支持 OpenAI 和 Anthropic 格式',
+        description: 'Go/TypeScript 编写的 API 代理，把多个账号合并成一个服务，兼容 OpenAI 和 Anthropic 格式',
         repoHref: 'https://github.com/Minsecrus/BudgetBridge',
         featured: true,
     },
     {
         id: 'need-i-learn',
         name: 'Need I Learn?',
-        description: '极性对照实验探测大模型的「要学吗」决策边界，自动检测和稀泥套话',
+        description: '批量询问大模型「XX 要学吗」，并自动标出回答里的和稀泥套话',
         repoHref: 'https://github.com/Minsecrus/need-i-learn',
         featured: true,
     },
@@ -79,6 +79,13 @@ export const allGithubProjects = [
         repoHref: 'https://github.com/Minsecrus/KRCIGE',
         pagesHref: 'https://minsecrus.github.io/KRCIGE/',
         group: '教程和分享',
+        featured: true,
+    },
+    {
+        id: 'nullclass',
+        name: 'NullClass',
+        description: '开源的 Android 大学课表应用，数据保存在本地，支持从教务系统和 WakeUp 导入课表',
+        repoHref: 'https://github.com/0x7E7-2023/NullClass',
         featured: true,
     },
     {
