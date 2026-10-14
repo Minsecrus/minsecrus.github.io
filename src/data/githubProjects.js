@@ -245,6 +245,12 @@ export const allGithubProjects = [
         group: '前端随笔',
     },
     {
+        id: 'strftime',
+        name: 'strftime',
+        pagesHref: 'https://minsecrus.github.io/strftime/',
+        group: '前端随笔',
+    },
+    {
         id: 'hemi-sweep',
         name: 'HemiSweep',
         pagesHref: 'https://minsecrus.github.io/HemiSweep/',
