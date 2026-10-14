@@ -43,6 +43,12 @@ const contacts = [
     { label: '邮箱', value: 'minsecrusdreamers@gmail.com' },
 ]
 
+// 在 @ 前留一个折行点，窄屏下邮箱从这里换行
+const breakBeforeAt = (text) => {
+    const at = text.indexOf('@')
+    return at < 0 ? text : <>{text.slice(0, at)}<wbr />{text.slice(at)}</>
+}
+
 const sectionMotion = {
     initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
@@ -128,7 +134,7 @@ export function Home({ navigateTo, copyToClipboard }) {
                                 className="contact-copy-btn interact"
                                 onClick={(event) => copyToClipboard(value, label, event)}
                             >
-                                {value}
+                                {breakBeforeAt(value)}
                             </button>
                         </motion.p>
                     ))}

@@ -196,6 +196,7 @@
 }
 
 .contact-item span {
+  flex-shrink: 0;
   color: var(--text-color);
   font-weight: var(--subtitle-weight);
 }
@@ -209,6 +210,8 @@
   cursor: pointer;
   color: var(--accent-color);
   font-weight: var(--heading-weight);
+  text-align: left;
+  overflow-wrap: anywhere;
   text-decoration: none;
   transition: color 0.2s ease;
 }
