@@ -262,6 +262,12 @@ export const allGithubProjects = [
         pagesHref: 'https://gentorial.github.io/Gomoku/',
         group: '前端随笔',
     },
+    {
+        id: 'height-fall',
+        name: 'HeightFall',
+        pagesHref: 'https://minsecrus.github.io/HeightFall/',
+        group: '前端随笔',
+    },
 ]
 
 export const featuredGithubProjects = allGithubProjects
