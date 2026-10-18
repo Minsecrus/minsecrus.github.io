@@ -65,6 +65,7 @@ export function About() {
                             <a target='_blank' href="https://blog.zgm2003.cn/" className="interact">左光明</a>
                             <a target='_blank' href="https://www.miroonresearch.cn/" className="interact">镜月研究部</a>
                             <a target='_blank' href="https://www.zhuqiy.com" className="interact">ZHUQIY</a>
+                            <a target='_blank' href="https://blog.yhx1415926.top/" className="interact">Elaina</a>
                         </div>
                     </div>
                 </motion.section>
