@@ -55,14 +55,12 @@ export function About() {
                         <div id="links">
                             <a target='_blank' href="https://space.bilibili.com/27619688" className="interact">左岚</a>
                             <a target='_blank' href="https://malloymanga.github.io/" className="interact">Malloy</a>
-                            <a target='_blank' href="https://space.bilibili.com/1084866085" className="interact">懒羊羊 Tetrazole</a>
+                            <a target='_blank' href="https://space.bilibili.com/1084866085" className="interact">懒羊羊</a>
                             <a target='_blank' href="https://chenglan41.github.io/" className="interact">橙蓝</a>
                             <a target='_blank' href="https://tpppp.wiki/" className="interact">TPPPP</a>
                             <a target='_blank' href="https://www.sormaze.top/" className="interact">索瑞迷宫主</a>
-                            <a target='_blank' href="https://www.skyhat.top/" className="interact">帽子</a>
                             <a target='_blank' href="https://lvyovo-wiki.tech/" className="interact">Lvy Neko</a>
                             <a target='_blank' href="https://www.coderains.cn/" className="interact">晓雨</a>
-                            <a target='_blank' href="https://blog.zgm2003.cn/" className="interact">左光明</a>
                             <a target='_blank' href="https://www.miroonresearch.cn/" className="interact">镜月研究部</a>
                             <a target='_blank' href="https://www.zhuqiy.com" className="interact">ZHUQIY</a>
                             <a target='_blank' href="https://blog.yhx1415926.top/" className="interact">Elaina</a>
