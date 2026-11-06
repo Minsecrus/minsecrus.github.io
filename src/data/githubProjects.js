@@ -89,6 +89,19 @@ export const allGithubProjects = [
         featured: true,
     },
     {
+        id: 'turn-reader',
+        name: 'turn-reader',
+        description: '专注用户体验的极简 EPUB 阅读器。',
+        repoHref: 'https://github.com/Minsecrus/turn-reader',
+        featured: true,
+    },
+    {
+        id: 'cs-course',
+        name: 'CS-Course',
+        pagesHref: 'https://minsecrus.github.io/CS-Course/',
+        group: '教程和分享',
+    },
+    {
         id: 'learning-notes',
         name: 'Learning Notes',
         pagesHref: 'https://minsecrus.github.io/learning-notes/',
