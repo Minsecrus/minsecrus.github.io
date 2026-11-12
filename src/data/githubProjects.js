@@ -132,6 +132,26 @@ export const allGithubProjects = [
         group: '教程和分享',
     },
     {
+        id: 'look-and-feel',
+        name: '顺眼顺手',
+        pagesHref: 'https://minsecrus.github.io/look-and-feel/',
+        group: '教程和分享',
+    },
+    {
+        id: 'htdp-v2-chinese',
+        name: '程序设计方法',
+        repoHref: 'https://github.com/Minsecrus/htdp-v2-chinese',
+        pagesHref: 'https://github.com/Minsecrus/htdp-v2-chinese',
+        group: '教程和分享',
+    },
+    {
+        id: 'cs2023',
+        name: 'CS2023',
+        repoHref: 'https://github.com/Minsecrus/CS2023',
+        pagesHref: 'https://github.com/Minsecrus/CS2023',
+        group: '教程和分享',
+    },
+    {
         id: 'history-axis',
         name: 'HistoryAxis',
         pagesHref: 'https://minsecrus.github.io/HistoryAxis/',
@@ -295,6 +315,6 @@ export const featuredGithubProjects = allGithubProjects
 export const githubPageProjectGroups = ['教程和分享', '前端随笔'].map((title) => ({
     title,
     items: allGithubProjects
-        .filter((project) => project.group === title && project.pagesHref)
-        .map(({ id, name, pagesHref }) => ({ id, name, href: pagesHref })),
+        .filter((project) => project.group === title && (project.pagesHref || project.repoHref))
+        .map(({ id, name, pagesHref, repoHref }) => ({ id, name, href: pagesHref ?? repoHref })),
 }))
