@@ -3,19 +3,27 @@ import { githubPageProjectGroups } from '../data/githubProjects'
 import './NavBar.css'
 
 const blogHref = 'https://minsecrus.github.io/minsecrus-blog/'
+const resumeHref = 'https://minsecrus.github.io/Resume/'
+
+const desktopNavLinks = [
+    { name: 'Abbr', page: 'abbr', href: '/abbr' },
+    { name: 'Blog', href: blogHref },
+    { name: 'Resume', href: resumeHref, target: '_blank', rel: 'noopener noreferrer' },
+    { name: 'About', page: 'about', href: '/about' },
+]
 
 const sitePages = [
     { name: '工具箱', page: 'toolbox', href: '/toolbox' },
     { name: '资料库', page: 'library', href: '/library' },
     { name: 'Abbr', page: 'abbr', href: '/abbr' },
     { name: 'Blog', href: blogHref },
+    { name: 'Resume', href: resumeHref, target: '_blank', rel: 'noopener noreferrer' },
     { name: 'About', page: 'about', href: '/about' },
 ]
 
 export function NavBar({ currentPage, navigateTo }) {
     const [visible, setVisible] = useState(true)
     const [menuOpen, setMenuOpen] = useState(false)
-
 
     const prevScrollPos = useRef(window.scrollY)
     const menuRef = useRef(null)
@@ -26,7 +34,7 @@ export function NavBar({ currentPage, navigateTo }) {
             setVisible(prevScrollPos.current > currentScrollPos || currentScrollPos < 10)
             prevScrollPos.current = currentScrollPos
         }
-        window.addEventListener('scroll', handleScroll)
+        window.addEventListener('scroll', handleScroll, { passive: true })
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
@@ -43,7 +51,7 @@ export function NavBar({ currentPage, navigateTo }) {
     }, [menuOpen])
 
     const handleMenuClick = () => {
-        setMenuOpen(!menuOpen)
+        setMenuOpen((prev) => !prev)
     }
 
     const handleNavClick = (event, page) => {
@@ -64,28 +72,19 @@ export function NavBar({ currentPage, navigateTo }) {
             </a>
             <div className="nav-actions">
                 <div className="links">
-                    <a
-                        href="/abbr"
-                        className={`nav-link-btn interact desktop-primary ${currentPage === 'abbr' ? 'active' : ''}`}
-                        onClick={(event) => handleNavClick(event, 'abbr')}
-                        aria-current={currentPage === 'abbr' ? 'page' : undefined}
-                    >
-                        Abbr
-                    </a>
-                    <a
-                        href={blogHref}
-                        className="nav-link-btn interact desktop-primary"
-                    >
-                        Blog
-                    </a>
-                    <a
-                        href="/about"
-                        className={`nav-link-btn interact desktop-primary ${currentPage === 'about' ? 'active' : ''}`}
-                        onClick={(event) => handleNavClick(event, 'about')}
-                        aria-current={currentPage === 'about' ? 'page' : undefined}
-                    >
-                        About
-                    </a>
+                    {desktopNavLinks.map((item) => (
+                        <a
+                            key={item.name}
+                            href={item.href}
+                            target={item.target}
+                            rel={item.rel}
+                            className={`nav-link-btn interact desktop-primary ${item.page && currentPage === item.page ? 'active' : ''}`}
+                            onClick={item.page ? (event) => handleNavClick(event, item.page) : undefined}
+                            aria-current={item.page && currentPage === item.page ? 'page' : undefined}
+                        >
+                            {item.name}
+                        </a>
+                    ))}
                 </div>
                 <div className="menu-container" ref={menuRef}>
                     <button
@@ -130,6 +129,8 @@ export function NavBar({ currentPage, navigateTo }) {
                                         <a
                                             key={item.page ?? item.href}
                                             href={item.href}
+                                            target={item.target}
+                                            rel={item.rel}
                                             className={`dropdown-item dropdown-item-btn interact mobile-menu-item ${item.page && currentPage === item.page ? 'active' : ''}`}
                                             onClick={item.page ? (event) => handleNavClick(event, item.page) : undefined}
                                             aria-current={item.page && currentPage === item.page ? 'page' : undefined}

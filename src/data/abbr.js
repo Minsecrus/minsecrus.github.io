@@ -4656,22 +4656,12 @@ export const unsortedAbbrGroups = [
 ];
 
 function sortAbbrGroupsById(groups) {
-    const sortedGroups = JSON.parse(JSON.stringify(groups));
-
-    sortedGroups.forEach(group => {
-        group.items.sort((a, b) => {
-            // 字符串按字典序排序（a-z, 0-9）
-            return a.id.localeCompare(b.id);
-        });
-    });
-
-    // 对组本身按 letter 排序（可选）
-    sortedGroups.sort((a, b) => {
-        return a.letter.localeCompare(b.letter);
-    });
-
-    return sortedGroups;
+    return groups
+        .map(group => ({
+            letter: group.letter,
+            items: [...group.items].sort((a, b) => a.id.localeCompare(b.id)),
+        }))
+        .sort((a, b) => a.letter.localeCompare(b.letter))
 }
 
-// 使用示例
 export const abbrGroups = sortAbbrGroupsById(unsortedAbbrGroups);

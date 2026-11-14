@@ -1,6 +1,21 @@
 import { motion } from 'motion/react'
 import './About.css'
 
+const friendLinks = [
+    { name: '左岚', href: 'https://space.bilibili.com/27619688' },
+    { name: 'Malloy', href: 'https://malloymanga.github.io/' },
+    { name: '懒羊羊', href: 'https://space.bilibili.com/1084866085' },
+    { name: '橙蓝', href: 'https://chenglan41.github.io/' },
+    { name: 'TPPPP', href: 'https://tpppp.wiki/' },
+    { name: '索瑞迷宫主', href: 'https://www.sormaze.top/' },
+    { name: 'Lvy Neko', href: 'https://lvyovo-wiki.tech/' },
+    { name: '晓雨', href: 'https://www.coderains.cn/' },
+    { name: '镜月研究部', href: 'https://www.miroonresearch.cn/' },
+    { name: 'ZHUQIY', href: 'https://www.zhuqiy.com' },
+    { name: 'Elaina', href: 'https://blog.yhx1415926.top/' },
+    { name: 'GoodCoder', href: 'https://goodcoder666.github.io/' },
+]
+
 export function About() {
     return (
         <div className="about-container">
@@ -17,11 +32,12 @@ export function About() {
                         <p className="text">也为想用框架和 GitHub Pages 建设网站的小伙伴们提供一定参考。</p>
                     </div>
                 </motion.section>
+
                 <motion.section
                     className="about-section"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3, duration: 0.5 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
                 >
                     <h2 className="about-subtitle interact">Reference</h2>
                     <div className="section-content">
@@ -30,11 +46,12 @@ export function About() {
                         <p className="text interact">如果发现某字的字体无法显示或某个链接没有指向正确的网址，麻烦告诉我一下 ~</p>
                     </div>
                 </motion.section>
+
                 <motion.section
                     className="about-section"
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6, duration: 0.5 }}
+                    transition={{ delay: 0.4, duration: 0.5 }}
                 >
                     <h2 className="about-subtitle interact">Gratitude</h2>
                     <div className="section-content">
@@ -44,27 +61,27 @@ export function About() {
                         <p className="text interact">注定比你少见证 915 次日出日落，可不可以多读 915 本书来弥补呢？</p>
                     </div>
                 </motion.section>
+
                 <motion.section
                     className="about-section"
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.9, duration: 0.5 }}
+                    transition={{ delay: 0.6, duration: 0.5 }}
                 >
                     <h2 className="about-subtitle interact">友链</h2>
                     <div className="section-content">
                         <div id="links">
-                            <a target='_blank' href="https://space.bilibili.com/27619688" className="interact">左岚</a>
-                            <a target='_blank' href="https://malloymanga.github.io/" className="interact">Malloy</a>
-                            <a target='_blank' href="https://space.bilibili.com/1084866085" className="interact">懒羊羊</a>
-                            <a target='_blank' href="https://chenglan41.github.io/" className="interact">橙蓝</a>
-                            <a target='_blank' href="https://tpppp.wiki/" className="interact">TPPPP</a>
-                            <a target='_blank' href="https://www.sormaze.top/" className="interact">索瑞迷宫主</a>
-                            <a target='_blank' href="https://lvyovo-wiki.tech/" className="interact">Lvy Neko</a>
-                            <a target='_blank' href="https://www.coderains.cn/" className="interact">晓雨</a>
-                            <a target='_blank' href="https://www.miroonresearch.cn/" className="interact">镜月研究部</a>
-                            <a target='_blank' href="https://www.zhuqiy.com" className="interact">ZHUQIY</a>
-                            <a target='_blank' href="https://blog.yhx1415926.top/" className="interact">Elaina</a>
-                            <a target='_blank' href="https://goodcoder666.github.io/" className="interact">GoodCoder</a>
+                            {friendLinks.map(({ name, href }) => (
+                                <a
+                                    key={name}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href={href}
+                                    className="interact"
+                                >
+                                    {name}
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </motion.section>
@@ -72,3 +89,5 @@ export function About() {
         </div>
     )
 }
+
+export default About

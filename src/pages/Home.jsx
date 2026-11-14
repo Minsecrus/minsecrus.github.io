@@ -50,9 +50,10 @@ const breakBeforeAt = (text) => {
 }
 
 const sectionMotion = {
-    initial: { opacity: 0, y: 50 },
+    initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
-    transition: { duration: 0.8 },
+    viewport: { once: true, margin: '0px 0px 80px 0px' },
+    transition: { duration: 0.4 },
 }
 
 export function Home({ navigateTo, copyToClipboard }) {
@@ -104,9 +105,11 @@ export function Home({ navigateTo, copyToClipboard }) {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="project-card"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.2 * (index + 1) } }}
-                            whileHover={{ y: -10, transition: { delay: 0 } }}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true, margin: '0px 0px 80px 0px' }}
+                            transition={{ duration: 0.3, delay: (index % 3) * 0.05 }}
+                            whileHover={{ y: -10, transition: { duration: 0.2, delay: 0 } }}
                         >
                             <div className="project-content">
                                 <h3 className="interact">{name}</h3>
@@ -143,3 +146,5 @@ export function Home({ navigateTo, copyToClipboard }) {
         </main>
     )
 }
+
+export default Home

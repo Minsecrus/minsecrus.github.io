@@ -152,6 +152,12 @@ export const allGithubProjects = [
         group: '教程和分享',
     },
     {
+        id: '468480',
+        name: '468480',
+        pagesHref: 'https://minsecrus.github.io/468480/',
+        group: '教程和分享',
+    },
+    {
         id: 'history-axis',
         name: 'HistoryAxis',
         pagesHref: 'https://minsecrus.github.io/HistoryAxis/',

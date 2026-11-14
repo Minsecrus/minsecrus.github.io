@@ -1,17 +1,20 @@
 import { useState, Fragment } from 'react'
+import { abbrGroups } from '../data/abbr'
 import './Abbr.css'
 
-const abbrIndexLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+const abbrIndexLetters = [
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+    'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
+]
 const abbrIndexColumns = [abbrIndexLetters, abbrIndexLetters, abbrIndexLetters]
 
-import { abbrGroups } from '../data/abbr'
-
 const abbrIdsSorted = abbrGroups
-    .flatMap(group => group.items)
-    .map(item => item.id.toLowerCase())
+    .flatMap((group) => group.items)
+    .map((item) => item.id.toLowerCase())
     .sort()
 
-const findBestIdByPrefix = (prefix) => {
+function findBestIdByPrefix(prefix) {
     if (!prefix) return null
 
     const lower = prefix.toLowerCase()
@@ -65,14 +68,16 @@ export function Abbr() {
         }
     }
 
+    const handleResetIndex = () => {
+        setVisibleColumns(1)
+        setActiveLetters(abbrIndexColumns.map(() => ''))
+        setAbbrIndexChain(['', '', ''])
+    }
+
     return (
         <div className="abbr-container">
             <main className="abbr-main">
-                <div className="abbr-content" onClick={() => {
-                    setVisibleColumns(1)
-                    setActiveLetters(abbrIndexColumns.map(() => ''))
-                    setAbbrIndexChain(['', '', ''])
-                }}>
+                <div className="abbr-content" onClick={handleResetIndex}>
                     {abbrGroups.map(({ letter, items }) => (
                         <Fragment key={letter}>
                             <h2 className="abbr-group-heading text">{letter}</h2>
@@ -99,6 +104,14 @@ export function Abbr() {
                                         key={`${columnIndex}-${letter}`}
                                         className={`abbr-index-letter text ${isActive ? 'active' : ''}`}
                                         onClick={() => handleLetterClick(letter, columnIndex)}
+                                        onKeyDown={(e) => {
+                                            if (e.key === 'Enter' || e.key === ' ') {
+                                                e.preventDefault()
+                                                handleLetterClick(letter, columnIndex)
+                                            }
+                                        }}
+                                        role="button"
+                                        tabIndex={0}
                                         aria-pressed={isActive}
                                     >
                                         {letter}
