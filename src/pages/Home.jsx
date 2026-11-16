@@ -40,14 +40,7 @@ const contacts = [
     { label: 'QQ', value: '2972853299' },
     { label: '编程交流群', value: '885719573' },
     { label: '知识脱贫群', value: '1019721429' },
-    { label: '邮箱', value: 'minsecrusdreamers@gmail.com' },
 ]
-
-// 在 @ 前留一个折行点，窄屏下邮箱从这里换行
-const breakBeforeAt = (text) => {
-    const at = text.indexOf('@')
-    return at < 0 ? text : <>{text.slice(0, at)}<wbr />{text.slice(at)}</>
-}
 
 const sectionMotion = {
     initial: { opacity: 0, y: 30 },
@@ -137,7 +130,7 @@ export function Home({ navigateTo, copyToClipboard }) {
                                 className="contact-copy-btn interact"
                                 onClick={(event) => copyToClipboard(value, label, event)}
                             >
-                                {breakBeforeAt(value)}
+                                {value}
                             </button>
                         </motion.p>
                     ))}
