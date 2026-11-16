@@ -1,12 +1,5 @@
 export const allGithubProjects = [
     {
-        id: 'minsecrus-github-io',
-        name: 'Minsecrus.github.io',
-        description: '个人主页，使用 Preact 和 Motion 构建',
-        repoHref: 'https://github.com/Minsecrus/Minsecrus.github.io',
-        featured: true,
-    },
-    {
         id: 'mdr-c-tutorial',
         name: 'Mdr-C-Tutorial',
         description: '完全开源免费的全套 C 语言教程，涉及从基础语法到项目开发的广大领域',
@@ -35,13 +28,6 @@ export const allGithubProjects = [
         featured: true,
     },
     {
-        id: 'mainly-c',
-        name: 'Mainly.C',
-        description: '面向 C/C++ 初学者的轻量级浏览器编辑器，使用 Clang 22 在本地编译并运行 C/C++ 代码',
-        repoHref: 'https://github.com/Minsecrus/Mainly.C',
-        featured: true,
-    },
-    {
         id: 'github-developer-assessor',
         name: 'GitHub Developer Assessor',
         description: '根据公开仓库和贡献记录评估 GitHub 开发者的 Agent Skill',
@@ -56,7 +42,6 @@ export const allGithubProjects = [
         repoHref: 'https://github.com/Minsecrus/FrontFrontier',
         pagesHref: 'https://minsecrus.github.io/FrontFrontier/',
         group: '教程和分享',
-        featured: true,
     },
     {
         id: 'budgetbridge',
@@ -79,7 +64,6 @@ export const allGithubProjects = [
         repoHref: 'https://github.com/Minsecrus/KRCIGE',
         pagesHref: 'https://minsecrus.github.io/KRCIGE/',
         group: '教程和分享',
-        featured: true,
     },
     {
         id: 'nullclass',
@@ -305,6 +289,14 @@ export const allGithubProjects = [
         id: 'height-fall',
         name: 'HeightFall',
         pagesHref: 'https://minsecrus.github.io/HeightFall/',
+        group: '前端随笔',
+    },
+    {
+        id: 'mainly-c',
+        name: 'Mainly.C',
+        description: '面向 C/C++ 初学者的轻量级浏览器编辑器，使用 Clang 22 在本地编译并运行 C/C++ 代码',
+        repoHref: 'https://github.com/Minsecrus/Mainly.C',
+        pagesHref: 'https://minsecrus.github.io/Mainly.C/',
         group: '前端随笔',
     },
 ]

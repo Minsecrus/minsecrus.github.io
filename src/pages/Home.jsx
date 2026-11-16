@@ -89,7 +89,7 @@ export function Home({ navigateTo, copyToClipboard }) {
             </motion.section>
 
             <motion.section className="projects-section" {...sectionMotion}>
-                <h2 className="section-title interact">我的 Github</h2>
+                <h2 className="section-title interact">我的项目</h2>
                 <div className="project-grid">
                     {featuredGithubProjects.map(({ id, name, description, href }, index) => (
                         <motion.a
